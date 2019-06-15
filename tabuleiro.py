@@ -165,7 +165,7 @@ class Tabuleiro:
             
         print ("")
             
-    def converteTabuleiroParaArray (self):
+    def converteTabuleiroParaArray (self, valorDama):
         indexArray = 0;
         array = np.zeros (shape = (32))
         
@@ -173,6 +173,10 @@ class Tabuleiro:
             for column in range (self.tabuleiroConfiguracao.shape[1]):
                 if ((row + column) % 2 == 1):
                     array [indexArray] = self.tabuleiroConfiguracao [row, column]
+                    
+                    if (array [indexArray] == VariaveisGlobais.DAMA):
+                        array [indexArray] = valorDama
+                    
                     indexArray += 1
                     
         return array

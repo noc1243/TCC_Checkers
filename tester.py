@@ -10,8 +10,13 @@ from movimento import Movimento
 from casa import Casa
 from gerenciadorDeTabuleiros import GerenciadorDeTabuleiros
 from variaveisGlobais import VariaveisGlobais
+from jogador import Jogador
+
+jogador1 = Jogador ()
 
 tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE)
+
+print (jogador1.predict (tabuleiro.converteTabuleiroParaArray (jogador1.valorDama)))
 
 casaInicial = Casa ("a", 2)
 casaFinal = Casa ("c", 4)
@@ -39,37 +44,7 @@ listTabuleirosPossiveis = GerenciadorDeTabuleiros.calculaPossibilidadesDeMultipl
 if (not listTabuleirosPossiveis is None):
     for tabuleiro in listTabuleirosPossiveis:
         if (not tabuleiro is None):
+            print (jogador1.predict (tabuleiro.converteTabuleiroParaArray (jogador1.valorDama)))
             tabuleiro.printaTabuleiro ()
 else:
     print ("Nao existem movimentos!!")
-
-#tabuleiro.printaTabuleiro ()
-#
-#print ("")
-#casaInicial = Casa ("a", 2)
-#casaFinal = Casa ("b", 3)
-#print (casaInicial.converteMovimentoParaArray ())
-#print (casaFinal.converteMovimentoParaArray ())
-#
-#movimento = Movimento (casaInicial, casaFinal)
-#tabuleiro.doAnyMovement (movimento)
-#
-#tabuleiro.printaTabuleiro ()
-#
-#print ("")
-#
-#casaInicial = Casa ("b", 3)
-#casaFinal = Casa ("c", 4)
-#movimento = Movimento (casaInicial, casaFinal)
-#tabuleiro.doAnyMovement (movimento)
-#
-#tabuleiro.printaTabuleiro ()
-#
-#print ("")
-#
-#casaInicial = Casa ("c", 4)
-#casaFinal = Casa ("d", 5)
-#movimento = Movimento (casaInicial, casaFinal)
-#tabuleiro.doAnyMovement (movimento)
-#
-#tabuleiro.printaTabuleiro ()
