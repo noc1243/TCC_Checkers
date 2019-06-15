@@ -14,3 +14,8 @@ class Movimento:
     def __init__(self, casaInicial, casaFinal):
         self.casaInicial = casaInicial
         self.casaFinal = casaFinal
+        
+    def printaMovimento (self):
+        self.casaInicial.printaCasa ()
+        self.casaFinal.printaCasa ()
+        print ("")

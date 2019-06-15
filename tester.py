@@ -9,17 +9,37 @@ from tabuleiro import Tabuleiro
 from movimento import Movimento
 from casa import Casa
 from gerenciadorDeTabuleiros import GerenciadorDeTabuleiros
+from variaveisGlobais import VariaveisGlobais
 
-tabuleiro = Tabuleiro ()
+tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE)
+
+casaInicial = Casa ("a", 2)
+casaFinal = Casa ("c", 4)
+movimento1 = Movimento (casaInicial, casaFinal)
+
+casaInicial = Casa ("c", 4)
+casaFinal = Casa ("e", 6)
+movimento2 = Movimento (casaInicial, casaFinal)
+
+#listaMovimentos = []
+#listaMovimentos.append (movimento1)
+#listaMovimentos.append (movimento2)
+
+tabuleiro.printaTabuleiro ()
+
+#tabuleiro.doMultipleMovementsComer (listaMovimentos)
+
+#tabuleiro.printaTabuleiro ()
+
+
 GerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
-listTabuleirosPossiveis = GerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
-
-
+listTabuleirosPossiveis = GerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+#
+#
 if (not listTabuleirosPossiveis is None):
-    for previsaoDeTabuleiro in listTabuleirosPossiveis:
-        if (not previsaoDeTabuleiro is None):
-            previsaoDeTabuleiro.printaTabuleiro ()
-            print ("")
+    for tabuleiro in listTabuleirosPossiveis:
+        if (not tabuleiro is None):
+            tabuleiro.printaTabuleiro ()
 else:
     print ("Nao existem movimentos!!")
 

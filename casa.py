@@ -19,3 +19,6 @@ class Casa:
         numeroLetra = ord(self.letra) - ord('a')
         numeroNumero = 7 - self.numero
         return np.array([numeroNumero, numeroLetra])
+    
+    def printaCasa (self):
+        print (self.letra + " " + str(self.numero))
