@@ -91,7 +91,7 @@ class SeletorNatural:
         return listaJogadores
     
     def selecionaMelhoresJogadores (self, listaJogadores):
-        listaJogadores.sort (key=lambda x: x.currentPoints, reverse=True)
+        listaJogadores.sort (key=lambda x: (x.currentPoints, x.geracao), reverse=True)
         
         jogadoresParaSeremDestruidos = listaJogadores [self.numeroJogadoresIniciais:]
         
