@@ -14,7 +14,7 @@ class Partida:
     
     numeroMaximoDeJogadas = 100
     
-    def __init__ (self, jogador1, jogador2):
+    def __init__ (self, jogador1, jogador2, debug = False):
         self.tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_INICIAL)
         
         self.jogador1 = jogador1
@@ -22,40 +22,53 @@ class Partida:
         
         self.turnoJogador1 = True
         
+        self.debug = debug
+        
     # RETONROS: 0 = EMPATE; 1 = VITORIA JOGADOR 1; -1 = VITORIA JOGADOR 2;
     def realizaPartida (self):
-        print ("PARTIDA INICIADA!!!")
-        for numeroJogadas in range (0, self.numeroMaximoDeJogadas):
-            print ("JOGADA: " + str (numeroJogadas))
-            if (self.turnoJogador1):
-                print ("JOGADA JOGADOR 1:")
-            else:
-                print ("JOGADA JOGADOR 2:")
+        if (self.debug):
+            print ("PARTIDA INICIADA!!!")
+            
+        for self.numeroJogadas in range (0, self.numeroMaximoDeJogadas):
+            if (self.debug):
+                print ("JOGADA: " + str (self.numeroJogadas))
+                if (self.turnoJogador1):
+                    print ("JOGADA JOGADOR 1:")
+                else:
+                    print ("JOGADA JOGADOR 2:")
                 
             if (self.turnoJogador1):
-                tabuleiroEscolhido = self.jogador1.selecionaMelhorJogada (copy.deepcopy(self.tabuleiro), 0)
+                tabuleiroEscolhido = self.jogador1.selecionaMelhorJogadaMinMax (copy.deepcopy(self.tabuleiro), 0)
                 
                 if (tabuleiroEscolhido == None):
-                    print ("ACABOU O JOGO NAO TEM MAIS JOGADA!!")
+                    if (self.debug):
+                        print ("ACABOU O JOGO NAO TEM MAIS JOGADA!!")
+                        self.tabuleiro.printaTabuleiro ()
+                        
                     self.jogador1.perdePartida()
                     self.jogador2.ganhaPartida()
-                    self.tabuleiro.printaTabuleiro ()
                     return -1
                     
                 self.tabuleiro = copy.deepcopy(tabuleiroEscolhido)
-                self.tabuleiro.printaTabuleiro ()
+                
+                if (self.debug):
+                    self.tabuleiro.printaTabuleiro ()
             else:
-                tabuleiroEscolhido = self.jogador2.selecionaMelhorJogada (copy.deepcopy(self.tabuleiro), 0)
+                tabuleiroEscolhido = self.jogador2.selecionaMelhorJogadaMinMax (copy.deepcopy(self.tabuleiro), 0)
                 
                 if (tabuleiroEscolhido == None):
-                    print ("ACABOU O JOGO NAO TEM MAIS JOGADA!!")
+                    if (self.debug):
+                        print ("ACABOU O JOGO NAO TEM MAIS JOGADA!!")
+                        self.tabuleiro.printaTabuleiro ()
+                        
                     self.jogador1.ganhaPartida()
                     self.jogador2.perdePartida()
-                    self.tabuleiro.printaTabuleiro ()
                     return 1
                     
                 self.tabuleiro = copy.deepcopy (tabuleiroEscolhido)
-                self.tabuleiro.printaTabuleiro ()
+                
+                if (self.debug):
+                    self.tabuleiro.printaTabuleiro ()
                 
             self.tabuleiro.inverteVisaoTabuleiro ()
             self.turnoJogador1 = not self.turnoJogador1

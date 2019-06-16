@@ -7,7 +7,6 @@ Created on Sat Jun 15 22:03:15 2019
 
 import numpy as np
 from partida import Partida
-import threading
 
 class Campeonato:
     
@@ -24,6 +23,8 @@ class Campeonato:
             listaDeJogos [index] = index
             
         np.random.shuffle (listaDeJogos)
+        
+#        print ("Lista de jogos da rodada:" + str (listaDeJogos))
         
         return listaDeJogos
     
@@ -44,20 +45,28 @@ class Campeonato:
         return listaPartidas
         
     def iniciaRodada (self):
+        print ("Iniciando Rodada!")
         listaPartidas = self.criaPartidas ()
         
-        
-        print ("COMECANDO AS PARTIDAS!!")
         for partida in listaPartidas:
-            partida.realizaPartida ()
+            print ("Comecando a partida!")
+            print (str(partida.jogador1.nomeJogador) + " VS " + str(partida.jogador2.nomeJogador))
+            result = partida.realizaPartida ()
+            if (result == 0):
+                print ("EMPATE!")
+            elif (result == 1):
+                print (str(partida.jogador1.nomeJogador) + " vence!")
+            else:
+                print (str(partida.jogador2.nomeJogador) + " vence!")
             
     def iniciaCampeonato (self):
+        print ("Iniciando Campeonato!!")
         for index in range (self.numeroRodadasNoCampeonato):
             self.iniciaRodada ()
             
         index = 0
         for jogador in self.listaJogadores:
-            print ("Score Jogador " + str(index) + ": " + str(jogador.currentPoints))
+            print ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao))
             index += 1
             
         
