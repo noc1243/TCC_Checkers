@@ -7,6 +7,7 @@ Created on Sat Jun 15 22:03:15 2019
 
 import numpy as np
 from partida import Partida
+import threading
 
 class Campeonato:
     
@@ -28,8 +29,9 @@ class Campeonato:
         
         return listaDeJogos
     
-    def iniciaJogo (self, partida):
-        partida.realizaPartida ()
+    def iniciaJogo (self, partida, results):
+        results.append (partida.realizaPartida ())
+        return results [0]
         
     def criaPartidas (self):
         listaDeJogos = self.criaListaDeJogos ()
@@ -47,17 +49,40 @@ class Campeonato:
     def iniciaRodada (self):
         print ("Iniciando Rodada!")
         listaPartidas = self.criaPartidas ()
-        
+
+        print ("Comecando as partidas!")        
+        threads = []
+        results = []
         for partida in listaPartidas:
-            print ("Comecando a partida!")
             print (str(partida.jogador1.nomeJogador) + " VS " + str(partida.jogador2.nomeJogador))
-            result = partida.realizaPartida ()
-            if (result == 0):
+            t = threading.Thread(target=self.iniciaJogo, args=(partida, results,))
+            threads.append (t)
+            t.start ()
+            
+        indexPartidas = 0    
+        print ("Esperando partidas terminarem!")
+        for thread in threads:
+            thread.join ()
+            if (results [indexPartidas] == 0):
                 print ("EMPATE!")
-            elif (result == 1):
-                print (str(partida.jogador1.nomeJogador) + " vence!")
+            elif (results [indexPartidas] == 1):
+                print (str(listaPartidas [indexPartidas].jogador1.nomeJogador) + " vence!")
             else:
-                print (str(partida.jogador2.nomeJogador) + " vence!")
+                print (str(listaPartidas [indexPartidas].jogador2.nomeJogador) + " vence!")
+            indexPartidas += 1
+            
+        
+#        CODIGO SINGLE-THREAD FUNIONANDO!!
+#        for partida in listaPartidas:
+#            print ("Comecando a partida!")
+#            print (str(partida.jogador1.nomeJogador) + " VS " + str(partida.jogador2.nomeJogador))
+#            result = partida.realizaPartida ()
+#            if (result == 0):
+#                print ("EMPATE!")
+#            elif (result == 1):
+#                print (str(partida.jogador1.nomeJogador) + " vence!")
+#            else:
+#                print (str(partida.jogador2.nomeJogador) + " vence!")
             
     def iniciaCampeonato (self):
         print ("Iniciando Campeonato!!")

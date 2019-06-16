@@ -49,8 +49,10 @@ class Jogador:
             self.model.add (Dense (1000, kernel_initializer=initializer, activation = 'tanh'))
             self.model.add (Dense (1, kernel_initializer=initializer, activation = 'tanh'))
             self.model.compile (loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+            self.model._make_predict_function()
         else:
             self.model = model
+            self.model._make_predict_function()
         
         if (listaSigmas is None):
             for layerIndex in range (3):
@@ -78,6 +80,7 @@ class Jogador:
         
     def carregaModelo (self):
         self.model = load_model (".\modelos\\" + self.nomeJogador)
+        self.model._make_predict_function()
         
     def calculaScoreTabuleiro (self, tabuleiro, numeroDaJogada):
         if (numeroDaJogada == self.numeroJogadasAFrente):

@@ -5,6 +5,7 @@ Created on Fri Jun 14 20:27:24 2019
 @author: nocera
 """
 
+from keras import backend as K
 from tabuleiro import Tabuleiro
 from movimento import Movimento
 from casa import Casa
@@ -17,11 +18,14 @@ from seletorNatural import SeletorNatural
 import random
 import copy
 
+
 VARIASEED = 0
 
 listaJogadores = []
 
 random.seed (16062019 + VARIASEED)
+
+K.clear_session ()
 
 #jogador1 = Jogador ()
 #jogador2 = Jogador ()
