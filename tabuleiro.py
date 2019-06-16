@@ -113,7 +113,7 @@ class Tabuleiro:
         tamanhoMovimento = self.calculaTamanhoMovimento (movimento)
         direcaoY = casaFinal[0] - casaInicial[0];
         
-        if (tamanhoMovimento == 1 and self.tabuleiroConfiguracao [casaFinal[0], casaFinal [1]] == VariaveisGlobais.CASAVAZIA and (direcaoY < 0 or self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1] == VariaveisGlobais.DAMA])):
+        if (tamanhoMovimento == 1 and self.tabuleiroConfiguracao [casaFinal[0], casaFinal [1]] == VariaveisGlobais.CASAVAZIA and (direcaoY < 0 or self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]] == VariaveisGlobais.DAMA)):
             return True
         else:
             return False
@@ -180,6 +180,10 @@ class Tabuleiro:
                     indexArray += 1
                     
         return array
+    
+    def inverteVisaoTabuleiro (self):
+        self.tabuleiroConfiguracao = np.rot90 (np.rot90 (self.tabuleiroConfiguracao)) * (-1)
+        
         
         
         

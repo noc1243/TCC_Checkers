@@ -11,14 +11,23 @@ from casa import Casa
 from gerenciadorDeTabuleiros import GerenciadorDeTabuleiros
 from variaveisGlobais import VariaveisGlobais
 from jogador import Jogador
+from partida import Partida
 
 jogador1 = Jogador ()
+jogador2 = Jogador ()
+partida = Partida (jogador1, jogador2)
 
-tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_INICIAL)
+partida.realizaPartida ()
+
+
+#tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_2)
 #tabuleiro.printaTabuleiro ()
 
-tabuleiro2 = jogador1.selecionaMelhorJogada (tabuleiro, 0)
-tabuleiro2.printaTabuleiro ()
+#tabuleiro.inverteVisaoTabuleiro ()
+#tabuleiro.printaTabuleiro ()
+
+#tabuleiro2 = jogador1.selecionaMelhorJogada (tabuleiro, 0)
+#tabuleiro2.printaTabuleiro ()
 
 #print (jogador1.predict (tabuleiro.converteTabuleiroParaArray (jogador1.valorDama)))
 #
@@ -33,12 +42,11 @@ tabuleiro2.printaTabuleiro ()
 #tabuleiro.printaTabuleiro ()
 #
 #GerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
-#listTabuleirosPossiveis = GerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+#listTabuleirosPossiveis = GerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
 #
 #if (not listTabuleirosPossiveis is None):
 #    for tabuleiro in listTabuleirosPossiveis:
 #        if (not tabuleiro is None):
-#            print (jogador1.predict (tabuleiro.converteTabuleiroParaArray (jogador1.valorDama)))
 #            tabuleiro.printaTabuleiro ()
 #else:
 #    print ("Nao existem movimentos!!")

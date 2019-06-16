@@ -16,7 +16,7 @@ import copy
 class Jogador:
     
     stddevJogador = 5
-    numeroJogadasAFrente = 2
+    numeroJogadasAFrente = 4
     numeroDePossiveisComidasParaNaoConsiderarJogadaForcada = 3
     
     def __init__ (self):
@@ -63,6 +63,7 @@ class Jogador:
         return maxScore
     
     def selecionaMelhorJogada (self, tabuleiro, numeroDaJogada):
+        tabuleiroEscolhido = None
         jogadaForcada = False
         
         gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
