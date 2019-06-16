@@ -12,12 +12,35 @@ from gerenciadorDeTabuleiros import GerenciadorDeTabuleiros
 from variaveisGlobais import VariaveisGlobais
 from jogador import Jogador
 from partida import Partida
+from campeonato import Campeonato
+
+
+listaJogadores = []
 
 jogador1 = Jogador ()
 jogador2 = Jogador ()
-partida = Partida (jogador1, jogador2)
+jogador3 = Jogador ()
+jogador4 = Jogador ()
+jogador5 = Jogador ()
+jogador6 = Jogador ()
 
-partida.realizaPartida ()
+listaJogadores.append (jogador1)
+listaJogadores.append (jogador2)
+listaJogadores.append (jogador3)
+listaJogadores.append (jogador4)
+listaJogadores.append (jogador5)
+listaJogadores.append (jogador6)
+
+campeonato = Campeonato (listaJogadores)
+campeonato.iniciaCampeonato ()
+
+
+#
+#partida = Partida (jogador1, jogador2)
+#partida.realizaPartida ()
+#
+#print (jogador1.currentPoints)
+#print (jogador2.currentPoints)
 
 
 #tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_2)

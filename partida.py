@@ -22,7 +22,9 @@ class Partida:
         
         self.turnoJogador1 = True
         
+    # RETONROS: 0 = EMPATE; 1 = VITORIA JOGADOR 1; -1 = VITORIA JOGADOR 2;
     def realizaPartida (self):
+        print ("PARTIDA INICIADA!!!")
         for numeroJogadas in range (0, self.numeroMaximoDeJogadas):
             print ("JOGADA: " + str (numeroJogadas))
             if (self.turnoJogador1):
@@ -35,8 +37,10 @@ class Partida:
                 
                 if (tabuleiroEscolhido == None):
                     print ("ACABOU O JOGO NAO TEM MAIS JOGADA!!")
+                    self.jogador1.perdePartida()
+                    self.jogador2.ganhaPartida()
                     self.tabuleiro.printaTabuleiro ()
-                    break
+                    return -1
                     
                 self.tabuleiro = copy.deepcopy(tabuleiroEscolhido)
                 self.tabuleiro.printaTabuleiro ()
@@ -45,12 +49,19 @@ class Partida:
                 
                 if (tabuleiroEscolhido == None):
                     print ("ACABOU O JOGO NAO TEM MAIS JOGADA!!")
+                    self.jogador1.ganhaPartida()
+                    self.jogador2.perdePartida()
                     self.tabuleiro.printaTabuleiro ()
-                    break
+                    return 1
                     
                 self.tabuleiro = copy.deepcopy (tabuleiroEscolhido)
                 self.tabuleiro.printaTabuleiro ()
                 
             self.tabuleiro.inverteVisaoTabuleiro ()
             self.turnoJogador1 = not self.turnoJogador1
+            
+        self.jogador1.empataPartida()
+        self.jogador2.empataPartida()
+        
+        return 0
         

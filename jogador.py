@@ -16,10 +16,18 @@ import copy
 class Jogador:
     
     stddevJogador = 5
-    numeroJogadasAFrente = 4
+    
+    numeroJogadasAFrente = 3
+    
     numeroDePossiveisComidasParaNaoConsiderarJogadaForcada = 3
     
+    pontosQuandoPerde = -2
+    pontosQuandoGanha = 3
+    pontosQuandoEmpata = 0
+    
     def __init__ (self):
+        self.currentPoints = 0
+        
         self.valorDama = (randint(10,30) /10.0)
         
         initializer = initializers.random_normal(stddev=Jogador.stddevJogador)
@@ -89,3 +97,12 @@ class Jogador:
                     tabuleiroEscolhido = copy.deepcopy (tabuleiro)
                     
         return tabuleiroEscolhido
+    
+    def ganhaPartida (self):
+        self.currentPoints += self.pontosQuandoGanha
+        
+    def perdePartida (self):
+        self.currentPoints += self.pontosQuandoPerde
+        
+    def empataPartida (self):
+        self.currentPoints += self.pontosQuandoEmpata
