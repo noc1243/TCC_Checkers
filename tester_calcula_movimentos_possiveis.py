@@ -14,7 +14,7 @@ from variaveisGlobais import VariaveisGlobais
 # TESTE 1
 print ("Comecando teste 1:")
 print ("Tabuleiro inicial teste 1:")
-tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE)
+tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_3)
 tabuleiro.printaTabuleiro ()
 
 gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)

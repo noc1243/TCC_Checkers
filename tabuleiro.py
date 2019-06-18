@@ -102,7 +102,7 @@ class Tabuleiro:
         casaFinal = movimento.casaFinal.converteMovimentoParaArray()
         
         direcao = np.subtract (casaInicial, casaFinal)
-        tamanhoMovimento = np.abs(direcao) [0]
+        tamanhoMovimento = max (np.abs(direcao) [0], np.abs(direcao) [1])
         
         return tamanhoMovimento
         
