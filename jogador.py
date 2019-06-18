@@ -22,7 +22,7 @@ class Jogador:
     peakVal = 0.2
     sigma = 0.5
     
-    numeroJogadasAFrente = 4
+    numeroJogadasAFrente = 2
     
     numeroDePossiveisComidasParaNaoConsiderarJogadaForcada = 3
     
@@ -79,6 +79,9 @@ class Jogador:
     
     def salvaModelo (self):
         self.model.save (".\modelos\\" + self.nomeJogador)
+        file = open (".\pesosDamas\\" + self.nomeJogador, "w+")
+        file.write (str (self.valorDama))
+        file.close
         
     def carregaModelo (self):
         self.model = load_model (".\modelos\\" + self.nomeJogador)
