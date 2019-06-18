@@ -1,0 +1,15 @@
+﻿Score Jogador_c25c7d45-223f-49bb-a6ab-89567e63c93f.h5 6: 5 Geracao Jogador: 185
+Score Jogador_cf3fbbde-530e-43de-b401-542d0d0ad867.h5 7: 5 Geracao Jogador: 185
+Score Jogador_951e4d0d-a68d-4f18-86ff-0e0e69e7beed.h5 18: 2 Geracao Jogador: 188
+Score Jogador_4846974f-2321-4fd6-b0c6-d1a8ad6777a6.h5 4: 2 Geracao Jogador: 186
+Score Jogador_a434cc1d-a8cb-46e4-9e5a-cc9c89710e09.h5 5: 2 Geracao Jogador: 186
+Score Jogador_9b45fa0c-f9bc-4737-9b36-ad8ec82be746.h5 2: 2 Geracao Jogador: 183
+Score Jogador_e5a06f56-c4bb-464c-928a-f9cb1a2833d5.h5 11: 2 Geracao Jogador: 182
+Score Jogador_c3a32002-759b-44a7-8f2e-6822528e70f2.h5 9: 2 Geracao Jogador: 180
+Score Jogador_adef2308-bd07-4bf9-a819-114e4da140d3.h5 10: 2 Geracao Jogador: 0
+Score Jogador_ed549d6a-74fd-40a2-9cac-497942033055.h5 1: -1 Geracao Jogador: 184
+Score Jogador_3a8ec318-c386-482a-b11d-c00b49dad290.h5 26: -1 Geracao Jogador: 183
+Score Jogador_1bb3feea-964d-45ae-a42f-f6ee46811009.h5 13: -1 Geracao Jogador: 181
+Score Jogador_1c3d4331-e21d-481b-abbe-c8da8c535e55.h5 24: -1 Geracao Jogador: 181
+Score Jogador_32d7a0a5-ebb1-4cd3-acfe-b1800a130e5f.h5 25: -1 Geracao Jogador: 1
+Score Jogador_4480f3a4-3bba-4a93-aa57-2f9e94e5bba3.h5 21: -4 Geracao Jogador: 186

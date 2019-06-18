@@ -121,8 +121,6 @@ class SeletorNatural:
         
         return listaJogadores
         
-        
-    
     def iniciaTreinamento (self):
         print ("Criando os jogadores iniciais!")
         listaJogadores = self.geraJogadoresIniciais ()

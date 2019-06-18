@@ -30,8 +30,17 @@ class Campeonato:
         return listaDeJogos
     
     def iniciaJogo (self, partida, results):
-        results.append (partida.realizaPartida ())
-        return results [0]
+        resultadoString = ""
+        result = partida.realizaPartida ()
+        
+        if (result == 0):
+            resultadoString = "EMPATE!"
+        elif (result == 1):
+            resultadoString = str(partida.jogador1.nomeJogador) + " venceu!"
+        else:
+            resultadoString = str(partida.jogador2.nomeJogador) + " venceu!"
+        
+        results.append (resultadoString)
         
     def criaPartidas (self):
         listaDeJogos = self.criaListaDeJogos ()
@@ -63,12 +72,7 @@ class Campeonato:
         print ("Esperando partidas terminarem!")
         for thread in threads:
             thread.join ()
-            if (results [indexPartidas] == 0):
-                print ("EMPATE!")
-            elif (results [indexPartidas] == 1):
-                print (str(listaPartidas [indexPartidas].jogador1.nomeJogador) + " vence!")
-            else:
-                print (str(listaPartidas [indexPartidas].jogador2.nomeJogador) + " vence!")
+            print (results [indexPartidas])
             indexPartidas += 1
             
         

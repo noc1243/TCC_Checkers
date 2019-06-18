@@ -30,7 +30,7 @@ class Jogador:
     pontosQuandoGanha = 1
     pontosQuandoEmpata = 0
     
-    def __init__ (self, model = None, valorDama = None, listaSigmas = None, geracao = 0):
+    def __init__ (self, model = None, valorDama = None, listaSigmas = None, geracao = 0, debug = False):
         self.listaSigmas = []
         listaWeights = []
         self.currentPoints = 0
@@ -68,6 +68,8 @@ class Jogador:
             self.listaSigmas = listaSigmas
             
         self.nomeJogador = "Jogador_" + str(uuid.uuid4()) + ".h5"
+        
+        self.debug = debug
         
         
     def predict (self, tabuleiro):
@@ -204,6 +206,10 @@ class Jogador:
                 if (score >= alpha and numeroDaJogada == 0):
                     alpha = score
                     tabuleiroEscolhido = copy.deepcopy (tabuleiro)
+                    if (self.debug):
+                        print ("Tabuleiro Selecionado por score: " + str (score))
+                        print ("Tabuleiro:")
+                        tabuleiroEscolhido.printaTabuleiro()
                     
         return tabuleiroEscolhido
     

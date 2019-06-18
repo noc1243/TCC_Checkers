@@ -27,6 +27,8 @@ random.seed (16062019 + VARIASEED)
 
 K.clear_session ()
 
+
+#TESTE CAMPEONATO
 #jogador1 = Jogador ()
 #jogador2 = Jogador ()
 #jogador3 = Jogador ()
@@ -41,12 +43,15 @@ K.clear_session ()
 #listaJogadores.append (jogador5)
 #listaJogadores.append (jogador6)
 
-seletorNatural = SeletorNatural (100)
-seletorNatural.iniciaTreinamento ()
-
 #campeonato = Campeonato (listaJogadores)
 #campeonato.iniciaCampeonato ()
 
+seletorNatural = SeletorNatural (840)
+seletorNatural.iniciaTreinamento ()
+
+#TESTE PARTIDA
+#jogador1 = Jogador ()
+#jogador2 = Jogador ()
 
 #partida = Partida (jogador1, jogador3)
 #result = partida.realizaPartida ()
@@ -69,6 +74,8 @@ seletorNatural.iniciaTreinamento ()
 #    print ("EMPATE!")
 
 
+#Teste Partidas com o filho
+#jogador1 = Jogador ()
 #
 #numeroDePartidasJogador1 = 0
 #numeroDePartidasJogador2 = 0
@@ -116,7 +123,9 @@ seletorNatural.iniciaTreinamento ()
 #print ("Vitorias Jogador 2: " + str (numeroDePartidasJogador2))
 #print ("Vitorias Empate: " + str (numeroDePartidasEmpate))
     
-
+#Teste pontuacao apos partida
+#jogador1 = Jogador ()
+#jogador2 = Jogador ()
 
 #partida = Partida (jogador2, jogador1, True)
 #partida.realizaPartida ()
@@ -125,17 +134,34 @@ seletorNatural.iniciaTreinamento ()
 #print (jogador2.currentPoints)
 
 
+#Tester inversão de tabuleiro
 #tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_2)
 #tabuleiro.printaTabuleiro ()
 
 #tabuleiro.inverteVisaoTabuleiro ()
 #tabuleiro.printaTabuleiro ()
 
+#Tester selecionaMelhorJogada
+#jogador1 = Jogador (debug = True)
+
+#tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_2)
+#tabuleiro.printaTabuleiro ()
+
 #tabuleiro2 = jogador1.selecionaMelhorJogada (tabuleiro, 0)
 #tabuleiro2.printaTabuleiro ()
 
+
+#Tester valor do Predict para um tabuleiro
+#jogador1 = Jogador (debug = True)
+
+#tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_2)
+#tabuleiro.printaTabuleiro ()
+
 #print (jogador1.predict (tabuleiro.converteTabuleiroParaArray (jogador1.valorDama)))
 #
+
+# Tester movimento no tabuleiro
+#tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE)
 #casaInicial = Casa ("a", 2)
 #casaFinal = Casa ("c", 4)
 #movimento1 = Movimento (casaInicial, casaFinal)
@@ -146,8 +172,15 @@ seletorNatural.iniciaTreinamento ()
 #
 #tabuleiro.printaTabuleiro ()
 #
-#GerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
-#listTabuleirosPossiveis = GerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+
+# Tester calcula Movimentos possiveis
+#tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_2)
+#tabuleiro.printaTabuleiro ()
+
+#gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+#listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+#if (not listaTabuleiros or listaTabuleiros is None):
+#    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
 #
 #if (not listTabuleirosPossiveis is None):
 #    for tabuleiro in listTabuleirosPossiveis:
