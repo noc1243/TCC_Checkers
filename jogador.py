@@ -166,6 +166,12 @@ class Jogador:
         else:
             best = 9999999999
             
+        if (len (listaTabuleiros) == 0):
+            if (jogadorJogando):
+                return -1
+            else:
+                return 1
+            
         for tabuleiro in listaTabuleiros:
             if (not tabuleiro is None):
                 if (jogadorJogando):
