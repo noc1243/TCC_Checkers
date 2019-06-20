@@ -51,7 +51,9 @@ class Campeonato:
             jogador1 = self.listaJogadores [int(listaDeJogos [index])]
             jogador2 = self.listaJogadores [int(listaDeJogos [index + 1])]
             partida = Partida (jogador1, jogador2)
+            partida2 = Partida (jogador2, jogador1)
             listaPartidas.append (partida)
+            listaPartidas.append (partida2)
         
         return listaPartidas
         
@@ -95,7 +97,7 @@ class Campeonato:
             
         index = 0
         for jogador in self.listaJogadores:
-            print ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao))
+            print ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)))
             index += 1
             
         

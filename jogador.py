@@ -20,7 +20,7 @@ import uuid
 class Jogador:
     
     peakVal = 0.2
-    sigma = 0.5
+    sigma = 0.05
     
     numeroJogadasAFrente = 2
     
@@ -30,10 +30,14 @@ class Jogador:
     pontosQuandoGanha = 1
     pontosQuandoEmpata = 0
     
+    numeroDeLayers = 4
+    
     def __init__ (self, model = None, valorDama = None, listaSigmas = None, geracao = 0, debug = False):
         self.listaSigmas = []
         listaWeights = []
         self.currentPoints = 0
+        self.totalPoints = 0
+        self.numeroDeGeracoesVivo = 1
         self.geracao = geracao
         
         if (valorDama is None):
@@ -45,8 +49,9 @@ class Jogador:
         if (model is None):
             initializer = initializers.random_uniform(minval=(-1) * Jogador.peakVal, maxval=Jogador.peakVal)
             self.model = Sequential ()
-            self.model.add (Dense (32, input_dim=32, kernel_initializer=initializer, activation = 'tanh'))
-            self.model.add (Dense (1000, kernel_initializer=initializer, activation = 'tanh'))
+            self.model.add (Dense (91, input_dim=32, kernel_initializer=initializer, activation = 'tanh'))
+            self.model.add (Dense (40, kernel_initializer=initializer, activation = 'tanh'))
+            self.model.add (Dense (10, kernel_initializer=initializer, activation = 'tanh'))
             self.model.add (Dense (1, kernel_initializer=initializer, activation = 'tanh'))
             self.model.compile (loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
             self.model._make_predict_function()
@@ -55,7 +60,7 @@ class Jogador:
             self.model._make_predict_function()
         
         if (listaSigmas is None):
-            for layerIndex in range (3):
+            for layerIndex in range (self.numeroDeLayers):
                 layer = self.model.get_layer (index = layerIndex)
                 layerWeights = layer.get_weights()
                 arrayWeights = np.zeros ((layerWeights [0].shape [0], layerWeights [0].shape [1])) + self.sigma
@@ -224,21 +229,30 @@ class Jogador:
     
     def ganhaPartida (self):
         self.currentPoints += self.pontosQuandoGanha
+        self.totalPoints += self.pontosQuandoGanha
         
     def perdePartida (self):
         self.currentPoints += self.pontosQuandoPerde
+        self.totalPoints += self.pontosQuandoPerde
         
     def empataPartida (self):
         self.currentPoints += self.pontosQuandoEmpata
+        self.totalPoints += self.pontosQuandoEmpata
         
     def calculaQuantidadeDePesos (self):
         quantidadeDePesos = 0
-        for layerIndex in range (3):
+        for layerIndex in range (self.numeroDeLayers):
             layer = self.model.get_layer (index = layerIndex)
             layerWeights = layer.get_weights()
             quantidadeDePesos += layerWeights [0].shape [0] * layerWeights [0].shape [1] + layerWeights [1].shape [0]
         
-        print (quantidadeDePesos)
+        return quantidadeDePesos
+    
+    def printaPesos (self):
+        for layerIndex in range (self.numeroDeLayers):
+            layer = self.model.get_layer (index = layerIndex)
+            layerWeights = layer.get_weights()
+            print (layerWeights)
         
     def __del__ (self):
         del self.model

@@ -25,17 +25,38 @@ class SeletorNatural:
     
     numeroJogadoresIniciais = 15
     
+    fitMaximoJogador = 5000
+    fitRealJogador = 8
+    
     def __init__ (self, numeroDeGeracoesTreinamento):
         self.numeroDeGeracoesTreinamento = numeroDeGeracoesTreinamento
         
+    def geraMatrizDeVariaveisGaussianas (self, shape1, shape2):
+        arrayGaussianas = np.zeros ((shape1, shape2))
+        for row in range(arrayGaussianas.shape [0]):
+            for column in range(arrayGaussianas.shape [1]):
+                arrayGaussianas [row, column] = gauss (self.mean, self.variance)
+        
+        return arrayGaussianas
+    
+    def geraArrayDeVariaveisGaussianas (self, shape):
+        arrayGaussianas = np.zeros (shape)
+        for index in range(arrayGaussianas.shape[0]):
+            arrayGaussianas [index] = gauss (self.mean, self.variance)
+        
+        return arrayGaussianas
+        
     def repdroduzJogador (self, jogador):
-        tau = 0.0839
+#        tau = 0.0839
+        tau = 1/math.sqrt(2 * math.sqrt (jogador.calculaQuantidadeDePesos ()))
         
         novoSigma = []
         for listaWeights in jogador.listaSigmas:
             novaListaWeights = []
-            novoWeights = listaWeights [0] + math.exp (tau * gauss (self.mean, self.variance))
-            novoBiases = listaWeights [1] + math.exp (tau * gauss (self.mean, self.variance))
+            changedGaussWeights = self.geraMatrizDeVariaveisGaussianas (listaWeights[0].shape[0], listaWeights[0].shape[1])
+            changedGaussBiases = self.geraArrayDeVariaveisGaussianas (listaWeights[1].shape[0])
+            novoWeights = np.multiply (listaWeights [0], changedGaussWeights)
+            novoBiases = np.multiply (listaWeights [1], changedGaussBiases)
             novaListaWeights.append (novoWeights)
             novaListaWeights.append (novoBiases)
             novoSigma.append (copy.deepcopy(novaListaWeights))
@@ -45,8 +66,10 @@ class SeletorNatural:
         for layerIndex in range (3):
             layer = novoModel.get_layer (index = layerIndex)
             layerWeights = layer.get_weights()
-            layerWeightsWeights = np.add (layerWeights [0], novoSigma [layerIndex] [0])
-            layerWeightsBiases = np.add  (layerWeights [1], novoSigma [layerIndex] [1])
+            changedGaussWeights = self.geraMatrizDeVariaveisGaussianas (layerWeights[0].shape[0], layerWeights[0].shape[1])
+            changedGaussBiases = self.geraArrayDeVariaveisGaussianas (layerWeights[1].shape[0])
+            layerWeightsWeights = np.add (layerWeights [0], np.multiply (novoSigma [layerIndex] [0], changedGaussWeights))
+            layerWeightsBiases = np.add  (layerWeights [1], np.multiply (novoSigma [layerIndex] [1], changedGaussBiases))
             novaListaWeights = []
             novaListaWeights.append (layerWeightsWeights)
             novaListaWeights.append (layerWeightsBiases)
@@ -92,6 +115,7 @@ class SeletorNatural:
     
     def selecionaMelhoresJogadores (self, listaJogadores):
         listaJogadores.sort (key=lambda x: (x.currentPoints, x.geracao), reverse=True)
+#        listaJogadores.sort (key=lambda x: (float (x.totalPoints)/float (x.numeroDeGeracoesVivo), x.geracao), reverse=True)
         
         jogadoresParaSeremDestruidos = listaJogadores [self.numeroJogadoresIniciais:]
         
@@ -105,6 +129,10 @@ class SeletorNatural:
     def limpaScoreJogadores (self, listaJogadores):
         for jogador in listaJogadores:
             jogador.currentPoints = 0
+            
+    def somaGeracoesVivoJogador (self, listaJogadores):
+        for jogador in listaJogadores:
+            jogador.numeroDeGeracoesVivo += 1
     
     def rodaGeracao (self, listaJogadores):
         print ("Criando filhos de uma geracao!")
@@ -118,6 +146,7 @@ class SeletorNatural:
         print ("Selecionando os melhores Jogadores!")
         listaJogadores = self.selecionaMelhoresJogadores (listaJogadores)
         self.limpaScoreJogadores (listaJogadores)
+        self.somaGeracoesVivoJogador (listaJogadores)
         
         return listaJogadores
         
@@ -132,5 +161,10 @@ class SeletorNatural:
             indexGeracao += 1
             print ("Fim da Geracao!")
             print ("")
+            for jogador in listaJogadores:
+                if (jogador.totalPoints >= self.fitMaximoJogador and (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo) > self.fitRealJogador)):
+                    print ("Grande jogador selecionado: " + str (jogador.nomeJogador))
+                    print ("Terminando a rodada de geracoes!")
+                    break
         
         K.clear_session ()
