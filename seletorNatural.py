@@ -21,7 +21,7 @@ class SeletorNatural:
     variance = 1
     
     meanDama = 0
-    varianceDama = 1
+    varianceDama = 0.1
     
     numeroJogadoresIniciais = 15
     
@@ -39,10 +39,25 @@ class SeletorNatural:
         
         return arrayGaussianas
     
+    def geraExponencialDeGaussianas (self, shape1, shape2, tau):
+        arrayGaussianas = np.zeros ((shape1, shape2))
+        for row in range(arrayGaussianas.shape [0]):
+            for column in range(arrayGaussianas.shape [1]):
+                arrayGaussianas [row, column] = math.exp (gauss (self.mean, self.variance) * tau)
+        
+        return arrayGaussianas
+    
     def geraArrayDeVariaveisGaussianas (self, shape):
         arrayGaussianas = np.zeros (shape)
         for index in range(arrayGaussianas.shape[0]):
             arrayGaussianas [index] = gauss (self.mean, self.variance)
+        
+        return arrayGaussianas
+    
+    def geraExponencialDeGaussianasArray (self, shape, tau):
+        arrayGaussianas = np.zeros (shape)
+        for index in range(arrayGaussianas.shape[0]):
+            arrayGaussianas [index] = math.exp (gauss (self.mean, self.variance) * tau)
         
         return arrayGaussianas
         
@@ -53,8 +68,8 @@ class SeletorNatural:
         novoSigma = []
         for listaWeights in jogador.listaSigmas:
             novaListaWeights = []
-            changedGaussWeights = self.geraMatrizDeVariaveisGaussianas (listaWeights[0].shape[0], listaWeights[0].shape[1])
-            changedGaussBiases = self.geraArrayDeVariaveisGaussianas (listaWeights[1].shape[0])
+            changedGaussWeights = self.geraExponencialDeGaussianas (listaWeights[0].shape[0], listaWeights[0].shape[1], tau)
+            changedGaussBiases = self.geraExponencialDeGaussianasArray (listaWeights[1].shape[0], tau)
             novoWeights = np.multiply (listaWeights [0], changedGaussWeights)
             novoBiases = np.multiply (listaWeights [1], changedGaussBiases)
             novaListaWeights.append (novoWeights)
