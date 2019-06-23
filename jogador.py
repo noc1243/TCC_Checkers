@@ -148,10 +148,13 @@ class Jogador:
         return tabuleiroEscolhido
     
     def calculaScoreTabuleiroMinMax (self, tabuleiro, numeroDaJogada, jogadorJogando, alpha, beta):
-        tabuleiro.inverteVisaoTabuleiro ()
-        
         if (numeroDaJogada == self.numeroJogadasAFrente):
-            return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+            if (jogadorJogando):
+                return (-1)*self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+            else:
+                return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+        
+        tabuleiro.inverteVisaoTabuleiro ()
         
         jogadaForcada = False
         
@@ -181,16 +184,16 @@ class Jogador:
             if (not tabuleiro is None):
                 if (jogadorJogando):
                     
-                    best = max (best, self.calculaScoreTabuleiroMinMax (copy.deepcopy(tabuleiro), numeroDaProximaJogada, not jogadorJogando, alpha, beta))
+                    best = max (best, self.calculaScoreTabuleiroMinMax (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), False, copy.deepcopy(alpha), copy.deepcopy(beta)))
                     alpha = max (alpha, best)
                     if (beta <= alpha):
                         break
                 else:
-                    best = min (best, self.calculaScoreTabuleiroMinMax (copy.deepcopy(tabuleiro), numeroDaProximaJogada, not jogadorJogando, alpha, beta))
+                    best = min (best, self.calculaScoreTabuleiroMinMax (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), True, copy.deepcopy(alpha), copy.deepcopy(beta)))
                     beta = min (beta, best)
                     if (beta <= alpha):
                         break
-                    
+        
         return best
     
     def selecionaMelhorJogadaMinMax (self, tabuleiro, numeroDaJogada):

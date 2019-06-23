@@ -22,7 +22,7 @@ class VariaveisGlobais :
                                    [0, -1, 0, -1, 0, 0, 0, 0], 
                                    [0, 0, 0, 0, 0, 0, 0, 0], 
                                    [0, -1, 0, -1, 0, 0, 0, 0], 
-                                   [1, 0, 9, 0, 0, 0, 0, 0], 
+                                   [0, 0, 9, 0, 0, 0, 0, 0], 
                                    [0, 0, 0, 0, 0, 0, 0, 0], 
                                    [0, 0, 0, 0, 0, 0, 0, 0]])
     
@@ -58,3 +58,7 @@ class VariaveisGlobais :
     DAMA = 9
     DAMAINIMIGA = -9
     CASAVAZIA = 0
+    
+    ARQUIVO_RESULTADOS_SELETOR = ".\\resultados_treinamento\\resultados_seletor.txt"
+    ARQUIVO_RESULTADOS_CAMPEONATO = ".\\resultados_treinamento\\resultados_campeonato.txt"
+    ARQUIVO_RESULTADOS_CAMPEONATO_ENTRE_TIMES = ".\\resultados_treinamento\\resultados_campeonato_entre_times.txt"

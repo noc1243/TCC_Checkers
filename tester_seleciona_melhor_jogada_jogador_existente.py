@@ -15,11 +15,11 @@ from keras import initializers
 from keras.models import load_model
 
 
-nomeJogador = "Jogador_cfa7a47e-34de-4384-82c2-d7af7c61e160.h5"
+nomeJogador = "Jogador_ab522a91-9c91-4822-b776-8626f91539f5.h5"
 
 K.clear_session ()
 
-tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_INICIAL)
+tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_4)
 tabuleiro.printaTabuleiro ()
 
 #Tester selecionaMelhorJogada
@@ -28,7 +28,7 @@ file = open (".\melhores_pesos\\" + nomeJogador, "r")
 peso = float (file.read())
     
 jogador1 = Jogador (debug = True, model = model, valorDama = peso)
-jogador1.printaPesos()
+#jogador1.printaPesos()
     
     
 tabuleiro2 = jogador1.selecionaMelhorJogadaMinMax (tabuleiro, 0)

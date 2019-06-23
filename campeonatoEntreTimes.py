@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun 15 22:03:15 2019
+Created on Fri Jun 21 22:40:58 2019
 
-@author: nocera
+@author: diogo
 """
 
 import numpy as np
@@ -11,17 +11,18 @@ from variaveisGlobais import VariaveisGlobais
 import threading
 import time
 
-class Campeonato:
+class CampeonatoEntreTimes:    
     
     numeroRodadasNoCampeonato = 5
     
-    def __init__ (self, listaJogadores):
-        self.listaJogadores = listaJogadores
+    def __init__ (self, listaJogadoresOriginais, listaJogadoresNovos):
+        self.listaJogadoresOriginais = listaJogadoresOriginais
+        self.listaJogadoresNovos = listaJogadoresNovos
         
-        self.fileResultados = open (str(VariaveisGlobais.ARQUIVO_RESULTADOS_CAMPEONATO), "a")
+        self.fileResultados = open (str(VariaveisGlobais.ARQUIVO_RESULTADOS_CAMPEONATO_ENTRE_TIMES), "a")
         
     def criaListaDeJogos (self):
-        tamanhoArray = len (self.listaJogadores)
+        tamanhoArray = len (self.listaJogadoresOriginais)
         listaDeJogos = np.zeros (tamanhoArray)
         
         for index in range (0, tamanhoArray):
@@ -47,13 +48,14 @@ class Campeonato:
         results.append (resultadoString)
         
     def criaPartidas (self):
-        listaDeJogos = self.criaListaDeJogos ()
+        jogadoresOriginais = self.criaListaDeJogos ()
+        jogadoresNovos = self.criaListaDeJogos ()
         listaPartidas = []
         
         
-        for index in range (0, len (listaDeJogos), 2):
-            jogador1 = self.listaJogadores [int(listaDeJogos [index])]
-            jogador2 = self.listaJogadores [int(listaDeJogos [index + 1])]
+        for index in range (len (jogadoresOriginais)):
+            jogador1 = self.listaJogadoresOriginais [int(jogadoresOriginais [index])]
+            jogador2 = self.listaJogadoresNovos [int(jogadoresNovos [index])]
             partida = Partida (jogador1, jogador2)
             partida2 = Partida (jogador2, jogador1)
             listaPartidas.append (partida)
@@ -67,7 +69,7 @@ class Campeonato:
         listaPartidas = self.criaPartidas ()
 
         print ("Comecando as partidas!")        
-        self.fileResultados.write ("Comecando as partidas!\n")
+        self.fileResultados.write ("Comecando as partidas\n")
         threads = []
         results = []
         for partida in listaPartidas:
@@ -76,7 +78,7 @@ class Campeonato:
             t = threading.Thread(target=self.iniciaJogo, args=(partida, results,))
             threads.append (t)
             t.start ()
-            time.sleep (0.1)
+            time.sleep (0.5)
             
         indexPartidas = 0    
         print ("Esperando partidas terminarem!")
@@ -102,16 +104,26 @@ class Campeonato:
             
     def iniciaCampeonato (self):
         print ("Iniciando Campeonato!!")
-        self.fileResultados.write ("Iniciando Campeonato!!\n")
+        self.fileResultados.write ("iniciando Campeonato!!\n")
         for index in range (self.numeroRodadasNoCampeonato):
             self.iniciaRodada ()
             
         index = 0
-        for jogador in self.listaJogadores:
+        print ("Jogadores Originais:")
+        self.fileResultados.write ("Jogadores Originais:\n")
+        for jogador in self.listaJogadoresOriginais:
+            print ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)))
+            self.fileResultados.write ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)) + "\n")
+            index += 1
+        
+        print ("Jogadores Novos:")
+        self.fileResultados.write ("Jogadores Novos:\n")
+        for jogador in self.listaJogadoresNovos:
             print ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)))
             self.fileResultados.write ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)) + "\n")
             index += 1
             
         self.fileResultados.close ()
         
-            
+    def __del__ (self):
+        self.fileResultados.close ()

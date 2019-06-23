@@ -14,13 +14,13 @@ class PartidaHumano:
     
     numeroMaximoDeJogadas = 100
     
-    def __init__ (self, jogadorHumano, jogador, debug = False):
+    def __init__ (self, jogadorHumano, jogador, turnoJogador1 = True, debug = False):
         self.tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_INICIAL)
         
         self.jogadorHumano = jogadorHumano
         self.jogador = jogador
         
-        self.turnoJogador1 = True
+        self.turnoJogador1 = turnoJogador1
         
         self.debug = debug
         

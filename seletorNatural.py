@@ -8,12 +8,15 @@ Created on Sun Jun 16 10:27:58 2019
 import math
 import copy
 import numpy as np
+import gc
 from random import gauss
 from jogador import Jogador
 from campeonato import Campeonato
+from campeonatoEntreTimes import CampeonatoEntreTimes
 from keras.models import Sequential
 from keras.layers import Dense
 from keras import backend as K
+from variaveisGlobais import VariaveisGlobais
 
 class SeletorNatural:
     
@@ -25,11 +28,16 @@ class SeletorNatural:
     
     numeroJogadoresIniciais = 15
     
-    fitMaximoJogador = 5000
+    fitMaximoJogador = 200
     fitRealJogador = 8
+    
+    tempoEntreVerificacoes = 100
     
     def __init__ (self, numeroDeGeracoesTreinamento):
         self.numeroDeGeracoesTreinamento = numeroDeGeracoesTreinamento
+        self.listaJogadoresBase = []
+        
+        self.fileResultados = open (VariaveisGlobais.ARQUIVO_RESULTADOS_SELETOR, "w+")
         
     def geraMatrizDeVariaveisGaussianas (self, shape1, shape2):
         arrayGaussianas = np.zeros ((shape1, shape2))
@@ -101,7 +109,11 @@ class SeletorNatural:
         for index in range (self.numeroJogadoresIniciais):
             jogador = Jogador ()
             listaJogadores.append (jogador)
+            self.listaJogadoresBase.append (copy.deepcopy(jogador))
+            jogador.salvaModelo ()
             print ("Jogador criado: " + str (jogador.nomeJogador))
+            self.fileResultados.write ("Jogador criado: " + str (jogador.nomeJogador) + "\n")
+            
         
         return listaJogadores
     
@@ -111,6 +123,8 @@ class SeletorNatural:
             filho = self.repdroduzJogador (copy.deepcopy (jogador))
             listaFilhosJogadores.append (filho)
             print ("Filho criado: " + str (filho.nomeJogador))
+            self.fileResultados.write ("Filho criado: " + str (filho.nomeJogador) + "\n")
+            
         
         return listaFilhosJogadores
     
@@ -139,6 +153,8 @@ class SeletorNatural:
         listaJogadores = self.limpaMemoriaDosModelos (listaJogadores, jogadoresParaSeremDestruidos)
         
         print ("Jogadores Selecionados!")
+        self.fileResultados.write ("Jogadores Selecionados!\n")
+        
         return listaJogadores
     
     def limpaScoreJogadores (self, listaJogadores):
@@ -151,35 +167,98 @@ class SeletorNatural:
     
     def rodaGeracao (self, listaJogadores):
         print ("Criando filhos de uma geracao!")
+        self.fileResultados.write ("Criando filhos de uma geracao!\n")
+        
         listaFilhos = self.geraFilhosDosJogadores (listaJogadores)
         listaJogadores.extend (listaFilhos)
         
         print ("Iniciando campeonato!")
+        self.fileResultados.write ("Iniciando campeonato!\n")
+        
         campeonato = Campeonato (listaJogadores)
         campeonato.iniciaCampeonato ()
         
         print ("Selecionando os melhores Jogadores!")
+        self.fileResultados.write ("Selecionando os melhores Jogadores!\n")
+        
         listaJogadores = self.selecionaMelhoresJogadores (listaJogadores)
         self.limpaScoreJogadores (listaJogadores)
         self.somaGeracoesVivoJogador (listaJogadores)
         
         return listaJogadores
+    
+    def copiaListaJogadores (self, listaJogadores):
+        novaListaJogadores = []
+        for jogador in listaJogadores:
+            novaListaJogadores.append (copy.deepcopy(jogador))
+            
+        return novaListaJogadores
+    
+    def carregaOsModelosDosJogadoresBase (self):
+        for jogador in self.listaJogadoresBase:
+            jogador.carregaModelo()
+    
+    def rodaCampeonatoEntreTimes (self, listaJogadores):
+        print ("Iniciando campeonato entre os times base para verificar a qualidade do treinamento!")
+        self.fileResultados.write ("Iniciando campeonato entre os times base para verificar a qualidade do treinamento!")
+        
+        self.carregaOsModelosDosJogadoresBase ()
+        self.limpaScoreJogadores (self.listaJogadoresBase)
+        
+        for jogador in listaJogadores:
+            jogador.carregaModelo ()
+        
+        campeonatoEntreTimes = CampeonatoEntreTimes (self.listaJogadoresBase, listaJogadores)
+        campeonatoEntreTimes.iniciaCampeonato ()
+        
+        self.listaJogadoresBase.extend (listaJogadores)
+        self.listaJogadoresBase = self.selecionaMelhoresJogadores(self.listaJogadoresBase)
+        self.limpaScoreJogadores (self.listaJogadoresBase)
+        self.limpaScoreJogadores (listaJogadores)
         
     def iniciaTreinamento (self):
         print ("Criando os jogadores iniciais!")
+        self.fileResultados.write ("Criando os jogadores iniciais!\n")
+        
         listaJogadores = self.geraJogadoresIniciais ()
         
         indexGeracao = 1
         for geracao in range (self.numeroDeGeracoesTreinamento):
+            self.fileResultados.close ()
+            self.fileResultados = open (VariaveisGlobais.ARQUIVO_RESULTADOS_SELETOR, "a")
+            
+            gc.collect ()
+            
             print ("Rodando Geracao: " + str(indexGeracao))
+            self.fileResultados.write ("Rodando Geracao: " + str(indexGeracao) + "\n")
+            
             listaJogadores = self.rodaGeracao (listaJogadores)
             indexGeracao += 1
             print ("Fim da Geracao!")
+            self.fileResultados.write ("Fim da Geracao!\n")
+            
             print ("")
+            self.fileResultados.write ("\n")
+            
+            
+            if (indexGeracao % self.tempoEntreVerificacoes == 0 and indexGeracao > 0):
+                print ("Verificando se os jogadores melhoraram!")
+                self.fileResultados.write ("Verificando se os jogadores melhoraram!\n")
+                
+                self.rodaCampeonatoEntreTimes (self.copiaListaJogadores(listaJogadores))
+                
+                for jogador in listaJogadores:
+                    jogador.carregaModelo ()
+            
             for jogador in listaJogadores:
                 if (jogador.totalPoints >= self.fitMaximoJogador and (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo) > self.fitRealJogador)):
                     print ("Grande jogador selecionado: " + str (jogador.nomeJogador))
+                    self.fileResultados.write ("Grande jogador selecionado: " + str (jogador.nomeJogador) + "\n")
+                    
                     print ("Terminando a rodada de geracoes!")
+                    self.fileResultados.write ("Terminando a rodade de geracoes!\n")
+                    
                     break
         
         K.clear_session ()
+        self.fileResultados.close ()

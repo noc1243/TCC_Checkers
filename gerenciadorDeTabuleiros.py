@@ -222,7 +222,7 @@ class GerenciadorDeTabuleiros:
             if (not novoTabuleiro is None):
                 listaMovimentos.append (movimento3)
                 listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
-                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row - 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row + 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
                 if (not listaDeListaDeMovimentosResultado is None):
                     listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
@@ -234,7 +234,7 @@ class GerenciadorDeTabuleiros:
             if (not novoTabuleiro is None):
                 listaMovimentos.append (movimento4)
                 listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
-                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row - 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row + 2, column + 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
                 if (not listaDeListaDeMovimentosResultado is None):
                     listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
