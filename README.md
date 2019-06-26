@@ -21,7 +21,8 @@ O problema designado é fazer com que uma máquina consiga jogar damas de forma 
 <p>Seguindo o paper citado acima, cada geração roda um "campeonato" em que 30 redes neurais, <b>Jogadores</b> , jogam 10 partidas com jogadores adversários selecionados de forma aleatória. Cada vitória dá ao jogador 1 ponto, cada derrota -2 pontos e cada empate 0 pontos. Realizados todos os jogos, a pontuação total dos jogadores é computada e os 15 melhores jogadores são selecionados para terem 15 filhos que competirão também na próxima geração.</p>
 
 
-<img src="https://github.com/noc1243/TCC_Checkers/blob/master/imagens/CicloDeSelecao.png"</img>
+![alt text](https://github.com/noc1243/TCC_Checkers/blob/master/imagens/CicloDeSelecao.png)
+
 
 <p>A rede neural utilizada foi a mesma mostrada no paper: 91x40x10x1. Esta rede foi decidia através da reprodução do mesmo problema em menor escala: ensinando um computador a jogar o Jogo da Velha.</p>
 <p>Na avaliação de qual jogada seria a melhor para ser realizada pelo <b>Jogador</b>, são olhados alguns movimentos a frente, <b>ply</b>. O algoritmo usado nessa decisão é um de MinMax Alpha Beta.</p>
