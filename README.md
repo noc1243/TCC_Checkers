@@ -32,11 +32,11 @@ Dentre as possíveis causas para o problema estão:
 1. A pontuação de empate está fazendo com que os jogadores aprendam a **não perder** ao invés de ganhar. Isso pode estar causando um ciclo entre as gerações;
 1. Olhar apenas 2 jogadas a frente pode acabar causando um limite no que os jogadores podem aprender, visto que nenhum jogador bom de fato consegue jogar bem sem olhar diversas jogadas a frente.
 
-Ao avaliar em um jogo contra um desses jogadores selecionados na 80ª geração, observou-se que, por mais que ele não seja um grande jogador, que joga a nível de especialista, o mesmo faz jogadas que fazem sentido:
-1. Impedir que uma de suas peças seja comida "de graça";
-1. Tentar fazer damas;
-1. Quando possível, fazer movimentos para "comer" duas peças ao invés de uma;
-1. Quando perdendo, fazer toda e qualquer jogada possível pra obter um empate;
+Ao realizar um jogo contra um desses jogadores selecionados na 80ª geração, observou-se que, por mais que ele não seja um grande jogador, jogando a nível de especialista, o mesmo faz jogadas que:
+1. Impedem que uma de suas peças seja comida "de graça";
+1. Tentam fazer damas;
+1. Quando possível, fazem movimentos para "comer" duas peças ao invés de uma;
+1. Quando perdendo, fazem toda e qualquer jogada possível pra obter um empate;
 
 ## Próximos Objetivos
 1. Como olhar 2 jogadas a frente parece não estar dando resultados melhores no treinamento, um treinamento que olha 4 jogadas a frente está sendo realizado.
