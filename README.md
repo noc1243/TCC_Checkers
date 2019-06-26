@@ -30,7 +30,7 @@ Fora isso, estão sendo realizadas partidas entre uma pessoa e o computador para
 Olhando 2 jogadas a frente e treinando até a 100ª geração, observou-se que, até a 80ª geração, houve uma melhora significativa dos jogadores em relação aos anteriores. Após este ponto, os jogadores parecem não estar mais melhorando.     
 Dentre as possíveis causas para o problema estão:
 1. A pontuação de empate está fazendo com que os jogadores aprendam a **não perder** ao invés de ganhar. Isso pode estar causando um ciclo entre as gerações;
-1. Olhar apenas 2 jogadas a frente, pode acabar causando um limite no que os jogadores podem aprender, visto que nenhum jogador bom de fato consegue jogar bem sem olhar diversas jogadas a frente.
+1. Olhar apenas 2 jogadas a frente pode acabar causando um limite no que os jogadores podem aprender, visto que nenhum jogador bom de fato consegue jogar bem sem olhar diversas jogadas a frente.
 
 Ao avaliar em um jogo contra um desses jogadores selecionados na 80ª geração, observou-se que, por mais que ele não seja um grande jogador, que joga a nível de especialista, o mesmo faz jogadas que fazem sentido:
 1. Impedir que uma de suas peças seja comida "de graça";
