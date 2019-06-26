@@ -50,4 +50,4 @@ Para jogar com um dos jogadores selecionados, basta rodar o código `partidaEntr
 
 **Importante**: Para rodar a versão desse código que se encontra na branch `Multi_Thread` não é possível usar interpretadores, como o **Spyder**. O Código precisa ser rodado via cli para funcionar.
 
-Mais detalhes e exemplos de uso serão mostrados na Wiki do projeto.
+Mais detalhes e exemplos de uso serão mostrados na <a href="https://github.com/noc1243/TCC_Checkers/wiki">Wiki</a> do projeto.
