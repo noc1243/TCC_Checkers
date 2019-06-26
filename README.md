@@ -18,7 +18,7 @@ Em seguida, esses 15 jogadores geram 15 filhos, um para cada jogador. Terminada 
 Para realizar tal objetivo, inicialmente, cria-se uma rede neural que classifique o quão bom um tabuleiro é para um jogador. Um array que representa esse tabuleiro é enviado como entrada para a rede neural multicamadas 91x40x10x1 que dá como uma saída um número entre -1 e 1. Quanto maior o número, melhor a situação do tabuleiro é para o jogador. Quanto menor é o número, pior a situação é. A decisão de qual a melhor jogada é feita a partir da pontuação dada para cada jogada possível de um tabuleiro. São olhadas *n* jogadas a frente utilizando um algoritmo de MinMax Alpha Beta para isso.       
 Além disso, foram usados dois tipos de mutação na criação de cada filho:
 1. Os pesos e biases são variados;
-1. A representação da Dama é mudada.
+1. A representação da Dama no array é mudada.
 
 Para avaliar os resultados do algoritmo genético, a cada 20 gerações, os jogadores selecionados jogam com os jogadores de 20 gerações atrás num campeonato e a pontuação de cada jogador no final é observada.
 
