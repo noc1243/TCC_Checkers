@@ -22,7 +22,7 @@ class Jogador:
     peakVal = 0.2
     sigma = 0.05
     
-    numeroJogadasAFrente = 2
+    numeroJogadasAFrente = 4
     
     numeroDePossiveisComidasParaNaoConsiderarJogadaForcada = 3
     

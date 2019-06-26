@@ -176,7 +176,9 @@ class SeletorNatural:
         self.fileResultados.write ("Iniciando campeonato!\n")
         
         campeonato = Campeonato (listaJogadores)
-        campeonato.iniciaCampeonato ()
+        fileResultadosCampeonato = open (VariaveisGlobais.ARQUIVO_RESULTADOS_CAMPEONATO, "a")
+        fileResultadosCampeonato.write (campeonato.iniciaCampeonato ())
+        fileResultadosCampeonato.close ()
         
         print ("Selecionando os melhores Jogadores!")
         self.fileResultados.write ("Selecionando os melhores Jogadores!\n")

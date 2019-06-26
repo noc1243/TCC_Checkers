@@ -8,17 +8,19 @@ Created on Sat Jun 15 22:03:15 2019
 import numpy as np
 from partida import Partida
 from variaveisGlobais import VariaveisGlobais
-import threading
+import multiprocessing
 import time
 
 class Campeonato:
+    
+    queue = multiprocessing.Queue ()
     
     numeroRodadasNoCampeonato = 5
     
     def __init__ (self, listaJogadores):
         self.listaJogadores = listaJogadores
         
-        self.fileResultados = open (str(VariaveisGlobais.ARQUIVO_RESULTADOS_CAMPEONATO), "a")
+        self.stringResultados = ""
         
     def criaListaDeJogos (self):
         tamanhoArray = len (self.listaJogadores)
@@ -33,7 +35,7 @@ class Campeonato:
         
         return listaDeJogos
     
-    def iniciaJogo (self, partida, results):
+    def iniciaJogo (self, partida, queue, index):
         resultadoString = ""
         result = partida.realizaPartida ()
         
@@ -44,7 +46,8 @@ class Campeonato:
         else:
             resultadoString = str(partida.jogador2.nomeJogador) + " venceu!"
         
-        results.append (resultadoString)
+        queue.put ([resultadoString, result, index])
+        return resultadoString
         
     def criaPartidas (self):
         listaDeJogos = self.criaListaDeJogos ()
@@ -63,30 +66,40 @@ class Campeonato:
         
     def iniciaRodada (self):
         print ("Iniciando Rodada!")
-        self.fileResultados.write ("Iniciando Rodada!\n")
+        self.stringResultados += " Iniciando Rodada!\n"
         listaPartidas = self.criaPartidas ()
 
-        print ("Comecando as partidas!")        
-        self.fileResultados.write ("Comecando as partidas!\n")
+        print ("Comecando as partidas!")     
+        self.stringResultados += " Comecando as partidas!\n"
+        index = 0
         threads = []
-        results = []
         for partida in listaPartidas:
             print (str(partida.jogador1.nomeJogador) + " VS " + str(partida.jogador2.nomeJogador))
-            self.fileResultados.write (str(partida.jogador1.nomeJogador) + " VS " + str(partida.jogador2.nomeJogador) + "\n")
-            t = threading.Thread(target=self.iniciaJogo, args=(partida, results,))
+            self.stringResultados += " " + str(partida.jogador1.nomeJogador) + " VS " + str(partida.jogador2.nomeJogador) + "\n"
+            t = multiprocessing.Process(target=self.iniciaJogo, args=(partida, self.queue, index,))
             threads.append (t)
             t.start ()
             time.sleep (0.1)
+            index += 1
             
         indexPartidas = 0    
         print ("Esperando partidas terminarem!")
-        self.fileResultados.write ("Esperando partidas terminarem!\n")
+        self.stringResultados += " Esperando partidas terminarem!\n"
         for thread in threads:
             thread.join ()
-            print (results [indexPartidas])
-            self.fileResultados.write (results [indexPartidas] + "\n")
             indexPartidas += 1
             
+        self.queue.put (None)
+        for q in iter(self.queue.get, None):
+            if (q [1] == 1):
+                listaPartidas [int(q [2])].jogador1.ganhaPartida ()
+                listaPartidas [int(q [2])].jogador2.perdePartida ()
+            elif (q [1] == -1):
+                listaPartidas [int(q [2])].jogador1.perdePartida ()
+                listaPartidas [int(q [2])].jogador2.ganhaPartida ()
+            else:
+                listaPartidas [int(q [2])].jogador1.empataPartida ()
+                listaPartidas [int(q [2])].jogador2.empataPartida ()
         
 #        CODIGO SINGLE-THREAD FUNIONANDO!!
 #        for partida in listaPartidas:
@@ -102,16 +115,16 @@ class Campeonato:
             
     def iniciaCampeonato (self):
         print ("Iniciando Campeonato!!")
-        self.fileResultados.write ("Iniciando Campeonato!!\n")
+        self.stringResultados += " Iniciando Campeonato!!\n"
         for index in range (self.numeroRodadasNoCampeonato):
             self.iniciaRodada ()
             
         index = 0
         for jogador in self.listaJogadores:
             print ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)))
-            self.fileResultados.write ("Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)) + "\n")
+            self.stringResultados += " Score " + str(jogador.nomeJogador) + " " + str(index) + ": " + str(jogador.currentPoints) + " Geracao Jogador: " + str (jogador.geracao) + " Pontos totais do jogador: " + str (jogador.totalPoints) + " Fit Real do jogador: " + str (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo)) + "\n"
             index += 1
             
-        self.fileResultados.close ()
+        return self.stringResultados
         
             
