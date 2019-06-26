@@ -100,6 +100,9 @@ class Campeonato:
             else:
                 listaPartidas [int(q [2])].jogador1.empataPartida ()
                 listaPartidas [int(q [2])].jogador2.empataPartida ()
+                
+            self.stringResultados += " " + q[0] + "\n"
+            print (q[0])
         
 #        CODIGO SINGLE-THREAD FUNIONANDO!!
 #        for partida in listaPartidas:
