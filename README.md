@@ -9,7 +9,7 @@ without human expertise. IEEE Transactions on Evolutionary Computation,
 5(4):422–428, 2001.`
 
 ## Metodologia
-A solução utilizada para realizar esse treinamento de forma não supervisionada é usar um algoritmo genético que, através de gerações, selecionará uma rede neural para jogar Damas. Nessa seleção natural, 30 jogadores jogam entre si num campeonato.    
+A solução utilizada para realizar esse treinamento de forma não supervisionada é usar um algoritmo genético que, através de várias gerações, selecionará uma rede neural para jogar Damas. Nessa seleção natural, 30 jogadores jogam entre si num campeonato.    
 No campeonato, cada vitória dá 1 ponto ao jogador. A cada derrota, ele perde 2 pontos. Cada empate dá 0 pontos. Ao final do campeonato, os 15 jogadores com maior pontuação são selecionados.          
 Em seguida, esses 15 jogadores geram 15 filhos, um para cada jogador. Terminada esta etapa, a seleção natural começa novamente, com os novos 15 jogadores selecionados, repetindo o ciclo até que um bom jogador seja criado.         
 
