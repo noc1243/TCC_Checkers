@@ -24,7 +24,7 @@ Para avaliar os resultados do algoritmo genético, a cada 20 gerações, os joga
 
 ![alt text](https://github.com/noc1243/TCC_Checkers/blob/master/imagens/ValidacaoDoTreino.png)
 
-Fora isso, estão sendo realizadas partidas entre uma pessoa e o computador para verificar se as jogadas do computador realmente não estão sendo escolhidas de forma aleatória.
+Fora isso, estão sendo realizadas partidas entre uma pessoa e o computador para verificar se as jogadas do computador realmente não estão sendo escolhidas ao acaso.
 
 ## Resultados até o momento   
 Olhando 2 jogadas a frente e treinando até a 100ª geração, observou-se que, até a 80ª geração, houve uma melhora significativa dos jogadores em relação aos anteriores. Após este ponto, os jogadores parecem não estar mais melhorando.     
