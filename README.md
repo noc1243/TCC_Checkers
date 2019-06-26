@@ -25,7 +25,7 @@ O problema designado é fazer com que uma máquina consiga jogar damas de forma 
 ## Avaliação dos resultados até o momento
 Para avaliar os resultados, no momento atual, a cada 20 gerações, os jogadores selecionados jogam com os jogadores originais e
 a pontuação de cada jogador no final do campeonato é avaliada. Caso os jogadores atuais tenham uma pontuação maior do que a dos originais, isso significa que o algoritmo genético está funcionando corretamente. Feito isso, em 20 gerações futuras, os novos jogadores selecionados jogarão com os selecionados na 20ª geração e assim por diante.    
-Fora isso, estão sendo realizadas partidas entre humanos e os computadores selecionados para verificar se as jogadas do computador realmente estão fazendo sentido.
+Fora isso, estão sendo realizadas partidas entre humanos e os computadores selecionados para verificar se as jogadas do computador realmente fazem sentido.
 
 ### Resultados
 Usando um **ply** de 2 e treinando até a 100ª geração, observou-se que, até a 80ª geração, houve uma melhora significativa dos jogadores em relação aos anteriores. Após este ponto, os jogadores parecem não estar mais melhorando.     
