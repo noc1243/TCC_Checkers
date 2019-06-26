@@ -42,3 +42,10 @@ Ao avaliar em um jogo contra um desses jogadores selecionados na 80ª geração,
 ## Próximos Objetivos
 1. Como o uso de um **ply** de 2 parece não estar dando resultados melhores no treinamento, agora um treinamento que faz o uso de um **ply** de 4 está sendo realizado.
 1. Caso ainda exista a tendência de empate ao invés da busca pela vitória pelos Jogadores, a função de fit será reavalida para punir jogadores que buscam muito o empate ao invés da vitória.
+
+## Usando o projeto
+Para que o projeto rode, no caso a branch `master`só se faz necessário rodar o código `treinamento.py` e que as pastas `modelos` e `pesosDamas` existam no diretório do projeto. Todos os modelos que aparecem no treinamento são salvos na pasta `modelos` e todos os pesos na pasta `pesosDamas`.    
+Existem vários códigos de teste escritos que testam cada "módulo" do projeto caso haja interesse de testar alguma parte específica do código.   
+Para jogar com um dos jogadores selecionados, basta rodar o código `partidaEntreHumanoEComputador.py`. Dentro dele é necessário que você aponte qual jogador deseja jogar com. O modelo desse jogador  deve se encontrar na pasta `melhores_modelos` e o peso deste jogador deve se encontrar na pasta `melhores_pesos`.   
+
+Mais detalhes e exemplos de uso serão mostrados na Wiki do projeto.
