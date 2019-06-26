@@ -1,0 +1,696 @@
+iniciando Campeonato!!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5
+Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5
+Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5
+Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5
+Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5
+Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5
+Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5
+Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5
+Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5
+Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5
+Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5
+Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5
+Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5
+Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5
+Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5
+Esperando partidas terminarem!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+EMPATE!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+EMPATE!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5
+Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5
+Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5
+Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5
+Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5
+Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5
+Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5
+Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5
+Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5
+Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5
+Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5
+Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5
+Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5
+Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5
+Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5
+Esperando partidas terminarem!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+EMPATE!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5
+Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5
+Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5
+Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5
+Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5
+Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5
+Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5
+Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5
+Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5
+Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5
+Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5
+Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5
+Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5
+Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5
+Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5
+Esperando partidas terminarem!
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 venceu!
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5 venceu!
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+EMPATE!
+EMPATE!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5
+Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5
+Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5
+Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5
+Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5
+Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5
+Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5
+Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5
+Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5
+Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5
+Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5
+Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5
+Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5
+Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5
+Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5
+Esperando partidas terminarem!
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 venceu!
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 venceu!
+Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5 venceu!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 venceu!
+Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5
+Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5
+Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5
+Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5
+Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5
+Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5
+Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5
+Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5
+Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5
+Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5
+Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5
+Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5
+Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5
+Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5
+Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5
+Esperando partidas terminarem!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5 venceu!
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 venceu!
+EMPATE!
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Jogadores Originais:
+Score Jogador_5a828343-3e01-445a-920f-d6b330ca54ad.h5 0: -16 Geracao Jogador: 0 Pontos totais do jogador: -16 Fit Real do jogador: -16.0
+Score Jogador_6e1278e5-bde8-46fa-b53f-e33c87434b3a.h5 1: -20 Geracao Jogador: 0 Pontos totais do jogador: -20 Fit Real do jogador: -20.0
+Score Jogador_ed930a4e-6520-4270-a3ea-64a24eb3caf0.h5 2: -11 Geracao Jogador: 0 Pontos totais do jogador: -11 Fit Real do jogador: -11.0
+Score Jogador_07270649-fa1c-470c-a6e0-cb8041376bf1.h5 3: -18 Geracao Jogador: 0 Pontos totais do jogador: -18 Fit Real do jogador: -18.0
+Score Jogador_bdc5696a-c31c-413a-96e3-7ebf59202f6b.h5 4: -16 Geracao Jogador: 0 Pontos totais do jogador: -16 Fit Real do jogador: -16.0
+Score Jogador_156d80a4-65ad-4ae9-b972-1b9027a2f8c7.h5 5: -13 Geracao Jogador: 0 Pontos totais do jogador: -13 Fit Real do jogador: -13.0
+Score Jogador_aa5451d0-afef-4229-b174-6d8619c9d0d2.h5 6: -7 Geracao Jogador: 0 Pontos totais do jogador: -7 Fit Real do jogador: -7.0
+Score Jogador_12319d0a-a1a4-40ad-8b59-6ee9d743d65a.h5 7: -6 Geracao Jogador: 0 Pontos totais do jogador: -6 Fit Real do jogador: -6.0
+Score Jogador_0cbb856d-4bf4-478e-9ab0-9bf879a452e0.h5 8: -6 Geracao Jogador: 0 Pontos totais do jogador: -6 Fit Real do jogador: -6.0
+Score Jogador_9ab6511b-ac2b-4879-968e-cee7e507eddc.h5 9: -12 Geracao Jogador: 0 Pontos totais do jogador: -12 Fit Real do jogador: -12.0
+Score Jogador_69b35815-b5b5-40f3-8d33-953cb1c253e7.h5 10: -18 Geracao Jogador: 0 Pontos totais do jogador: -18 Fit Real do jogador: -18.0
+Score Jogador_14cf3ee8-940b-410f-a3d7-488c906116ca.h5 11: -14 Geracao Jogador: 0 Pontos totais do jogador: -14 Fit Real do jogador: -14.0
+Score Jogador_cb628d8e-54ae-4166-8982-33a366a4c3fa.h5 12: -20 Geracao Jogador: 0 Pontos totais do jogador: -20 Fit Real do jogador: -20.0
+Score Jogador_2297b7dd-9dbd-4985-a39b-e88298e4e34c.h5 13: -13 Geracao Jogador: 0 Pontos totais do jogador: -13 Fit Real do jogador: -13.0
+Score Jogador_c4dfab30-e781-4efd-9464-0d86848c6f15.h5 14: -18 Geracao Jogador: 0 Pontos totais do jogador: -18 Fit Real do jogador: -18.0
+Jogadores Novos:
+Score Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 15: 6 Geracao Jogador: 46 Pontos totais do jogador: 8 Fit Real do jogador: 4.0
+Score Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 16: 5 Geracao Jogador: 43 Pontos totais do jogador: 9 Fit Real do jogador: 3.0
+Score Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 17: 10 Geracao Jogador: 47 Pontos totais do jogador: 11 Fit Real do jogador: 5.5
+Score Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 18: 10 Geracao Jogador: 47 Pontos totais do jogador: 11 Fit Real do jogador: 5.5
+Score Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 19: 8 Geracao Jogador: 46 Pontos totais do jogador: 9 Fit Real do jogador: 3.0
+Score Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 20: 7 Geracao Jogador: 46 Pontos totais do jogador: 8 Fit Real do jogador: 4.0
+Score Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 21: 2 Geracao Jogador: 46 Pontos totais do jogador: 3 Fit Real do jogador: 1.5
+Score Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 22: 2 Geracao Jogador: 45 Pontos totais do jogador: 5 Fit Real do jogador: 1.6666666666666667
+Score Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 23: 6 Geracao Jogador: 45 Pontos totais do jogador: 7 Fit Real do jogador: 3.5
+Score Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 24: 10 Geracao Jogador: 44 Pontos totais do jogador: 12 Fit Real do jogador: 4.0
+Score Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 25: 5 Geracao Jogador: 44 Pontos totais do jogador: 6 Fit Real do jogador: 3.0
+Score Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 26: 6 Geracao Jogador: 46 Pontos totais do jogador: 6 Fit Real do jogador: 3.0
+Score Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 27: 4 Geracao Jogador: 45 Pontos totais do jogador: 4 Fit Real do jogador: 1.3333333333333333
+Score Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 28: 9 Geracao Jogador: 44 Pontos totais do jogador: 8 Fit Real do jogador: 2.0
+Score Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 29: 8 Geracao Jogador: 45 Pontos totais do jogador: 7 Fit Real do jogador: 1.75
+iniciando Campeonato!!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5
+Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5
+Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5
+Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5
+Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5
+Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5
+Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5
+Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5
+Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5
+Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5
+Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5
+Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5
+Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5
+Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5
+Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5
+Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Esperando partidas terminarem!
+Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+EMPATE!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+EMPATE!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5
+Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5
+Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5
+Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5
+Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5
+Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5
+Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5
+Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5
+Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5
+Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5
+Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5
+Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5
+Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5
+Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5
+Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5
+Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Esperando partidas terminarem!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 venceu!
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 venceu!
+EMPATE!
+EMPATE!
+Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5
+Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5
+Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5
+Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5
+Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5
+Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5
+Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5
+Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5
+Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5
+Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5
+Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5
+Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5
+Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5
+Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5
+Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5
+Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Esperando partidas terminarem!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5 venceu!
+Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 venceu!
+Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5 venceu!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+EMPATE!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+EMPATE!
+EMPATE!
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 venceu!
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5
+Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5
+Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5
+Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5
+Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5
+Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5
+Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5
+Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5
+Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5
+Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5
+Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5
+Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5
+Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5
+Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5
+Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5
+Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Esperando partidas terminarem!
+Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5 venceu!
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 venceu!
+Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5 venceu!
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 venceu!
+EMPATE!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Iniciando Rodada!
+Comecando as partidas
+Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 VS Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5
+Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5 VS Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5
+Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 VS Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5
+Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5 VS Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 VS Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5
+Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5 VS Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 VS Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5
+Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5 VS Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 VS Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5
+Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5 VS Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5
+Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 VS Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5
+Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5 VS Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 VS Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5
+Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5 VS Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5
+Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 VS Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5
+Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5 VS Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5
+Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 VS Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5
+Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5 VS Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5
+Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 VS Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5
+Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 VS Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5
+Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 VS Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5
+Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 VS Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5
+Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 VS Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5
+Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5 VS Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5
+Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 VS Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5
+Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5 VS Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 VS Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5
+Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5 VS Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5
+Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 VS Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5
+Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5 VS Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5
+Esperando partidas terminarem!
+Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 venceu!
+Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5 venceu!
+Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 venceu!
+EMPATE!
+EMPATE!
+Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 venceu!
+EMPATE!
+EMPATE!
+Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 venceu!
+Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 venceu!
+Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 venceu!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+EMPATE!
+Jogadores Originais:
+Score Jogador_3c3aee22-804f-486b-a61c-2d6f9f4abcc2.h5 0: 0 Geracao Jogador: 47 Pontos totais do jogador: 11 Fit Real do jogador: 5.5
+Score Jogador_4f4fbcea-d5ce-4114-8ce9-4508d3667be1.h5 1: 5 Geracao Jogador: 47 Pontos totais do jogador: 16 Fit Real do jogador: 8.0
+Score Jogador_2f2dc6f2-17d7-416e-a16f-7926cd951f99.h5 2: -1 Geracao Jogador: 44 Pontos totais do jogador: 11 Fit Real do jogador: 3.6666666666666665
+Score Jogador_b7071d6d-dd1a-41a4-81d2-2a1b414e3182.h5 3: 5 Geracao Jogador: 44 Pontos totais do jogador: 13 Fit Real do jogador: 3.25
+Score Jogador_3ab02301-a2ba-4fbd-bb82-b3f2c04aaa01.h5 4: 2 Geracao Jogador: 46 Pontos totais do jogador: 11 Fit Real do jogador: 3.6666666666666665
+Score Jogador_2a721ee4-32aa-4804-9455-d927c1a97e65.h5 5: 2 Geracao Jogador: 45 Pontos totais do jogador: 9 Fit Real do jogador: 2.25
+Score Jogador_7b1ae4aa-26a7-4cab-a1e1-de3428abdc7a.h5 6: -1 Geracao Jogador: 46 Pontos totais do jogador: 7 Fit Real do jogador: 3.5
+Score Jogador_19bb279d-7321-451f-b546-921a9a1f932c.h5 7: -1 Geracao Jogador: 46 Pontos totais do jogador: 7 Fit Real do jogador: 3.5
+Score Jogador_4c73fe5b-31d3-4d0c-a66d-67be51feb87d.h5 8: 2 Geracao Jogador: 46 Pontos totais do jogador: 8 Fit Real do jogador: 4.0
+Score Jogador_f8448759-a185-4c82-a33d-b3aaa2b86ec1.h5 9: 3 Geracao Jogador: 45 Pontos totais do jogador: 10 Fit Real do jogador: 5.0
+Score Jogador_55bdc8bd-5f73-40ac-9220-7f229be950a6.h5 10: -2 Geracao Jogador: 44 Pontos totais do jogador: 4 Fit Real do jogador: 2.0
+Score Jogador_592ca558-f2d1-46cd-959f-479ff3ebc30f.h5 11: -2 Geracao Jogador: 43 Pontos totais do jogador: 7 Fit Real do jogador: 2.3333333333333335
+Score Jogador_c612cc11-77fc-445f-9b04-9141304550af.h5 12: -5 Geracao Jogador: 45 Pontos totais do jogador: -1 Fit Real do jogador: -0.3333333333333333
+Score Jogador_d3ca04ba-f7a9-4616-a18f-697711a70b80.h5 13: 2 Geracao Jogador: 46 Pontos totais do jogador: 5 Fit Real do jogador: 2.5
+Score Jogador_7767ae96-4229-4054-b43e-914b95ef9ee0.h5 14: 1 Geracao Jogador: 45 Pontos totais do jogador: 6 Fit Real do jogador: 2.0
+Jogadores Novos:
+Score Jogador_1521d7e8-2c41-4733-97c6-af5d08800465.h5 15: -5 Geracao Jogador: 97 Pontos totais do jogador: 8 Fit Real do jogador: 1.3333333333333333
+Score Jogador_5770f6d8-e5b7-435e-96e0-062eecca851f.h5 16: -3 Geracao Jogador: 103 Pontos totais do jogador: 0 Fit Real do jogador: 0.0
+Score Jogador_fae93528-b5a7-4e2c-96e8-ef0627a96fe3.h5 17: -3 Geracao Jogador: 100 Pontos totais do jogador: 6 Fit Real do jogador: 1.0
+Score Jogador_00e0f829-d8f1-41a4-9e96-cbb4b5546f42.h5 18: -5 Geracao Jogador: 104 Pontos totais do jogador: -2 Fit Real do jogador: -0.6666666666666666
+Score Jogador_959f896c-6161-437a-aabf-0b21c94d1547.h5 19: -8 Geracao Jogador: 102 Pontos totais do jogador: -6 Fit Real do jogador: -1.5
+Score Jogador_a9568078-c6ef-48ff-9655-4be206707a71.h5 20: 0 Geracao Jogador: 102 Pontos totais do jogador: 1 Fit Real do jogador: 0.3333333333333333
+Score Jogador_7dbf5e2c-f42e-4112-9118-3b58e5d5ef9f.h5 21: -4 Geracao Jogador: 102 Pontos totais do jogador: -3 Fit Real do jogador: -1.5
+Score Jogador_db5d96c0-3bbe-44f2-ba93-8ea92e3a0f72.h5 22: -4 Geracao Jogador: 98 Pontos totais do jogador: -3 Fit Real do jogador: -1.5
+Score Jogador_f0e5dab9-6e82-4415-97dd-80c83c6b7b83.h5 23: -1 Geracao Jogador: 105 Pontos totais do jogador: -1 Fit Real do jogador: -0.5
+Score Jogador_8243524d-0ddf-48ca-8d01-b182b62a997c.h5 24: 1 Geracao Jogador: 101 Pontos totais do jogador: 5 Fit Real do jogador: 1.25
+Score Jogador_1a136666-9366-40b3-9e82-e4d6dbc5ea48.h5 25: -2 Geracao Jogador: 103 Pontos totais do jogador: -2 Fit Real do jogador: -0.5
+Score Jogador_5ed14b14-0348-4bbe-8783-ed52168ce9e7.h5 26: -7 Geracao Jogador: 102 Pontos totais do jogador: -1 Fit Real do jogador: -0.2
+Score Jogador_2e6e4fbe-a7af-4bfc-a8d3-94059380107f.h5 27: -2 Geracao Jogador: 101 Pontos totais do jogador: -3 Fit Real do jogador: -1.5
+Score Jogador_0dba71fb-f6e7-492a-860d-ccfc5a44ae9e.h5 28: -6 Geracao Jogador: 101 Pontos totais do jogador: -7 Fit Real do jogador: -3.5
+Score Jogador_70f56f70-6980-46fc-9f71-0997cfcda030.h5 29: -4 Geracao Jogador: 104 Pontos totais do jogador: -6 Fit Real do jogador: -3.0
