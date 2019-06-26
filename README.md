@@ -48,4 +48,6 @@ Para que o projeto rode, no caso a branch `master`só se faz necessário rodar o
 Existem vários códigos de teste escritos que testam cada "módulo" do projeto caso haja interesse de testar alguma parte específica do código.   
 Para jogar com um dos jogadores selecionados, basta rodar o código `partidaEntreHumanoEComputador.py`. Dentro dele é necessário que você aponte qual jogador deseja jogar com. O modelo desse jogador  deve se encontrar na pasta `melhores_modelos` e o peso deste jogador deve se encontrar na pasta `melhores_pesos`.   
 
+**Importante**: Para rodar a versão desse código que se encontra na branch `Multi_Thread` não é possível usar interpretadores, como o **Spyder**. O Código precisa ser rodado via cli para funcionar.
+
 Mais detalhes e exemplos de uso serão mostrados na Wiki do projeto.
