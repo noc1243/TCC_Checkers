@@ -1,0 +1,36 @@
+# Projeto Final - Diogo Nocera Magalhães
+
+## Objetivo
+
+O objetivo inicial deste projeto final é reproduzir o paper     
+`K. Chellapilla and D.B. Fogel. Evolving an expert checkers playing program
+without human expertise. IEEE Transactions on Evolutionary Computation,
+5(4):422–428, 2001.`
+
+### Explicando o problema
+
+O problema designado é fazer com que uma máquina consiga jogar damas de forma a jogar tão bem quanto um ser humano ou até melhor.    
+
+
+### Solução utilizada
+<p>Uma possível solução para esse problema seria criar uma rede neural multicamadas que avaliasse o estado  de um tabuleiro após uma
+jogada e, após analisar todas as possíveis jogadas, decidir pela melhor. A princípio, pensa-se no uso de back-propagation para
+treinar essa rede neural, contudo, surge um problema: como decidir qual avaliação um tabuleiro deve ter para que seja feito o 
+back-propagation? Tal solução envolveria o uso de uma quantidade de dados absurda e criação de algumas regras para a avaliação de
+um tabuleiro que necessitam de um especialista em damas.</p>
+<p>Para solucionar este problema, foi usado um algoritmo genético baseado na competição entre seres da mesma espécie. Nessa solução, 
+são criadas várias redes neurais com os pesos e bias iniciados aleatoriamente e estas são colocadas para jogar entre si a cada geração.
+Os melhores jogadores de uma geração são selecionados e, através de mutação, geram filhos que jogarão entre si e com os pais na próxima
+geração.</p>
+<p>Tal solução permite que essas redes neurais fiquem melhores no jogo de damas a cada geração que passa sem que seja necessária
+uma avaliação das jogadas por um ser humano.</p>
+
+### Detalhando a solução
+<p>Seguindo o paper citado acima, cada geração roda um "campeonato" em que 30 redes neurais, <b>Jogadores</b> , jogam 10 partidas com
+jogadores adversários selecionados de forma aleatória. Cada vitória dá ao jogador 1 ponto, cada derrota -2 pontos e cada empate 0
+pontos. Realizados todos os jogos, a pontuação total dos jogadores é computada e os 15 melhores jogadores são selecionados para
+terem 15 filhos que competirão também na próxima geração.</p>
+<p>A rede neural utilizada foi a mesma mostrada no paper: 91x40x10x1. Esta rede foi decidia através da reprodução do mesmo problema
+em menor escala ensinando um computador a jogar o Jogo da Velha.</p>
+<p>Na avaliação de qual jogada seria a melhor para ser realizada pelo <b>Jogador</b> são olhados alguns movimentos a frente, <b>ply</b>.
+O algoritmo usado nessa decisão é um de MinMax Alpha Beta</p>
