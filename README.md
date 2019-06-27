@@ -19,7 +19,7 @@ Além disso, foram usados dois tipos de mutação na criação de cada filho:
 1. Os pesos e biases são variados;
 1. A representação da Dama no array é mudada.
 
-Para avaliar os resultados do algoritmo genético, a cada 20 gerações, os jogadores selecionados jogam com os jogadores de 20 gerações atrás num campeonato e a pontuação de cada jogador no final é observada.
+Para avaliar os resultados do algoritmo genético a seguinte metodologia está sendo utilizada: de 20 em 20 gerações os jogadores atualmente selecionados jogam com os jogadores de validação. Ao final a pontuação de cada jogador é observada e os jogadores atualmente selecionados se tornam os novos jogadores de validação. Os jogadores de validação são inicializados com os primeiros jogadores criados no início do treinamento.
 
 ![alt text](https://github.com/noc1243/TCC_Checkers/blob/master/imagens/ValidacaoDoTreino.png)
 
