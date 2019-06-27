@@ -2,7 +2,7 @@
 
 ## Introdução e Objetivo do Projeto
 
-Neste projeto tentamos ensinar uma rede neural a jogar Damas tão bem quanto ou melhor que um ser humano. O intuito final do projeto é conseguir esse feito sem que haja a necessidade de utilizar alguém com expertise em Damas para ajudar no treinamento do computador. Ou seja, será feito um treinamento não supervisionado.       
+Neste projeto tentamos ensinar uma rede neural a jogar Damas tão bem quanto ou melhor que um ser humano. O intuito final do projeto é conseguir esse feito sem que haja a necessidade de utilizar alguém com expertise em Damas para auxiliar no treinamento do computador. Ou seja, será feito um treinamento não supervisionado.       
 Para tal fim, tentou-se reproduzir o paper:     
 `K. Chellapilla and D.B. Fogel. Evolving an expert checkers playing program
 without human expertise. IEEE Transactions on Evolutionary Computation,
