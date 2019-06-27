@@ -27,15 +27,15 @@ Outro meio de avaliação usado foi realizadando partidas entre uma pessoa e o c
 
 ## Resultados até o momento   
 1. Vislumbrando 2 jogadas à frente e treinando até a 100ª geração, observou-se que, até a 80ª geração, houve uma melhora significativa dos jogadores em relação aos anteriores. Após este ponto, os jogadores parecem não estar mais melhorando. Dentre as possíveis causas para este problema estão:
-    * A pontuação de empate está fazendo com que os jogadores aprendam a **não perder** ao invés de ganhar. Isso pode estar causando um ciclo entre as gerações;
-    * Olhar apenas 2 jogadas a frente pode estar limitando os jogadores graças a suas opções limitadas.
+    1. A pontuação de empate está fazendo com que os jogadores aprendam a **não perder** ao invés de ganhar. Isso pode estar causando um ciclo entre as gerações;
+    1. Olhar apenas 2 jogadas a frente pode estar limitando os jogadores graças a suas opções limitadas.
 
 
-2. Ao realizar um jogo contra um desses jogadores selecionados na 80ª geração, observou-se que, o jogador selecionado fazia jogadas que:
-    * Impediam que uma de suas peças fosse capturada facilmente;
-    * Tentavam fazer damas;
-    * Quando possível, faziam movimentos para capturar duas peças ao invés de uma;
-    * Quando perdendo, faziam toda e qualquer jogada possível pra obter um empate;
+1. Ao realizar um jogo contra um desses jogadores selecionados na 80ª geração, observou-se que, o jogador selecionado fazia jogadas que:
+    1. Impediam que uma de suas peças fosse capturada facilmente;
+    1. Tentavam fazer damas;
+    1. Quando possível, faziam movimentos para capturar duas peças ao invés de uma;
+    1. Quando perdendo, faziam toda e qualquer jogada possível pra obter um empate;
 
 ## Próximos Objetivos
 1. Já que vislumbrar 2 jogadas a frente não está trazendo melhores resultados, um treinamento que vislumbra 4 jogadas à frente está sendo realizado.
