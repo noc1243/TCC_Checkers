@@ -150,7 +150,9 @@ class Jogador:
     def calculaScoreTabuleiroMinMax (self, tabuleiro, numeroDaJogada, jogadorJogando, alpha, beta):
         if (numeroDaJogada == self.numeroJogadasAFrente):
             if (jogadorJogando):
-                return (-1)*self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                tabuleiro.inverteVisaoTabuleiro()
+#                return (-1)*self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
             else:
                 return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
         

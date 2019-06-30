@@ -154,7 +154,12 @@ class Tabuleiro:
         for row in range (self.tabuleiroConfiguracao.shape[0]):
             print (str (8 - row) + "   ", end = " ")
             for column in range (self.tabuleiroConfiguracao.shape[1]):
-                print (self.tabuleiroConfiguracao [row, column], end = " ")
+                if (self.tabuleiroConfiguracao [row, column] == VariaveisGlobais.INIMIGO):
+                    print ("x", end = " ")
+                elif (self.tabuleiroConfiguracao [row, column] == VariaveisGlobais.DAMAINIMIGA):
+                    print ("y", end = " ")
+                else:
+                    print (self.tabuleiroConfiguracao [row, column], end = " ")
             print ("")
             
         print ("")
