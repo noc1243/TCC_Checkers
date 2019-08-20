@@ -12,7 +12,9 @@ import gc
 from random import gauss
 from jogador import Jogador
 from campeonato import Campeonato
+from fullCampeonato import FullCampeonato
 from campeonatoEntreTimes import CampeonatoEntreTimes
+from fullCampeonatoEntreTimes import FullCampeonatoEntreTimes
 from keras.models import Sequential
 from keras.layers import Dense
 from keras import backend as K
@@ -21,23 +23,29 @@ from variaveisGlobais import VariaveisGlobais
 class SeletorNatural:
     
     mean = 0
-    variance = 1
+    variance = 2
     
     meanDama = 0
     varianceDama = 0.1
     
     numeroJogadoresIniciais = 15
+    numeroJogadoresNovosGeracao = 5
     
     fitMaximoJogador = 200
     fitRealJogador = 8
     
-    tempoEntreVerificacoes = 100
+    tempoEntreVerificacoes = 20
+    
+    CSV_SEPARATOR = ","
     
     def __init__ (self, numeroDeGeracoesTreinamento):
         self.numeroDeGeracoesTreinamento = numeroDeGeracoesTreinamento
         self.listaJogadoresBase = []
         
         self.fileResultados = open (VariaveisGlobais.ARQUIVO_RESULTADOS_SELETOR, "w+")
+        self.fileListaJogadoresGeracao = open (VariaveisGlobais.ARQUIVO_LISTA_JOGADORES_GERACAO, "w+")
+        
+        self.gravaCabecalho ()
         
     def geraMatrizDeVariaveisGaussianas (self, shape1, shape2):
         arrayGaussianas = np.zeros ((shape1, shape2))
@@ -79,7 +87,11 @@ class SeletorNatural:
             changedGaussWeights = self.geraExponencialDeGaussianas (listaWeights[0].shape[0], listaWeights[0].shape[1], tau)
             changedGaussBiases = self.geraExponencialDeGaussianasArray (listaWeights[1].shape[0], tau)
             novoWeights = np.multiply (listaWeights [0], changedGaussWeights)
+            novoWeights [novoWeights > 0.5] = 0.5
+            novoWeights [novoWeights < 0.005] = 0.005
             novoBiases = np.multiply (listaWeights [1], changedGaussBiases)
+            novoBiases [novoBiases > 0.5] = 0.5
+            novoBiases [novoBiases < 0.005] = 0.005
             novaListaWeights.append (novoWeights)
             novaListaWeights.append (novoBiases)
             novoSigma.append (copy.deepcopy(novaListaWeights))
@@ -98,7 +110,7 @@ class SeletorNatural:
             novaListaWeights.append (layerWeightsBiases)
             layer.set_weights(novaListaWeights)
         
-        novoValorDama = max (min (jogador.valorDama + gauss (self.meanDama, self.varianceDama), 3), 1)
+        novoValorDama = max (min (jogador.valorDama * math.exp((1/math.sqrt(2)) *gauss (self.meanDama, self.varianceDama)), 3), 1)
         
         jogadorFilho = Jogador (novoModel, novoValorDama, novoSigma, jogador.geracao + 1)
         
@@ -117,13 +129,51 @@ class SeletorNatural:
         
         return listaJogadores
     
+    def gravaCabecalho (self):
+        stringCabecalho = ""
+        for i in range (1, self.numeroJogadoresIniciais * 2, 1):
+            stringCabecalho += "jogador" + str (i) + self.CSV_SEPARATOR
+            
+        stringCabecalho = stringCabecalho [:-1]
+        
+        self.fileListaJogadoresGeracao.write (stringCabecalho + "\n")
+        self.fileListaJogadoresGeracao.flush ()
+    
+    def salvaCsvJogadores (self, listaJogadores):
+        listaNomeJogadores = []
+        for jogador in listaJogadores:
+            listaNomeJogadores.append (jogador.nomeJogador)
+            
+        stringListaJogadores = self.CSV_SEPARATOR.join (listaNomeJogadores)
+        
+        self.fileListaJogadoresGeracao.write (stringListaJogadores + "\n")
+        self.fileListaJogadoresGeracao.flush ()
+    
+    def geraJogadoresNovos (self):
+        listaJogadores = []
+        for index in range (self.numeroJogadoresNovosGeracao):
+            jogador = Jogador ()
+            listaJogadores.append (jogador)
+            jogador.salvaModelo ()
+            print ("Jogador criado: " + str (jogador.nomeJogador))
+            self.fileResultados.write ("Jogador criado: " + str (jogador.nomeJogador) + "\n")
+            
+        
+        return listaJogadores
+    
     def geraFilhosDosJogadores (self, listaJogadores):
         listaFilhosJogadores = []
-        for jogador in listaJogadores:
-            filho = self.repdroduzJogador (copy.deepcopy (jogador))
+        for index in range(self.numeroJogadoresIniciais - self.numeroJogadoresNovosGeracao):
+            filho = self.repdroduzJogador (copy.deepcopy (listaJogadores[index]))
             listaFilhosJogadores.append (filho)
             print ("Filho criado: " + str (filho.nomeJogador))
             self.fileResultados.write ("Filho criado: " + str (filho.nomeJogador) + "\n")
+            
+#        for jogador in listaJogadores:
+#            filho = self.repdroduzJogador (copy.deepcopy (jogador))
+#            listaFilhosJogadores.append (filho)
+#            print ("Filho criado: " + str (filho.nomeJogador))
+#            self.fileResultados.write ("Filho criado: " + str (filho.nomeJogador) + "\n")
             
         
         return listaFilhosJogadores
@@ -142,8 +192,53 @@ class SeletorNatural:
             
         return listaJogadores
     
+    def selecionaMelhoresJogadoresPreSelection (self, listaJogadores):
+        jogadoresParaSeremDestruidos = []
+        jogadoresSelecionados = []
+        for index in range (int(len(listaJogadores)/2)):
+            if (listaJogadores [index].currentPoints > listaJogadores [index + self.numeroJogadoresIniciais].currentPoints):
+                jogadoresParaSeremDestruidos.append (listaJogadores [index + self.numeroJogadoresIniciais])
+                jogadoresSelecionados.append (listaJogadores [index])
+            else:
+                jogadoresParaSeremDestruidos.append (listaJogadores [index])
+                jogadoresSelecionados.append (listaJogadores [index + self.numeroJogadoresIniciais])
+                
+        listaJogadores = self.limpaMemoriaDosModelos (jogadoresSelecionados, jogadoresParaSeremDestruidos)
+        
+        print ("Jogadores Selecionados!")
+        self.fileResultados.write ("Jogadores Selecionados!\n")
+        return listaJogadores
+            
+    def selecionaMelhoresJogadoresPreSelectionParcial (self, listaJogadores):
+        jogadoresParaSeremDestruidos = []
+        jogadoresSelecionados = []
+        for index in range (int(len(listaJogadores)/6)):
+            if (listaJogadores [index].currentPoints > listaJogadores [index + self.numeroJogadoresIniciais].currentPoints):
+                jogadoresParaSeremDestruidos.append (listaJogadores [index + self.numeroJogadoresIniciais])
+                jogadoresSelecionados.append (listaJogadores [index])
+            else:
+                jogadoresParaSeremDestruidos.append (listaJogadores [index])
+                jogadoresSelecionados.append (listaJogadores [index + self.numeroJogadoresIniciais])
+                
+        listaJogadores = [x for x in listaJogadores if (x not in jogadoresParaSeremDestruidos and x not in jogadoresSelecionados)]
+        listaJogadores.sort (key=lambda x: (x.currentPoints, x.geracao), reverse=True)
+        
+        
+        jogadoresParaSeremDestruidos.extend (listaJogadores [int((2*self.numeroJogadoresIniciais)/3):])
+        
+        jogadoresSelecionados.extend(listaJogadores [0:int((2*self.numeroJogadoresIniciais)/3)])
+
+        listaJogadores = self.limpaMemoriaDosModelos (jogadoresSelecionados, jogadoresParaSeremDestruidos)
+        
+        print ("Jogadores Selecionados!")
+        self.fileResultados.write ("Jogadores Selecionados!\n")
+        
+        return listaJogadores
+            
     def selecionaMelhoresJogadores (self, listaJogadores):
         listaJogadores.sort (key=lambda x: (x.currentPoints, x.geracao), reverse=True)
+        
+        self.salvaCsvJogadores (listaJogadores)
 #        listaJogadores.sort (key=lambda x: (float (x.totalPoints)/float (x.numeroDeGeracoesVivo), x.geracao), reverse=True)
         
         jogadoresParaSeremDestruidos = listaJogadores [self.numeroJogadoresIniciais:]
@@ -171,6 +266,9 @@ class SeletorNatural:
         
         listaFilhos = self.geraFilhosDosJogadores (listaJogadores)
         listaJogadores.extend (listaFilhos)
+        
+        listaJogadoresNovos = self.geraJogadoresNovos ()
+        listaJogadores.extend (listaJogadoresNovos)
         
         print ("Iniciando campeonato!")
         self.fileResultados.write ("Iniciando campeonato!\n")
@@ -212,7 +310,7 @@ class SeletorNatural:
         campeonatoEntreTimes.iniciaCampeonato ()
         
         self.listaJogadoresBase.extend (listaJogadores)
-        self.listaJogadoresBase = self.selecionaMelhoresJogadores(self.listaJogadoresBase)
+        self.listaJogadoresBase = self.selecionaMelhoresJogadores (self.listaJogadoresBase)
         self.limpaScoreJogadores (self.listaJogadoresBase)
         self.limpaScoreJogadores (listaJogadores)
         
@@ -262,3 +360,4 @@ class SeletorNatural:
         
         K.clear_session ()
         self.fileResultados.close ()
+        self.fileListaJogadoresGeracao.close ()

@@ -160,11 +160,14 @@ class GerenciadorDeTabuleiros:
             novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento1, tabuleiro)
             if (not novoTabuleiro is None):
                 listaMovimentos.append (movimento1)
-                listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+#                listaDeListaDeMovimentos.append (listaMovimentos)
                 listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaOPeaoComer (row - 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
-                if (not listaDeListaDeMovimentosResultado is None):
-                    listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = (copy.deepcopy (listaDeListaDeMovimentosResultado))
+#                    listaDeListaDeMovimentos.remove (listaMovimentos)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                     
                 listaMovimentos.remove (movimento1)
                 
@@ -172,11 +175,14 @@ class GerenciadorDeTabuleiros:
             novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento2, tabuleiro)
             if (not novoTabuleiro is None):
                 listaMovimentos.append (movimento2)
-                listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+#                listaDeListaDeMovimentos.append (listaMovimentos)
                 listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaOPeaoComer (row - 2, column + 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
-                if (not listaDeListaDeMovimentosResultado is None or not listaDeListaDeMovimentosResultado):
-                    listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = (copy.deepcopy (listaDeListaDeMovimentosResultado))
+#                    listaDeListaDeMovimentos.remove (listaMovimentos)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                     
                 listaMovimentos.remove (movimento2)
                 
@@ -200,8 +206,10 @@ class GerenciadorDeTabuleiros:
                 listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                 listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row - 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
-                if (not listaDeListaDeMovimentosResultado is None):
-                    listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                     
                 listaMovimentos.remove (movimento1)
                 
@@ -212,8 +220,10 @@ class GerenciadorDeTabuleiros:
                 listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                 listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row - 2, column + 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
-                if (not listaDeListaDeMovimentosResultado is None or not listaDeListaDeMovimentosResultado):
-                    listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                     
                 listaMovimentos.remove (movimento2)
                 
@@ -224,8 +234,10 @@ class GerenciadorDeTabuleiros:
                 listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                 listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row + 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
-                if (not listaDeListaDeMovimentosResultado is None):
-                    listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                     
                 listaMovimentos.remove (movimento3) 
                 
@@ -236,8 +248,10 @@ class GerenciadorDeTabuleiros:
                 listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                 listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row + 2, column + 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
                 
-                if (not listaDeListaDeMovimentosResultado is None):
-                    listaDeListaDeMovimentos.extend (copy.deepcopy (listaDeListaDeMovimentosResultado))
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
                     
                 listaMovimentos.remove (movimento4) 
         

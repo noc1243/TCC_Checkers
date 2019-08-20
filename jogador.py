@@ -22,7 +22,7 @@ class Jogador:
     peakVal = 0.2
     sigma = 0.05
     
-    numeroJogadasAFrente = 2
+    numeroJogadasAFrente = 0
     
     numeroDePossiveisComidasParaNaoConsiderarJogadaForcada = 3
     
@@ -30,7 +30,7 @@ class Jogador:
     pontosQuandoGanha = 1
     pontosQuandoEmpata = 0
     
-    numeroDeLayers = 4
+    numeroDeLayers = 3
     
     def __init__ (self, model = None, valorDama = None, listaSigmas = None, geracao = 0, debug = False):
         self.listaSigmas = []
@@ -41,7 +41,7 @@ class Jogador:
         self.geracao = geracao
         
         if (valorDama is None):
-            self.valorDama = (randint(10,30) /10.0)
+            self.valorDama = 2.0
         else:
             self.valorDama = valorDama
         
@@ -49,8 +49,8 @@ class Jogador:
         if (model is None):
             initializer = initializers.random_uniform(minval=(-1) * Jogador.peakVal, maxval=Jogador.peakVal)
             self.model = Sequential ()
-            self.model.add (Dense (91, input_dim=32, kernel_initializer=initializer, activation = 'tanh'))
-            self.model.add (Dense (40, kernel_initializer=initializer, activation = 'tanh'))
+            self.model.add (Dense (40, input_dim=32, kernel_initializer=initializer, activation = 'tanh'))
+#            self.model.add (Dense (40, kernel_initializer=initializer, activation = 'tanh'))
             self.model.add (Dense (10, kernel_initializer=initializer, activation = 'tanh'))
             self.model.add (Dense (1, kernel_initializer=initializer, activation = 'tanh'))
             self.model.compile (loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
@@ -148,13 +148,23 @@ class Jogador:
         return tabuleiroEscolhido
     
     def calculaScoreTabuleiroMinMax (self, tabuleiro, numeroDaJogada, jogadorJogando, alpha, beta):
-        if (numeroDaJogada == self.numeroJogadasAFrente):
+        if (numeroDaJogada >= self.numeroJogadasAFrente):
             if (jogadorJogando):
-                tabuleiro.inverteVisaoTabuleiro()
-#                return (-1)*self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
-                return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+#                tabuleiro.inverteVisaoTabuleiro()
+                return (-1)*self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+#                return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
             else:
-                return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                score = self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                tabuleiro.inverteVisaoTabuleiro()
+                gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+                if (not listaTabuleiros or listaTabuleiros is None):
+                    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+                if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                    score = 1.1
+                    
+                return score
         
         tabuleiro.inverteVisaoTabuleiro ()
         

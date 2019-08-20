@@ -48,7 +48,7 @@ class VariaveisGlobais :
                                    [0, 0, 0, 0, 0, 0, -1, 0], 
                                    [0, 0, 0, 0, 0, 0, 0, 0], 
                                    [0, 0, 0, 0, 0, 0, -1, 0], 
-                                   [0, 0, 0, 0, 0, 1, 0, 0], 
+                                   [0, 0, 0, 0, 0, 9, 0, 0], 
                                    [0, 0, 0, 0, 0, 0, -1, 0], 
                                    [0, 0, 0, 0, 0, 1, 0, 0], 
                                    [0, 0, 0, 0, 0, 0, 0, 0]])
@@ -62,3 +62,5 @@ class VariaveisGlobais :
     ARQUIVO_RESULTADOS_SELETOR = ".\\resultados_treinamento\\resultados_seletor.txt"
     ARQUIVO_RESULTADOS_CAMPEONATO = ".\\resultados_treinamento\\resultados_campeonato.txt"
     ARQUIVO_RESULTADOS_CAMPEONATO_ENTRE_TIMES = ".\\resultados_treinamento\\resultados_campeonato_entre_times.txt"
+    ARQUIVO_LISTA_JOGADORES_GERACAO = ".\\resultados_treinamento\\lista_jogadores_geracao.txt"
+    IMAGEM_RESULTADO_TREINAMENTO = ".\\resultados_treinamento\\resultado_treinamento.png"

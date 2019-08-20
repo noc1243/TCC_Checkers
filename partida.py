@@ -103,17 +103,18 @@ class Partida:
         return numeroDePecas
     
     def avaliaTabuleiroDerrota (self):
-        if (self.numeroJogadas >= self.numeroDeJogadasParaChecarTabuleiro):
-            numeroDePecas = self.contaNumeroPecasJogador ()
-            
-            if (numeroDePecas <= self.numeroDePecasParaChecarTabuleiro):
-                numeroDeDiferecaDePecas = self.contaDiferencaDePecas ()
-                if (numeroDeDiferecaDePecas <= (-1) * self.diferencaDePecasParaDarDerrota):
-                    return True
-                else:
-                    return False
-            else:
-                return False
-        else:
-            return False
+        return False
+#        if (self.numeroJogadas >= self.numeroDeJogadasParaChecarTabuleiro):
+#            numeroDePecas = self.contaNumeroPecasJogador ()
+#            
+#            if (numeroDePecas <= self.numeroDePecasParaChecarTabuleiro):
+#                numeroDeDiferecaDePecas = self.contaDiferencaDePecas ()
+#                if (numeroDeDiferecaDePecas <= (-1) * self.diferencaDePecasParaDarDerrota):
+#                    return True
+#                else:
+#                    return False
+#            else:
+#                return False
+#        else:
+#            return False
             

@@ -21,5 +21,5 @@ random.seed (16062019 + VARIASEED)
 K.clear_session ()
 
 # INPUT = NUMERO DE GERACOES
-seletorNatural = SeletorNatural (500)
+seletorNatural = SeletorNatural (850)
 seletorNatural.iniciaTreinamento ()

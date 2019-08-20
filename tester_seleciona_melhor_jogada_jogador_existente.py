@@ -15,7 +15,7 @@ from keras import initializers
 from keras.models import load_model
 
 
-nomeJogador = "Jogador_ab522a91-9c91-4822-b776-8626f91539f5.h5"
+nomeJogador = "Jogador_db2c90f0-20d0-40cb-824e-7f0df399b87c.h5"
 
 K.clear_session ()
 
