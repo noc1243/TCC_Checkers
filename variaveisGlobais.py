@@ -73,3 +73,4 @@ class VariaveisGlobais :
     ARQUIVO_RESULTADOS_CAMPEONATO_ENTRE_TIMES = ".\\resultados_treinamento\\resultados_campeonato_entre_times.txt"
     ARQUIVO_LISTA_JOGADORES_GERACAO = ".\\resultados_treinamento\\lista_jogadores_geracao.txt"
     IMAGEM_RESULTADO_TREINAMENTO = ".\\resultados_treinamento\\resultado_treinamento.png"
+    IMAGEM_RESULTADO_TREINAMENTO_PONTUACAO = ".\\resultados_treinamento\\resultado_treinamento_pontuacao.png"

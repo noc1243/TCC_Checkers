@@ -36,17 +36,17 @@ def getListaParaPlot ():
                 continue
             
             for i in range (colocacoesJogadoresASeremAnalisados):
-                if (not (row[i].split("_")[0] in dictPlots)):
-                    dictPlots [row[i].split("_")[0]] = []
+                if (not (row[i].split("_")[0] + row[i].split("_")[1] in dictPlots)):
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]] = []
                     listaY = []
                     listaX = []
                     listaY.append (index + geracaoAtual)
                     listaX.append (i)
-                    dictPlots [row[i].split("_")[0]].append (listaY)
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]].append (listaY)
                     dictPlots [row[i].split("_")[0]].append (listaX)
                 else:
-                    dictPlots [row[i].split("_")[0]] [0].append (index + geracaoAtual)
-                    dictPlots [row[i].split("_")[0]] [1].append (i)
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]] [0].append (index + geracaoAtual)
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]] [1].append (i)
             index += 1
         
         return dictPlots

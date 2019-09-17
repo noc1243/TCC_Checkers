@@ -36,37 +36,42 @@ def getListaParaPlot ():
                 continue
             
             for i in range (colocacoesJogadoresASeremAnalisados):
-                if (not (row[i].split("_")[0] in dictPlots)):
-                    dictPlots [row[i].split("_")[0]] = []
+                if (not (row[i].split("_")[0] + row[i].split("_")[1] in dictPlots)):
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]] = []
                     listaY = []
                     listaX = []
                     listaY.append (index + geracaoAtual)
-                    listaX.append (row[i].split("_")[1])
-                    dictPlots [row[i].split("_")[0]].append (listaY)
-                    dictPlots [row[i].split("_")[0]].append (listaX)
+                    listaX.append (float(row[i].split("_")[2]))
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]].append (listaY)
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]].append (listaX)
                 else:
-                    dictPlots [row[i].split("_")[0]] [0].append (index + geracaoAtual)
-                    dictPlots [row[i].split("_")[0]] [1].append (row[i].split("_")[1])
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]] [0].append (index + geracaoAtual)
+                    dictPlots [row[i].split("_")[0] + row[i].split("_")[1]] [1].append (float(row[i].split("_")[2]))
+                    print (row[i].split("_")[2])
             index += 1
         
         return dictPlots
     
 def plotJogadores (dictPlots):
+    maxTicks = -20
     legenda = []
     plt.figure(num=None, figsize=(100, 30), dpi=80, facecolor='w', edgecolor='k')
     for jogador in dictPlots:
+#        print (str(dictPlots [jogador] [0]) + ", " + str(dictPlots [jogador] [1]))
         plt.plot(dictPlots [jogador] [0], dictPlots [jogador] [1])
         legenda.append (jogador)
         print ("plotando!! : " + jogador)
+        
+#        if (maxTicks < dictPlots [jogador] [1]):
+#            maxTicks = dictPlots [jogador] [1]
     
     plt.xticks(range (numeroDeGeracoesASeremAnalisadas))
-    plt.yticks(range (colocacoesJogadoresASeremAnalisados))
     plt.grid ()
     plt.xlabel('Geracao')
-    plt.ylabel('Colocacao')
+    plt.ylabel('Pontuacao')
     plt.title('Caminho dos Jogadores ao longo das geracoes')
 #    plt.legend (legenda)
-    plt.savefig(VariaveisGlobais.IMAGEM_RESULTADO_TREINAMENTO)
+    plt.savefig(VariaveisGlobais.IMAGEM_RESULTADO_TREINAMENTO_PONTUACAO)
     
 dictPlots = getListaParaPlot ()
 plotJogadores (dictPlots)
