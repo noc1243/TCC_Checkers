@@ -17,12 +17,12 @@ np.set_printoptions(threshold=np.inf)
 np.set_printoptions(suppress=True)
 
 
-nomeJogador = "Jogador_71a8aa21-577e-4d3c-a57b-d374696c7065.h5"
+nomeJogador = "Jogador_101a8102-cea7-4b81-b8f6-0087020288ee.h5"
 
 K.clear_session ()
 
-model = load_model (".\melhores_modelos\\" + nomeJogador)
-file = open (".\melhores_pesos\\" + nomeJogador, "r")
+model = load_model (".\modelos\\" + nomeJogador)
+file = open (".\pesosDamas\\" + nomeJogador, "r")
 peso = float (file.read())
 file.close ()
 

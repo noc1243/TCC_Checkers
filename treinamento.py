@@ -10,7 +10,7 @@ from keras import backend as K
 from seletorNatural import SeletorNatural
 
 # VARIAVEL PARA FORCAR UMA SEED DIFERENTE CASO SEJA NECESSARIO ALGUM TESTE
-VARIASEED = 0
+VARIASEED = 141
 
 listaJogadores = []
 

@@ -9,9 +9,9 @@ import csv
 import matplotlib.pyplot as plt
 from variaveisGlobais import VariaveisGlobais
 
-geracaoInicial = 100
-numeroDeGeracoesASeremAnalisadas = 15
-colocacoesJogadoresASeremAnalisados = 15
+geracaoInicial = 0
+numeroDeGeracoesASeremAnalisadas = 50
+colocacoesJogadoresASeremAnalisados = 30
 
 def getListaParaPlot ():
     global numeroDeGeracoesASeremAnalisadas
@@ -36,30 +36,31 @@ def getListaParaPlot ():
                 continue
             
             for i in range (colocacoesJogadoresASeremAnalisados):
-                if (not (row[i] in dictPlots)):
-                    dictPlots [row[i]] = []
+                if (not (row[i].split("_")[0] in dictPlots)):
+                    dictPlots [row[i].split("_")[0]] = []
                     listaY = []
                     listaX = []
                     listaY.append (index + geracaoAtual)
                     listaX.append (i)
-                    dictPlots [row[i]].append (listaY)
-                    dictPlots [row[i]].append (listaX)
+                    dictPlots [row[i].split("_")[0]].append (listaY)
+                    dictPlots [row[i].split("_")[0]].append (listaX)
                 else:
-                    dictPlots [row[i]] [0].append (index + geracaoAtual)
-                    dictPlots [row[i]] [1].append (i)
+                    dictPlots [row[i].split("_")[0]] [0].append (index + geracaoAtual)
+                    dictPlots [row[i].split("_")[0]] [1].append (i)
             index += 1
         
         return dictPlots
     
 def plotJogadores (dictPlots):
     legenda = []
-    plt.figure(num=None, figsize=(30, 30), dpi=80, facecolor='w', edgecolor='k')
+    plt.figure(num=None, figsize=(100, 30), dpi=80, facecolor='w', edgecolor='k')
     for jogador in dictPlots:
         plt.plot(dictPlots [jogador] [0], dictPlots [jogador] [1])
         legenda.append (jogador)
         print ("plotando!! : " + jogador)
     
-    plt.yticks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+    plt.xticks(range (numeroDeGeracoesASeremAnalisadas))
+    plt.yticks(range (colocacoesJogadoresASeremAnalisados))
     plt.grid ()
     plt.xlabel('Geracao')
     plt.ylabel('Colocacao')

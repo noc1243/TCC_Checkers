@@ -29,7 +29,7 @@ class SeletorNatural:
     varianceDama = 0.1
     
     numeroJogadoresIniciais = 15
-    numeroJogadoresNovosGeracao = 5
+    numeroJogadoresNovosGeracao = 2
     
     fitMaximoJogador = 200
     fitRealJogador = 8
@@ -87,11 +87,11 @@ class SeletorNatural:
             changedGaussWeights = self.geraExponencialDeGaussianas (listaWeights[0].shape[0], listaWeights[0].shape[1], tau)
             changedGaussBiases = self.geraExponencialDeGaussianasArray (listaWeights[1].shape[0], tau)
             novoWeights = np.multiply (listaWeights [0], changedGaussWeights)
-            novoWeights [novoWeights > 0.5] = 0.5
-            novoWeights [novoWeights < 0.005] = 0.005
+            novoWeights [novoWeights > 0] = 0.0005
+#            novoWeights [novoWeights < 0.005] = 0.005
             novoBiases = np.multiply (listaWeights [1], changedGaussBiases)
-            novoBiases [novoBiases > 0.5] = 0.5
-            novoBiases [novoBiases < 0.005] = 0.005
+            novoBiases [novoBiases > 0] = 0.0005
+#            novoBiases [novoBiases < 0.005] = 0.005
             novaListaWeights.append (novoWeights)
             novaListaWeights.append (novoBiases)
             novoSigma.append (copy.deepcopy(novaListaWeights))
@@ -107,6 +107,8 @@ class SeletorNatural:
             layerWeightsBiases = np.add  (layerWeights [1], np.multiply (novoSigma [layerIndex] [1], changedGaussBiases))
             novaListaWeights = []
             novaListaWeights.append (layerWeightsWeights)
+            print ("Diferença total entre os pesos layer " + str(layerIndex) + " do " + str (jogador.nomeJogador) + " : " + str(np.sum (layerWeights[0] - layerWeightsWeights)))
+            print ("Diferença total entre os biases layer " + str(layerIndex) + " do " + str (jogador.nomeJogador) + " : " + str(np.sum (layerWeights[1] - layerWeightsBiases)))
             novaListaWeights.append (layerWeightsBiases)
             layer.set_weights(novaListaWeights)
         
@@ -142,7 +144,7 @@ class SeletorNatural:
     def salvaCsvJogadores (self, listaJogadores):
         listaNomeJogadores = []
         for jogador in listaJogadores:
-            listaNomeJogadores.append (jogador.nomeJogador)
+            listaNomeJogadores.append (jogador.nomeJogador + "_" + str(jogador.currentPoints))
             
         stringListaJogadores = self.CSV_SEPARATOR.join (listaNomeJogadores)
         
@@ -306,7 +308,7 @@ class SeletorNatural:
         for jogador in listaJogadores:
             jogador.carregaModelo ()
         
-        campeonatoEntreTimes = CampeonatoEntreTimes (self.listaJogadoresBase, listaJogadores)
+        campeonatoEntreTimes = FullCampeonatoEntreTimes (self.listaJogadoresBase, listaJogadores)
         campeonatoEntreTimes.iniciaCampeonato ()
         
         self.listaJogadoresBase.extend (listaJogadores)
@@ -339,14 +341,14 @@ class SeletorNatural:
             self.fileResultados.write ("\n")
             
             
-            if (indexGeracao % self.tempoEntreVerificacoes == 0 and indexGeracao > 0):
-                print ("Verificando se os jogadores melhoraram!")
-                self.fileResultados.write ("Verificando se os jogadores melhoraram!\n")
-                
-                self.rodaCampeonatoEntreTimes (self.copiaListaJogadores(listaJogadores))
-                
-                for jogador in listaJogadores:
-                    jogador.carregaModelo ()
+#            if (indexGeracao % self.tempoEntreVerificacoes == 0 and indexGeracao > 0):
+#                print ("Verificando se os jogadores melhoraram!")
+#                self.fileResultados.write ("Verificando se os jogadores melhoraram!\n")
+#                
+#                self.rodaCampeonatoEntreTimes (self.copiaListaJogadores(listaJogadores))
+#                
+#                for jogador in listaJogadores:
+#                    jogador.carregaModelo ()
             
             for jogador in listaJogadores:
                 if (jogador.totalPoints >= self.fitMaximoJogador and (float (jogador.totalPoints)/float (jogador.numeroDeGeracoesVivo) > self.fitRealJogador)):

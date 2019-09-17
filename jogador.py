@@ -20,7 +20,7 @@ import uuid
 class Jogador:
     
     peakVal = 0.2
-    sigma = 0.05
+    sigma = 0.001
     
     numeroJogadasAFrente = 0
     
@@ -150,9 +150,18 @@ class Jogador:
     def calculaScoreTabuleiroMinMax (self, tabuleiro, numeroDaJogada, jogadorJogando, alpha, beta):
         if (numeroDaJogada >= self.numeroJogadasAFrente):
             if (jogadorJogando):
-#                tabuleiro.inverteVisaoTabuleiro()
-                return (-1)*self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
-#                return self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                tabuleiro.inverteVisaoTabuleiro()
+                score = self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                
+                gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+                if (not listaTabuleiros or listaTabuleiros is None):
+                    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+                if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                    score = -1.1
+                    
+                return score
             else:
                 score = self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
                 tabuleiro.inverteVisaoTabuleiro()
