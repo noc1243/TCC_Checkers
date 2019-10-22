@@ -17,7 +17,7 @@ np.set_printoptions(threshold=np.inf)
 np.set_printoptions(suppress=True)
 
 
-nomeJogador = "Jogador_101a8102-cea7-4b81-b8f6-0087020288ee.h5"
+nomeJogador = "Jogador_e39e79fd-b1f0-4f7d-88ca-6d4c28239974.h5"
 
 K.clear_session ()
 

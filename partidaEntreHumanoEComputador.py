@@ -17,7 +17,7 @@ from keras.layers import Dense
 from keras import initializers
 from keras.models import load_model
 
-nomeJogador = "Jogador_ab522a91-9c91-4822-b776-8626f91539f5.h5"
+nomeJogador = "Jogador_e39e79fd-b1f0-4f7d-88ca-6d4c28239974.h5"
 
 K.clear_session ()
 
@@ -29,8 +29,8 @@ jogadorHumano = JogadorHumano ()
 
 #tabuleiro.printaTabuleiro ()
 
-model = load_model (".\melhores_modelos\\" + nomeJogador)
-file = open (".\melhores_pesos\\" + nomeJogador, "r")
+model = load_model (".\modelos\\" + nomeJogador)
+file = open (".\pesosDamas\\" + nomeJogador, "r")
 peso = float (file.read())
 file.close ()
 jogador = Jogador (model = model, valorDama = peso)

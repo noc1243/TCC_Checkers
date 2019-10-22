@@ -29,12 +29,14 @@ class SeletorNatural:
     varianceDama = 0.1
     
     numeroJogadoresIniciais = 15
-    numeroJogadoresNovosGeracao = 2
+    numeroJogadoresNovosGeracao = 0
     
     fitMaximoJogador = 200
     fitRealJogador = 8
     
     tempoEntreVerificacoes = 20
+    
+    forcedSigma = 0.1
     
     CSV_SEPARATOR = ","
     
@@ -87,10 +89,10 @@ class SeletorNatural:
             changedGaussWeights = self.geraExponencialDeGaussianas (listaWeights[0].shape[0], listaWeights[0].shape[1], tau)
             changedGaussBiases = self.geraExponencialDeGaussianasArray (listaWeights[1].shape[0], tau)
             novoWeights = np.multiply (listaWeights [0], changedGaussWeights)
-            novoWeights [novoWeights > 0] = 0.0005
+#            novoWeights [novoWeights > 0] = self.forcedSigma
 #            novoWeights [novoWeights < 0.005] = 0.005
             novoBiases = np.multiply (listaWeights [1], changedGaussBiases)
-            novoBiases [novoBiases > 0] = 0.0005
+#            novoBiases [novoBiases > 0] = self.forcedSigma
 #            novoBiases [novoBiases < 0.005] = 0.005
             novaListaWeights.append (novoWeights)
             novaListaWeights.append (novoBiases)
@@ -107,14 +109,14 @@ class SeletorNatural:
             layerWeightsBiases = np.add  (layerWeights [1], np.multiply (novoSigma [layerIndex] [1], changedGaussBiases))
             novaListaWeights = []
             novaListaWeights.append (layerWeightsWeights)
-            print ("Diferença total entre os pesos layer " + str(layerIndex) + " do " + str (jogador.nomeJogador) + " : " + str(np.sum (layerWeights[0] - layerWeightsWeights)))
-            print ("Diferença total entre os biases layer " + str(layerIndex) + " do " + str (jogador.nomeJogador) + " : " + str(np.sum (layerWeights[1] - layerWeightsBiases)))
+#            print ("Diferença total entre os pesos layer " + str(layerIndex) + " do " + str (jogador.nomeJogador) + " : " + str(np.sum (layerWeights[0] - layerWeightsWeights)))
+#            print ("Diferença total entre os biases layer " + str(layerIndex) + " do " + str (jogador.nomeJogador) + " : " + str(np.sum (layerWeights[1] - layerWeightsBiases)))
             novaListaWeights.append (layerWeightsBiases)
             layer.set_weights(novaListaWeights)
         
         novoValorDama = max (min (jogador.valorDama * math.exp((1/math.sqrt(2)) *gauss (self.meanDama, self.varianceDama)), 3), 1)
         
-        jogadorFilho = Jogador (novoModel, novoValorDama, novoSigma, jogador.geracao + 1)
+        jogadorFilho = Jogador (novoModel, novoValorDama, novoSigma, jogador.geracao + 1, jogador.genealogia)
         
         return jogadorFilho
     
@@ -236,23 +238,57 @@ class SeletorNatural:
         self.fileResultados.write ("Jogadores Selecionados!\n")
         
         return listaJogadores
+    
+    def trocaOrdemJogadoresMesmaGeracao (self, listaJogadores):
+        print ("Trocando a ordem dos jogadores")
+        listaNovaJogadores = []
+        listaJogadoresParaSeremDestruidos = []
+        geracaoOriginal = {}
+        
+        numeroJogadores = 0
+        for jogador in listaJogadores:
+            if (numeroJogadores >= self.numeroJogadoresIniciais):
+                listaJogadoresParaSeremDestruidos.append (jogador)
+                continue
+            if jogador.genealogia [0][0][0] in geracaoOriginal:
+                if geracaoOriginal [jogador.genealogia [0][0][0]] == 1:
+                    geracaoOriginal [jogador.genealogia [0][0][0]] += 1
+                    listaNovaJogadores.append (jogador)
+                    numeroJogadores += 1
+                else:
+                    listaJogadoresParaSeremDestruidos.append (jogador)    
+            else:
+                geracaoOriginal [jogador.genealogia [0][0][0]] = 1
+                listaNovaJogadores.append (jogador)
+                numeroJogadores += 1
+        
+        listaJogadoresPosOrdenar = []
+        listaJogadoresPosOrdenar.extend (listaNovaJogadores)
+        listaJogadoresPosOrdenar.extend (listaJogadoresParaSeremDestruidos)
+        
+        return listaJogadoresPosOrdenar
             
     def selecionaMelhoresJogadores (self, listaJogadores):
         listaJogadores.sort (key=lambda x: (x.currentPoints, x.geracao), reverse=True)
         
-        self.salvaCsvJogadores (listaJogadores)
+        #QUALQUER COISA TIRAR. LIMITADOR DE JOGADORES DE MESMA ORIGEM!!
+        listaJogadoresNovos = listaJogadores
+#        listaJogadoresNovos = self.trocaOrdemJogadoresMesmaGeracao (listaJogadores)
+        
+        self.salvaCsvJogadores (listaJogadoresNovos)
 #        listaJogadores.sort (key=lambda x: (float (x.totalPoints)/float (x.numeroDeGeracoesVivo), x.geracao), reverse=True)
         
-        jogadoresParaSeremDestruidos = listaJogadores [self.numeroJogadoresIniciais:]
+        jogadoresParaSeremDestruidos = listaJogadoresNovos [self.numeroJogadoresIniciais:]
         
-        listaJogadores = listaJogadores [0:self.numeroJogadoresIniciais]
-
-        listaJogadores = self.limpaMemoriaDosModelos (listaJogadores, jogadoresParaSeremDestruidos)
+        listaJogadoresNovos = listaJogadoresNovos [0:self.numeroJogadoresIniciais]
+        
+        listaJogadoresNovos = self.limpaMemoriaDosModelos (listaJogadoresNovos, listaJogadores)
+        listaJogadoresNovos = self.limpaMemoriaDosModelos (listaJogadoresNovos, jogadoresParaSeremDestruidos)
         
         print ("Jogadores Selecionados!")
         self.fileResultados.write ("Jogadores Selecionados!\n")
         
-        return listaJogadores
+        return listaJogadoresNovos
     
     def limpaScoreJogadores (self, listaJogadores):
         for jogador in listaJogadores:
@@ -324,6 +360,25 @@ class SeletorNatural:
         
         indexGeracao = 1
         for geracao in range (self.numeroDeGeracoesTreinamento):
+#            if (indexGeracao >= 100):
+#                print ("Acabando com a insercao de novos jogadores")
+#                self.fileResultados.write ("Acabando com a insercao de novos jogadores\n")
+#                self.numeroJogadoresNovosGeracao = 0
+#            if (indexGeracao >= 250):
+#                print ("Diminuindo sigma 1")
+#                self.fileResultados.write ("Diminuindo sigma 1\n")
+#                self.forcedSigma = 0.01
+#            if (indexGeracao >= 400):
+#                self.numeroJogadoresNovosGeracao = 2
+#                print ("Diminuindo sigma 2 e inserindo novos jogadores")
+#                self.fileResultados.write ("Diminuindo sigma 2 e inserindo novos jogadores\n")
+#                self.forcedSigma = 0.005
+#            if (indexGeracao >= 800):
+#                self.numeroJogadoresNovosGeracao = 2
+#                print ("Diminuindo sigma 3")
+#                self.fileResultados.write ("Diminuindo sigma 3\n")
+#                self.forcedSigma = 0.001
+                
             self.fileResultados.close ()
             self.fileResultados = open (VariaveisGlobais.ARQUIVO_RESULTADOS_SELETOR, "a")
             

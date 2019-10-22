@@ -14,7 +14,7 @@ from variaveisGlobais import VariaveisGlobais
 # TESTE 1
 print ("Comecando teste 1:")
 print ("Tabuleiro inicial teste 1:")
-tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_4)
+tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_7)
 tabuleiro.printaTabuleiro ()
 
 gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
@@ -23,7 +23,7 @@ if (not listaTabuleiros or listaTabuleiros is None):
     listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
 
 print ("Printando tabuleiros possiveis:")
-if (not listaTabuleiros is None):
+if (not listaTabuleiros is None and len(listaTabuleiros) > 0):
     for tabuleiro in listaTabuleiros:
         if (not tabuleiro is None):
             tabuleiro.printaTabuleiro ()

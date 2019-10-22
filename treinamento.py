@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Jun 16 23:08:50 2019
-
 @author: nocera
 """
 
@@ -21,5 +20,6 @@ random.seed (16062019 + VARIASEED)
 K.clear_session ()
 
 # INPUT = NUMERO DE GERACOES
-seletorNatural = SeletorNatural (850)
-seletorNatural.iniciaTreinamento ()
+if __name__ == '__main__':
+    seletorNatural = SeletorNatural (1700)
+    seletorNatural.iniciaTreinamento ()

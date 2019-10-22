@@ -22,7 +22,7 @@ class Jogador:
     peakVal = 0.2
     sigma = 0.001
     
-    numeroJogadasAFrente = 0
+    numeroJogadasAFrente = 5
     
     numeroDePossiveisComidasParaNaoConsiderarJogadaForcada = 3
     
@@ -32,7 +32,7 @@ class Jogador:
     
     numeroDeLayers = 3
     
-    def __init__ (self, model = None, valorDama = None, listaSigmas = None, geracao = 0, debug = False):
+    def __init__ (self, model = None, valorDama = None, listaSigmas = None, geracao = 0, genealogia = [], debug = False):
         self.listaSigmas = []
         listaWeights = []
         self.currentPoints = 0
@@ -74,6 +74,18 @@ class Jogador:
             
         self.nomeJogador = "Jogador_" + str(uuid.uuid4()) + ".h5"
         
+        self.genealogia = copy.deepcopy (genealogia)
+        
+        listaNomeJogador = []
+        listaNomeJogador.append (self.nomeJogador)
+        listaGeracaoJogador = []
+        listaGeracaoJogador.append (self.geracao)
+        listaGeral = []
+        listaGeral.append(listaNomeJogador)
+        listaGeral.append(listaGeracaoJogador)
+        
+        self.genealogia.append (listaGeral)
+        
         self.debug = debug
         
         
@@ -87,6 +99,9 @@ class Jogador:
         file = open (".\pesosDamas\\" + self.nomeJogador, "w+")
         file.write (str (self.valorDama))
         file.close
+        file2 = open (".\genealogia\\" + self.nomeJogador, "w+")
+        file2.write (str (self.genealogia))
+        file2.close
         
     def carregaModelo (self):
         self.model = load_model (".\modelos\\" + self.nomeJogador)
@@ -217,6 +232,129 @@ class Jogador:
         
         return best
     
+    def calculaScoreTabuleiroMinMax2 (self, tabuleiro, numeroDaJogada, jogadorJogando):
+        if (numeroDaJogada >= self.numeroJogadasAFrente):
+            if (jogadorJogando):
+                tabuleiro.inverteVisaoTabuleiro()
+                score = self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                
+                gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+                if (not listaTabuleiros or listaTabuleiros is None):
+                    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+                if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                    score = -1.1
+                    
+                return score
+            else:
+                score = self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                tabuleiro.inverteVisaoTabuleiro()
+                gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+                if (not listaTabuleiros or listaTabuleiros is None):
+                    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+                if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                    score = 1.1
+                    
+                return score
+        
+        tabuleiro.inverteVisaoTabuleiro ()
+        
+        jogadaForcada = False
+        
+        gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+        listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+        if (not listaTabuleiros or listaTabuleiros is None):
+            listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+        elif (len (listaTabuleiros) < self.numeroDePossiveisComidasParaNaoConsiderarJogadaForcada):
+            jogadaForcada = True
+        
+        numeroDaProximaJogada = numeroDaJogada
+        if (not jogadaForcada):
+            numeroDaProximaJogada += 1 
+            
+        if (jogadorJogando):
+            best = -1.1
+        else:
+            best = 1.1
+            
+        if (len (listaTabuleiros) == 0):
+            if (jogadorJogando):
+                return -1
+            else:
+                return 1
+            
+        for tabuleiro in listaTabuleiros:
+            if (not tabuleiro is None):
+                if (jogadorJogando):
+                    best = max (best, self.calculaScoreTabuleiroMinMax2 (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), False))
+                else:
+                    best = min (best, self.calculaScoreTabuleiroMinMax2 (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), True ))
+        
+        return best
+    
+    def calculaScoreTabuleiroMedia (self, tabuleiro, numeroDaJogada, jogadorJogando):
+        if (numeroDaJogada >= self.numeroJogadasAFrente):
+            if (jogadorJogando):
+                tabuleiro.inverteVisaoTabuleiro()
+                score = self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                
+                gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+                if (not listaTabuleiros or listaTabuleiros is None):
+                    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+                if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                    score = -1.1
+                    
+                return score
+            else:
+                score = self.predict (tabuleiro.converteTabuleiroParaArray (self.valorDama))
+                tabuleiro.inverteVisaoTabuleiro()
+                gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+                if (not listaTabuleiros or listaTabuleiros is None):
+                    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+                if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                    score = 1.1
+                    
+                return score
+        
+        tabuleiro.inverteVisaoTabuleiro ()
+        
+        jogadaForcada = False
+        
+        gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+        listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+        if (not listaTabuleiros or listaTabuleiros is None):
+            listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+        elif (len (listaTabuleiros) < self.numeroDePossiveisComidasParaNaoConsiderarJogadaForcada):
+            jogadaForcada = True
+        
+        numeroDaProximaJogada = numeroDaJogada
+        numeroDaProximaJogada += 1 
+#        if (not jogadaForcada):
+#            numeroDaProximaJogada += 1 
+            
+        if (len (listaTabuleiros) == 0):
+            if (jogadorJogando):
+                return -1
+            else:
+                return 1
+        soma = 0
+        for tabuleiro in listaTabuleiros:
+            if (not tabuleiro is None):
+                if (jogadorJogando):
+                    soma += self.calculaScoreTabuleiroMedia (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), False)
+                else:
+                    soma += self.calculaScoreTabuleiroMedia (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), True)
+                    
+        
+        return soma/len(listaTabuleiros)
+    
     def selecionaMelhorJogadaMinMax (self, tabuleiro, numeroDaJogada):
         tabuleiroEscolhido = None
         jogadaForcada = False
@@ -240,7 +378,8 @@ class Jogador:
         for tabuleiro in listaTabuleiros:
             if (not tabuleiro is None):
                 
-                score = self.calculaScoreTabuleiroMinMax (copy.deepcopy(tabuleiro), numeroDaProximaJogada, False, alpha, beta)
+#                score = self.calculaScoreTabuleiroMinMax (copy.deepcopy(tabuleiro), numeroDaProximaJogada, False, alpha, beta)
+                score = self.calculaScoreTabuleiroMedia (copy.deepcopy(tabuleiro), numeroDaProximaJogada, False)
                 if (score >= alpha and numeroDaJogada == 0):
                     alpha = score
                     tabuleiroEscolhido = copy.deepcopy (tabuleiro)

@@ -15,16 +15,16 @@ from keras import initializers
 from keras.models import load_model
 
 
-nomeJogador = "Jogador_db2c90f0-20d0-40cb-824e-7f0df399b87c.h5"
+nomeJogador = "Jogador_2989f379-d1ad-47c9-ac3d-dbc5b9455d02.h5"
 
 K.clear_session ()
 
-tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_4)
+tabuleiro = Tabuleiro (VariaveisGlobais.TABULEIRO_TESTE_7)
 tabuleiro.printaTabuleiro ()
 
 #Tester selecionaMelhorJogada
-model = load_model (".\melhores_modelos\\" + nomeJogador)
-file = open (".\melhores_pesos\\" + nomeJogador, "r")
+model = load_model (".\modelos\\" + nomeJogador)
+file = open (".\pesosDamas\\" + nomeJogador, "r")
 peso = float (file.read())
     
 jogador1 = Jogador (debug = True, model = model, valorDama = peso)

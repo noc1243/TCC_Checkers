@@ -1,0 +1,1202 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Aug  5 22:33:17 2019
+
+@author: nocera
+"""
+
+import sys
+import math
+import numpy as np
+import copy
+import time
+
+# Auto-generated code below aims at helping you parse
+# the standard input according to the problem statement.
+
+class GerenciadorDeTabuleiros:
+    
+    
+    def __init__ (self, tabuleiro):
+        self.tabuleiro = tabuleiro
+        
+    def geraMovimentoAPartirDeRowEColumn (self, inicialRow, inicialColumn, finalRow, finalColumn):
+        inicialNumero = 7 - inicialRow
+        inicialLetra = chr(ord('a') + inicialColumn)
+        casaInicial = Casa (inicialLetra, inicialNumero)
+        
+        finalNumero = 7 - finalRow
+        finalLetra = chr(ord('a') + finalColumn)
+        casaFinal = Casa (finalLetra, finalNumero)
+        
+        movimento = Movimento (casaInicial, casaFinal)
+        return movimento
+        
+    def criaTabuleiroAPartirDeUmMovimento (self, movimento):
+        novoTabuleiro = Tabuleiro (self.tabuleiro.tabuleiroConfiguracao)
+        
+        if (novoTabuleiro.doAnyMovement (movimento)):
+            return novoTabuleiro
+        else:
+            return None
+        
+    def criaTabuleiroAPartirDeUmaListaDeMovimentos (self, listaMovimento):
+        novoTabuleiro = Tabuleiro (self.tabuleiro.tabuleiroConfiguracao)
+        
+        if (novoTabuleiro.doMultipleMovementsComer (listaMovimento)):
+            return novoTabuleiro
+        else:
+            return None
+        
+    def criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (self, movimento, tabuleiro):
+        novoTabuleiro = Tabuleiro (tabuleiro.tabuleiroConfiguracao)
+        
+        if (novoTabuleiro.doAnyMovement (movimento)):
+            return novoTabuleiro
+        else:
+            return None
+        
+    def criaMovimentoValidoAPartirDeRowEColumn (self, inicialRow, inicialColumn, finalRow, finalColumn):
+        if (finalColumn < 0 or finalColumn > 7 or finalRow < 0 or finalRow > 7):
+            return None
+        else:
+            return self.geraMovimentoAPartirDeRowEColumn (inicialRow, inicialColumn, finalRow, finalColumn)
+        
+    def criaMovimentoParaOPeao (self, row, column):
+        listTabuleirosPossiveis = []
+        
+        movimento1 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 1, column - 1)
+        movimento2 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 1, column + 1)
+        
+        if (not movimento1 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento1))
+        if (not movimento2 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento2))
+            
+        return listTabuleirosPossiveis
+    
+    def criaMovimentoParaADama (self, row, column):
+        listTabuleirosPossiveis = []
+        
+        movimento1 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 1, column - 1)
+        movimento2 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 1, column + 1)
+        movimento3 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row + 1, column - 1)
+        movimento4 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row + 1, column + 1)
+        
+        if (not movimento1 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento1))
+        if (not movimento2 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento2))
+        if (not movimento3 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento3))
+        if (not movimento4 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento4))
+            
+        return listTabuleirosPossiveis
+    
+    def calculaPossibilidadesDeMovimentoNormal (self):
+        listTabuleirosPossiveis = []
+        for row in range (self.tabuleiro.tabuleiroConfiguracao.shape[0]):
+            for column in range (self.tabuleiro.tabuleiroConfiguracao.shape[1]):
+                if (self.tabuleiro.tabuleiroConfiguracao [row, column] == VariaveisGlobais.PEAO):
+                    listTabuleirosPossiveis.extend (self.criaMovimentoParaOPeao (row, column))
+                if (self.tabuleiro.tabuleiroConfiguracao [row, column] == VariaveisGlobais.DAMA):
+                    listTabuleirosPossiveis.extend (self.criaMovimentoParaADama (row, column))
+                
+        return listTabuleirosPossiveis
+    
+    def criaMovimentoParaOPeaoComer (self, row, column):
+        listTabuleirosPossiveis = []
+        
+        movimento1 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column - 2)
+        movimento2 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column + 2)
+        
+        if (not movimento1 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento1))
+        if (not movimento2 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento2))
+            
+        return listTabuleirosPossiveis
+    
+    def criaMovimentoParaADamaComer (self, row, column):
+        listTabuleirosPossiveis = []
+        
+        movimento1 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column - 2)
+        movimento2 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column + 2)
+        movimento3 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row + 2, column - 2)
+        movimento4 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row + 2, column + 2)
+        
+        if (not movimento1 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento1))
+        if (not movimento2 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento2))
+        if (not movimento3 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento3))
+        if (not movimento4 is None):
+            listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmMovimento (movimento4))
+            
+        return listTabuleirosPossiveis
+                        
+    def calculaPossibilidadesDeMovimentoComer (self):
+        listTabuleirosPossiveis = []
+        for row in range (self.tabuleiro.tabuleiroConfiguracao.shape[0]):
+            for column in range (self.tabuleiro.tabuleiroConfiguracao.shape[1]):
+                if (self.tabuleiro.tabuleiroConfiguracao [row, column] == VariaveisGlobais.PEAO):
+                    listTabuleirosPossiveis.extend (self.criaMovimentoParaOPeaoComer (row, column))
+                if (self.tabuleiro.tabuleiroConfiguracao [row, column] == VariaveisGlobais.DAMA):
+                    listTabuleirosPossiveis.extend (self.criaMovimentoParaADamaComer (row, column))
+                        
+        listTabuleirosPossiveis
+        
+        
+    #CODIGO QUE CALCULA TODOS OS MOVIMENTOS POSSIVEIS PARA QUE O PEAO COMA!
+    def criaMultiplosMovimentosParaOPeaoComer (self, row, column, listaMovimentos, tabuleiro):
+        listaDeListaDeMovimentos = []
+        if (column < 0 or column > 7 or row < 0 or row > 7):
+            return None
+        
+        movimento1 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column - 2)
+        movimento2 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column + 2)
+        
+        if (not movimento1 is None):
+            novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento1, tabuleiro)
+            if (not novoTabuleiro is None):
+                listaMovimentos.append (movimento1)
+#                listaDeListaDeMovimentos.append (listaMovimentos)
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaOPeaoComer (row - 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = (copy.deepcopy (listaDeListaDeMovimentosResultado))
+#                    listaDeListaDeMovimentos.remove (listaMovimentos)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                    
+                listaMovimentos.remove (movimento1)
+                
+        if (not movimento2 is None):
+            novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento2, tabuleiro)
+            if (not novoTabuleiro is None):
+                listaMovimentos.append (movimento2)
+#                listaDeListaDeMovimentos.append (listaMovimentos)
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaOPeaoComer (row - 2, column + 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = (copy.deepcopy (listaDeListaDeMovimentosResultado))
+#                    listaDeListaDeMovimentos.remove (listaMovimentos)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                    
+                listaMovimentos.remove (movimento2)
+                
+        return listaDeListaDeMovimentos
+    
+    #CODIGO QUE CALCULA TODOS OS MOVIMENTOS POSSIVEIS PARA QUE A DAMA COMA!
+    def criaMultiplosMovimentosParaADamaComer (self, row, column, listaMovimentos, tabuleiro):
+        listaDeListaDeMovimentos = []
+        if (column < 0 or column > 7 or row < 0 or row > 7):
+            return None
+        
+        movimento1 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column - 2)
+        movimento2 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row - 2, column + 2)
+        movimento3 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row + 2, column - 2)
+        movimento4 = self.criaMovimentoValidoAPartirDeRowEColumn (row, column, row + 2, column + 2)
+        
+        if (not movimento1 is None):
+            novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento1, tabuleiro)
+            if (not novoTabuleiro is None):
+                listaMovimentos.append (movimento1)
+                listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row - 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                    
+                listaMovimentos.remove (movimento1)
+                
+        if (not movimento2 is None):
+            novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento2, tabuleiro)
+            if (not novoTabuleiro is None):
+                listaMovimentos.append (movimento2)
+                listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row - 2, column + 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                    
+                listaMovimentos.remove (movimento2)
+                
+        if (not movimento3 is None):
+            novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento3, tabuleiro)
+            if (not novoTabuleiro is None):
+                listaMovimentos.append (movimento3)
+                listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row + 2, column - 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                    
+                listaMovimentos.remove (movimento3) 
+                
+        if (not movimento4 is None):
+            novoTabuleiro = self.criaTabuleiroAPartirDeUmMovimentoEUmTabuleiro (movimento4, tabuleiro)
+            if (not novoTabuleiro is None):
+                listaMovimentos.append (movimento4)
+                listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                listaDeListaDeMovimentosResultado = self.criaMultiplosMovimentosParaADamaComer (row + 2, column + 2, copy.deepcopy(listaMovimentos), novoTabuleiro)
+                
+                if (not listaDeListaDeMovimentosResultado is None and len(listaDeListaDeMovimentosResultado) > 0):
+                    listaDeListaDeMovimentos = copy.deepcopy (listaDeListaDeMovimentosResultado)
+                else:
+                    listaDeListaDeMovimentos.append (copy.deepcopy (listaMovimentos))
+                    
+                listaMovimentos.remove (movimento4) 
+        
+        return listaDeListaDeMovimentos
+    
+    def calculaPossibilidadesDeMultiplasComidas (self):
+        listTabuleirosPossiveis = []
+        for row in range (self.tabuleiro.tabuleiroConfiguracao.shape[0]):
+            for column in range (self.tabuleiro.tabuleiroConfiguracao.shape[1]):
+                if (self.tabuleiro.tabuleiroConfiguracao [row, column] == VariaveisGlobais.PEAO):
+                    listaDeListaDeMovimentos = self.criaMultiplosMovimentosParaOPeaoComer (row, column, [], self.tabuleiro)
+                    if (not listaDeListaDeMovimentos is None):
+                        for listaDeMovimentos in listaDeListaDeMovimentos:
+                            if (not listaDeMovimentos is None):
+                                listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmaListaDeMovimentos(listaDeMovimentos))
+                
+                if (self.tabuleiro.tabuleiroConfiguracao [row, column] == VariaveisGlobais.DAMA):
+                    listaDeListaDeMovimentos = self.criaMultiplosMovimentosParaADamaComer (row, column, [], self.tabuleiro)
+                    if (not listaDeListaDeMovimentos is None):
+                        for listaDeMovimentos in listaDeListaDeMovimentos:
+                            if (not listaDeMovimentos is None):
+                                listTabuleirosPossiveis.append (self.criaTabuleiroAPartirDeUmaListaDeMovimentos(listaDeMovimentos))
+                    
+        return listTabuleirosPossiveis
+
+class Casa:
+    
+    def __init__(self, letra, numero):
+        self.letra = letra
+        self.numero = numero
+        
+    def converteMovimentoParaArray (self):
+        #FEITO DESSA FORMA PARA CORRESPONDER A UM TABULEIRO NORMAL
+        numeroLetra = ord(self.letra) - ord('a')
+        numeroNumero = 7 - self.numero
+        return np.array([numeroNumero, numeroLetra])
+    
+    def printaCasa (self):
+        print (self.letra + " " + str(self.numero), file=sys.stderr)
+        
+class Movimento:
+    
+    def __init__(self, casaInicial, casaFinal):
+        self.casaInicial = casaInicial
+        self.casaFinal = casaFinal
+        
+    def printaMovimento (self):
+        self.casaInicial.printaCasa ()
+        self.casaFinal.printaCasa ()
+        print ("")
+        
+class VariaveisGlobais :
+    TABULEIRO_INICIAL = np.array ([[0, -1, 0, -1, 0, -1, 0, -1], 
+                                   [-1, 0, -1, 0, -1, 0, -1, 0], 
+                                   [0, -1, 0, -1, 0, -1, 0, -1], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [1, 0, 1, 0, 1, 0, 1, 0], 
+                                   [0, 1, 0, 1, 0, 1, 0, 1], 
+                                   [1, 0, 1, 0, 1, 0, 1, 0]])
+    
+    TABULEIRO_TESTE =   np.array ([[0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, -1, 0, -1, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, -1, 0, -1, 0, 0, 0, 0], 
+                                   [0, 0, 9, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0]])
+    
+    TABULEIRO_TESTE_2 =   np.array ([[0, 0, 0, 0, 0, 0, 0, -1], 
+                                   [-1, 0, 0, 0, -1, 0, -1, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [-1, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, -1, 0, 0, 0, -1], 
+                                   [-9, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, -9, 0, 1, 0]])
+    
+    TABULEIRO_TESTE_3 =   np.array ([[0, -1, 0, -1, 0, -1, 0, -1], 
+                                   [0, 0, -1, 0, -1, 0, -1, 0], 
+                                   [0, -1, 0, -1, 0, -1, 0, 0], 
+                                   [0, 0, -1, 0, 0, 0, -1, 0], 
+                                   [0, 1, 0, 0, 0, 0, 0, 1], 
+                                   [1, 0, 1, 0, 1, 0, 0, 0], 
+                                   [0, 0, 0, 1, 0, 1, 0, 1], 
+                                   [1, 0, 1, 0, 1, 0, 1, 0]])
+    
+    TABULEIRO_TESTE_4 =   np.array ([[0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, -1, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, -1, 0], 
+                                   [0, 0, 0, 0, 0, 9, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, -1, 0], 
+                                   [0, 0, 0, 0, 0, 1, 0, 0], 
+                                   [0, 0, 0, 0, 0, 0, 0, 0]])
+    
+    PEAO = 1
+    INIMIGO = -1
+    DAMA = 9
+    DAMAINIMIGA = -9
+    CASAVAZIA = 0
+    
+    ARQUIVO_RESULTADOS_SELETOR = ".\\resultados_treinamento\\resultados_seletor.txt"
+    ARQUIVO_RESULTADOS_CAMPEONATO = ".\\resultados_treinamento\\resultados_campeonato.txt"
+    ARQUIVO_RESULTADOS_CAMPEONATO_ENTRE_TIMES = ".\\resultados_treinamento\\resultados_campeonato_entre_times.txt"
+    
+class Tabuleiro:
+    
+    def __init__ (self, tabuleiroConfiguracao = VariaveisGlobais.TABULEIRO_INICIAL):
+        #CASO O CONSTRUTOR USADO SEJA O COM UM TABULEIRO, O TABULEIRO CRIADO TERA A MESMA CONFIGURACAO DO USADO DE BASE
+        #USADO DEEPCOPY PARA A CRIACAO DE UM NOVO OBJETO 100% DIFERENTE DO ANTERIOR PARA EVITAR PROBLEMAS DE REFERÊNCIA DE MEMÓRIA
+        self.tabuleiroConfiguracao = copy.deepcopy (tabuleiroConfiguracao)
+
+    def doNormalMovement (self, movimento):
+        casaInicial = movimento.casaInicial.converteMovimentoParaArray()
+        casaFinal = movimento.casaFinal.converteMovimentoParaArray()
+        
+        tempPeca = self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]]
+        self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]] = VariaveisGlobais.CASAVAZIA
+        self.tabuleiroConfiguracao [casaFinal[0], casaFinal [1]] = tempPeca
+        
+    def doComeMovement (self, movimento):
+        casaInicial = movimento.casaInicial.converteMovimentoParaArray()
+        casaFinal = movimento.casaFinal.converteMovimentoParaArray()
+        casaPecaASerComida = self.pegaCasaPecaComida (movimento)
+        
+        tempPeca = self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]]
+        self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]] = VariaveisGlobais.CASAVAZIA
+        self.tabuleiroConfiguracao [casaFinal[0], casaFinal [1]] = tempPeca
+        self.tabuleiroConfiguracao [casaPecaASerComida[0], casaPecaASerComida [1]] = VariaveisGlobais.CASAVAZIA
+            
+    def coroaPeca (self, movimento):
+        casaFinal = movimento.casaFinal.converteMovimentoParaArray()
+        
+        if (casaFinal [0] == 0):
+            self.tabuleiroConfiguracao [casaFinal[0], casaFinal [1]] = VariaveisGlobais.DAMA;    
+            
+    def doMultipleMovementsComer (self, listaMovimento):
+        #Salva o tabuleiro original para que, caso algum movimento nao role, o tabuleiro possa voltar para a configuracao original
+        tabuleiroOriginal = copy.deepcopy (self.tabuleiroConfiguracao)
+        
+        for movimento in listaMovimento:
+            tamanhoMovimento = self.calculaTamanhoMovimento (movimento);
+            
+            if (tamanhoMovimento != 2):
+                print ("Movimento nao eh de comer. Movimento Invalido, tabuleiro sera resetado para o estado inicial")
+                self.tabuleiroConfiguracao = copy.deepcopy (tabuleiroOriginal)
+                return False
+                
+            if (not (self.doAnyMovement (movimento))):
+                print ("Movimento nao permitido. Tabuleiro sera resetado para o estado inicial")
+                self.tabuleiroConfiguracao = copy.deepcopy (tabuleiroOriginal)
+                return False
+            
+        return True
+                
+    def doAnyMovement (self, movimento):
+        #PRIMEIRO VERIFICA SE EH POSSIVEL REALIZAR O MOVIMENTO
+        if (not(self.verificaValidadeMovimento (movimento))):
+#            print ("Movimento nao permitido!!")
+            return False
+        
+        tamanhoMovimento = self.calculaTamanhoMovimento (movimento);
+        
+        if (tamanhoMovimento == 1):
+#            print ("Fazendo movimento normal!")
+            self.doNormalMovement (movimento)
+            
+        elif(tamanhoMovimento == 2):
+#            print ("Fazendo movimento para comer peca!")
+            self.doComeMovement (movimento)
+        else:
+            return False
+        
+        self.coroaPeca (movimento)
+        return True;
+            
+    def pegaCasaPecaComida (self, movimento):
+        casaInicial = movimento.casaInicial.converteMovimentoParaArray()
+        casaFinal = movimento.casaFinal.converteMovimentoParaArray()
+        
+        direcao = self.normalizeVector (np.subtract (casaInicial, casaFinal))
+        
+        return np.add (casaFinal, direcao)
+        
+    def normalizeVector (self, vector):
+        vectorNormalizado = np.array ([0, 0])
+        for index in range (vector.shape[0]):
+            vectorNormalizado [index] = vector[index] / np.abs (vector[index])
+            
+        return vectorNormalizado
+    
+    def calculaTamanhoMovimento (self, movimento):
+        casaInicial = movimento.casaInicial.converteMovimentoParaArray()
+        casaFinal = movimento.casaFinal.converteMovimentoParaArray()
+        
+        direcao = np.subtract (casaInicial, casaFinal)
+        tamanhoMovimento = max (np.abs(direcao) [0], np.abs(direcao) [1])
+        
+        return tamanhoMovimento
+        
+    def verificaValidadeMovimentoNormal (self, movimento):
+        casaInicial = movimento.casaInicial.converteMovimentoParaArray()
+        casaFinal = movimento.casaFinal.converteMovimentoParaArray()
+        
+        tamanhoMovimento = self.calculaTamanhoMovimento (movimento)
+        direcaoY = casaFinal[0] - casaInicial[0];
+        
+        if (tamanhoMovimento == 1 and self.tabuleiroConfiguracao [casaFinal[0], casaFinal [1]] == VariaveisGlobais.CASAVAZIA and (direcaoY < 0 or self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]] == VariaveisGlobais.DAMA)):
+            return True
+        else:
+            return False
+    
+    def verificaValidadeMovimentoComer (self, movimento):
+        casaInicial = movimento.casaInicial.converteMovimentoParaArray()
+        casaFinal = movimento.casaFinal.converteMovimentoParaArray()
+        casaPecaASerComida = self.pegaCasaPecaComida (movimento)
+        
+        tamanhoMovimento = self.calculaTamanhoMovimento (movimento)
+        direcaoY = casaFinal[0] - casaInicial[0];
+        
+        if (tamanhoMovimento == 2 and self.tabuleiroConfiguracao [casaFinal[0], casaFinal [1]] == VariaveisGlobais.CASAVAZIA and (self.tabuleiroConfiguracao [casaPecaASerComida[0], casaPecaASerComida [1]] == VariaveisGlobais.INIMIGO or self.tabuleiroConfiguracao [casaPecaASerComida[0], casaPecaASerComida [1]] == VariaveisGlobais.DAMAINIMIGA) and (direcaoY < 0 or self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]] == VariaveisGlobais.DAMA)):
+            return True
+        else:
+            return False
+        
+    def verificaSeExistePecaParaMover (self, movimento):
+        casaInicial = movimento.casaInicial.converteMovimentoParaArray()
+        
+        if (self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]] != VariaveisGlobais.PEAO and self.tabuleiroConfiguracao [casaInicial[0], casaInicial [1]] != VariaveisGlobais.DAMA):
+            return True
+        else:
+            return False
+    
+    def verificaValidadeMovimento (self, movimento):
+        if (self.verificaSeExistePecaParaMover (movimento)):
+#            print ("Casa Inicial de movimento nao tem peca que pode ser jogada!!")
+            return False
+        if (self.verificaValidadeMovimentoNormal (movimento)):
+            return True
+        elif (self.verificaValidadeMovimentoComer (movimento)):
+            return True
+        else:
+            return False
+    
+    def printaTabuleiro (self):
+        for row in range (self.tabuleiroConfiguracao.shape[0]):
+            print (str (8 - row) + "   ", end = " ", file=sys.stderr)
+            for column in range (self.tabuleiroConfiguracao.shape[1]):
+                if (self.tabuleiroConfiguracao [row, column] == VariaveisGlobais.INIMIGO):
+                    print ("x", end = " ", file=sys.stderr)
+                elif (self.tabuleiroConfiguracao [row, column] == VariaveisGlobais.DAMAINIMIGA):
+                    print ("y", end = " ", file=sys.stderr)
+                else:
+                    print (self.tabuleiroConfiguracao [row, column], end = " ", file=sys.stderr)
+            print ("", file=sys.stderr)
+            
+        print ("", file=sys.stderr)
+        print ("    ", end = " ", file=sys.stderr)
+        letter = ord('a')
+        for row in range (self.tabuleiroConfiguracao.shape[0]):
+            print (chr (letter + row), end = " ", file=sys.stderr)
+            
+        print ("", file=sys.stderr)
+            
+    def converteTabuleiroParaArray (self, valorDama):
+        indexArray = 0;
+        array = np.zeros (shape = (32))
+        
+        for row in range (self.tabuleiroConfiguracao.shape[0]):
+            for column in range (self.tabuleiroConfiguracao.shape[1]):
+                if ((row + column) % 2 == 1):
+                    array [indexArray] = self.tabuleiroConfiguracao [row, column]
+                    
+                    if (array [indexArray] == VariaveisGlobais.DAMA):
+                        array [indexArray] = valorDama
+                    
+                    indexArray += 1
+                    
+        return array
+    
+    def inverteVisaoTabuleiro (self):
+        self.tabuleiroConfiguracao = np.rot90 (np.rot90 (self.tabuleiroConfiguracao)) * (-1)
+        
+def converteInputParaTabuleiro (listaLinhas, cor, valorK):
+    print (cor, file=sys.stderr)
+    if (cor != "r" and cor != "b"):
+        print ("ERRO AQUI: " + cor, file=sys.stderr)
+        cor = "r"
+    if (cor == "w"):
+        cor = "r"
+    listaTabuleiro = []
+    for linha in listaLinhas:
+        linhaArray = []
+        for index in range (len(linha)):
+            casa = linha [index].strip()
+            #print (casa, file=sys.stderr)
+            if (casa == "."):
+                linhaArray.append (0)
+            elif (casa == cor):
+                linhaArray.append (1)
+            elif (casa == cor.upper ()):
+                linhaArray.append (valorK)
+            else:
+                print (casa, file=sys.stderr)
+                if (casa.isupper()):
+                    linhaArray.append (-valorK)
+                else:
+                    linhaArray.append (-1)
+        listaTabuleiro.append (np.array (linhaArray))
+    
+    tabuleiroArray = np.array (listaTabuleiro)
+    if (cor == "r"):
+        tabuleiroArray = np.rot90 (np.rot90 (tabuleiroArray))
+    tabuleiro = Tabuleiro (tabuleiroArray)
+    return tabuleiro
+
+
+def fazJogada (tabuleiro, jogadas, cor):
+        jogadaEfetuada = False
+        
+        tabuleiroASerJogado = copy.deepcopy (tabuleiro)
+        
+        while (not jogadaEfetuada):
+            listaJogadas = getListaMovimentos (jogadas, cor)
+            
+            if (len (listaJogadas) == 1):
+                if (tabuleiroASerJogado.doAnyMovement (listaJogadas [0])):
+                    jogadaEfetuada = True
+            else:
+                tabuleiroASerJogado.doMultipleMovementsComer (listaJogadas)
+                if (not np.array_equal (tabuleiroASerJogado.tabuleiroConfiguracao, tabuleiro.tabuleiroConfiguracao)):
+                    jogadaEfetuada = True
+            
+            if (not jogadaEfetuada):
+                return None
+                
+            
+        return tabuleiroASerJogado
+    
+def getListaMovimentos (jogadas, cor):
+    listaJogadas = []
+    # print ("pegando input do tabuleiro", file=sys.stderr)
+    
+    if (cor != "r" and cor != "b"):
+        cor = "r"
+        
+    jogadas = jogadas.split ("\"")
+        
+    for jogada in jogadas:
+        if (jogada and not jogada == " "):
+            separados = jogada.split (" ")
+            
+            if (cor == "b"):                
+                letraInicial = separados [0]
+                numeroInicial = int (separados [1])
+            else:
+                letraInicial = chr(ord('h') - (ord(separados[0]) - ord('a')))
+                numeroInicial = 7 - int (separados [1])
+            casaInicial = Casa (letraInicial, numeroInicial)
+                
+            if (cor =="b"):    
+                letraFinal = separados [2]
+                numeroFinal = int(separados [3])
+            else:
+                letraFinal = chr(ord('h') - (ord(separados[2]) - ord('a')))
+                numeroFinal = 7 - int (separados [3])
+                
+            casaFinal = Casa (letraFinal, numeroFinal)
+                
+            movimento = Movimento (casaInicial, casaFinal)
+            
+            # movimento.printaMovimento ()
+            listaJogadas.append (movimento)
+            
+    return listaJogadas
+
+def converteJogadaParaInputDoTabuleiro (jogadas):
+    listaJogadas = "\""
+    comecouAParsear = True
+    for index in range (0, len(jogadas), 2):
+        listaJogadas += jogadas [index].lower() + " " + str(int(jogadas [index + 1]) - 1)
+        if (index + 2 < len(jogadas)):
+            if (not comecouAParsear):
+                listaJogadas += "\"" + " \"" + jogadas [index].lower() + " " + str(int(jogadas [index + 1]) - 1) + " "
+            else:
+                listaJogadas += " "
+        else:
+            listaJogadas += "\""
+        
+        comecouAParsear = False
+        
+        
+    print (listaJogadas, file=sys.stderr)
+    return listaJogadas
+
+def predict (tabuleiroArray):
+    global camada0
+    global camada1
+    global camada2
+    global pesoCamada0
+    global pesoaCamada1
+    global pesoCamada2
+    
+    arrayTabuleiro = np.array ([tabuleiroArray])
+    score = np.tanh(np.tanh(np.tanh(arrayTabuleiro.dot(camada0) + pesoCamada0).dot(camada1) + pesoCamada1).dot(camada2) + pesoCamada2)
+    return score
+
+numeroJogadasAFrente = 3
+timeStart = 0
+
+def calculaScoreTabuleiroMedia (tabuleiro, numeroDaJogada, jogadorJogando):
+    global numeroJogadasAFrente
+    global pesoDama
+    global timeStart
+    print ("Numero da jogada: " + str (numeroDaJogada) + " tempo de jogo: " + str (time.time() - timeStart), file=sys.stderr)
+    if (numeroDaJogada >= numeroJogadasAFrente or (time.time() - timeStart) >= 0.077):
+        if (jogadorJogando):
+            tabuleiro.inverteVisaoTabuleiro()
+            score = predict (tabuleiro.converteTabuleiroParaArray (pesoDama))
+
+            gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+            listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+            if (not listaTabuleiros or listaTabuleiros is None):
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+            if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                score = -1.1
+                    
+            return score
+        else:
+            score = predict (tabuleiro.converteTabuleiroParaArray (pesoDama))
+            tabuleiro.inverteVisaoTabuleiro()
+            gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+            listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+            if (not listaTabuleiros or listaTabuleiros is None):
+                listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+                    
+            if (len (listaTabuleiros) == 0 or listaTabuleiros is None):
+                score = 1.1
+                    
+            return score
+        
+    tabuleiro.inverteVisaoTabuleiro ()
+        
+    jogadaForcada = False
+        
+    gerenciadorDeTabuleiros = GerenciadorDeTabuleiros (tabuleiro)
+    listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMultiplasComidas ()
+    if (not listaTabuleiros or listaTabuleiros is None):
+        listaTabuleiros = gerenciadorDeTabuleiros.calculaPossibilidadesDeMovimentoNormal ()
+#    elif (len (listaTabuleiros) < self.numeroDePossiveisComidasParaNaoConsiderarJogadaForcada):
+#        jogadaForcada = True
+        
+    numeroDaProximaJogada = numeroDaJogada
+    numeroDaProximaJogada += 1 
+#        if (not jogadaForcada):
+#            numeroDaProximaJogada += 1 
+            
+    if (len (listaTabuleiros) == 0):
+        if (jogadorJogando):
+            return -1
+        else:
+            return 1
+    soma = 0
+    for tabuleiro in listaTabuleiros:
+        if (not tabuleiro is None):
+            if (jogadorJogando):
+                soma += calculaScoreTabuleiroMedia (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), False)
+            else:
+                soma += calculaScoreTabuleiroMedia (copy.deepcopy(tabuleiro), copy.deepcopy(numeroDaProximaJogada), True)
+                    
+        
+    return soma/len(listaTabuleiros)
+    
+camada0 = np.array ([[ 0.13590388   ,-0.18659018   , 0.12603843   , 0.094959214  ,
+  -0.059012935  , 0.10327745   ,-0.07512747   , 0.00091431476,
+   0.18434808   ,-0.14572656   ,-0.0855948    ,-0.14460576   ,
+   0.15971424   ,-0.021354858  , 0.07569752   , 0.23257115   ,
+   0.1643798    ,-0.050146498  ,-0.14052676   ,-0.05588117   ,
+  -0.13769463   ,-0.04762053   ,-0.14860006   , 0.046300594  ,
+   0.056283224  ,-0.16774617   ,-0.019125942  , 0.1311907    ,
+  -0.11993529   , 0.0064878725 ,-0.0546913    ,-0.038841307  ,
+   0.16798341   , 0.058036897  ,-0.03310266   , 0.09141347   ,
+   0.15274784   , 0.25167903   , 0.23094608   , 0.10964396   ],
+ [-0.03920373   , 0.07641792   ,-0.3725001    ,-0.10935173   ,
+   0.013549381  , 0.14936343   , 0.028649269  ,-0.011166934  ,
+  -0.119284004  , 0.13625057   , 0.045308594  ,-0.10217038   ,
+  -0.16978215   ,-0.12269859   ,-0.03579148   ,-0.05905185   ,
+   0.10427204   , 0.06922131   ,-0.1680258    ,-0.14392512   ,
+   0.0026088578 ,-0.078040816  ,-0.2017103    , 0.1406098    ,
+  -0.025927994  ,-0.70270854   ,-0.018647788  ,-0.01629189   ,
+   0.5561441    , 0.0751495    , 0.14993036   , 0.020896856  ,
+  -0.14445347   , 0.21754816   ,-0.15143533   ,-0.12819837   ,
+   0.0357821    ,-0.1298966    , 0.115656786  , 0.057721235  ],
+ [ 0.16717972   , 0.11316865   , 0.08691679   ,-0.116170205  ,
+  -0.060691904  , 0.09766148   , 0.088052414  , 0.1962475    ,
+   0.117993794  ,-0.017611269  , 0.14890523   ,-0.20317705   ,
+   0.0933434    ,-0.3986456    ,-0.1852542    , 0.041350406  ,
+   0.12124231   , 0.03235966   , 0.08135272   ,-0.10279516   ,
+  -0.061013732  ,-0.007638959  ,-0.18327911   , 0.062615104  ,
+   0.20478235   , 0.16907445   , 0.0057080723 , 0.1834322    ,
+  -0.023372615  , 0.026888527  ,-0.20760469   , 0.019351566  ,
+  -0.008677836  , 0.18914084   ,-0.20285735   , 0.07892804   ,
+   0.06880783   ,-0.005585175  , 0.43669096   ,-0.11437926   ],
+ [ 0.16244063   , 0.04330912   , 0.15148626   , 0.19002102   ,
+   0.031703092  , 0.16852194   ,-0.074669294  ,-0.012371157  ,
+   0.04102016   ,-0.21295616   ,-0.109654225  ,-0.0826125    ,
+  -0.10370445   ,-0.14084671   , 0.090213545  ,-0.035995733  ,
+   0.019441387  , 0.04659166   , 0.055517554  ,-0.034433674  ,
+  -0.107494995  ,-0.02173973   , 0.3149078    , 0.13381572   ,
+   0.09687156   , 0.034351032  , 0.48873982   , 0.049895577  ,
+  -0.13936098   ,-0.07379497   ,-0.06940015   , 0.17982018   ,
+   0.20860423   ,-0.1519651    , 0.13509342   ,-0.21461126   ,
+   0.09706695   , 0.20565444   ,-0.15518844   ,-0.09313084   ],
+ [ 0.066244364  ,-0.010213875  ,-0.10896872   ,-0.017424695  ,
+  -0.06531613   , 0.090864025  , 0.099437445  ,-0.010113324  ,
+  -0.006206892  ,-0.035509557  ,-0.12884842   ,-0.20615211   ,
+   0.69154716   , 0.14112483   , 0.09539649   , 0.04598391   ,
+  -0.1279258    ,-0.16682886   , 0.16210182   , 0.15028629   ,
+  -0.33126286   ,-0.06169281   ,-0.0038777816 , 0.059990752  ,
+   0.0691877    , 0.115182355  ,-0.09455924   ,-0.080812715  ,
+   0.22061202   , 0.112323225  , 0.12651034   ,-0.0811218    ,
+   0.17124745   ,-0.16653006   ,-0.21668014   ,-0.051659834  ,
+   0.04413387   ,-0.06503288   , 0.088969916  ,-0.1795428    ],
+ [ 0.11824881   , 0.097643465  ,-0.034332443  , 0.0822958    ,
+   0.24798746   , 0.068893634  , 0.2034201    ,-0.18578763   ,
+  -0.23888096   , 0.09122457   , 0.07645515   ,-0.28662834   ,
+   0.081927665  ,-0.0127195325 ,-0.0550574    , 0.02200217   ,
+   0.06099573   ,-0.14181489   , 0.06979209   , 0.1373541    ,
+   0.016316079  , 0.10415196   ,-0.23250467   ,-0.028294988  ,
+   0.12229842   ,-0.06851851   , 0.040119044  , 0.16291174   ,
+  -0.07058247   ,-0.12912868   , 0.38452193   , 0.076857045  ,
+  -0.17985155   , 0.08621921   ,-0.07340585   ,-0.0034901504 ,
+  -0.13326788   , 0.16560414   , 0.60812896   ,-0.1037634    ],
+ [ 0.308703     , 0.15958357   , 0.16219917   , 0.07014602   ,
+  -0.08730789   , 0.019304518  ,-0.17598343   , 0.1622142    ,
+   0.01040315   ,-0.018304685  , 0.04407875   ,-0.030310757  ,
+  -0.089794844  ,-0.003072654  , 0.014417036  , 0.14660072   ,
+   0.019992685  , 0.07094033   , 0.048106533  , 0.08091953   ,
+  -0.15854724   ,-0.057614706  , 0.068994716  ,-0.0476195    ,
+  -0.09287623   ,-0.1440754    ,-0.11061143   ,-0.08754311   ,
+   0.10491634   ,-0.18104106   , 0.074465595  , 0.11652682   ,
+  -0.03142321   , 0.20437808   , 0.60419106   ,-0.123656526  ,
+   0.18219711   , 0.11468718   , 0.13671467   ,-0.1298401    ],
+ [-0.17257833   , 0.12213131   , 0.1727575    , 0.11689828   ,
+   0.027586795  ,-0.11130515   , 0.1822696    , 0.03303646   ,
+  -0.27567565   ,-0.050237115  ,-0.17874753   , 0.15889774   ,
+   0.1362535    ,-0.16384669   , 0.16808635   ,-0.042870924  ,
+   0.04883217   , 0.08305806   , 0.13574654   ,-0.12082514   ,
+   0.15119563   , 0.14462999   ,-0.12604675   , 0.30059546   ,
+   0.017448533  , 0.13500245   , 0.1926361    ,-0.17837462   ,
+  -0.009077068  , 0.20033176   , 0.019325597  ,-0.00783468   ,
+  -0.11590006   , 0.10934994   ,-0.009388801  ,-0.17034692   ,
+  -2.1932094    ,-0.019173432  , 0.031621512  , 0.039114706  ],
+ [ 0.17513466   , 0.08316175   , 0.11999846   ,-0.11555134   ,
+   0.04027016   ,-0.17717886   , 0.13499092   , 0.18600413   ,
+  -0.18019797   ,-0.14889814   , 0.149292     ,-0.009567844  ,
+   0.111334145  , 0.04004246   ,-0.09413538   ,-0.0029291697 ,
+  -0.16462086   ,-0.1689455    ,-0.12674133   ,-0.23160765   ,
+   0.27833778   ,-0.09018002   , 0.06854501   , 0.0017100876 ,
+  -0.09059031   , 0.11701996   , 0.105271526  , 0.067312315  ,
+   0.054911256  , 0.01958661   ,-0.15953144   , 0.080657676  ,
+   0.11686273   , 0.15020776   ,-0.19175291   ,-0.17863901   ,
+   0.08595699   ,-0.1148339    ,-0.13529058   , 0.27549323   ],
+ [-0.02568837   , 0.70816725   , 0.1267062    , 0.057904802  ,
+  -0.098821305  ,-0.026172837  ,-0.11585834   ,-0.077139415  ,
+  -0.124077864  , 0.11547848   ,-0.27321425   ,-0.071087725  ,
+   0.10221548   ,-0.06471645   , 0.22295494   ,-0.17538665   ,
+  -0.12589398   ,-0.17500016   , 0.051887628  , 0.03060399   ,
+  -0.02794667   , 0.03923359   ,-0.31654125   ,-0.14793879   ,
+   0.062063582  ,-0.047360323  ,-0.1796631    , 0.13662288   ,
+  -0.19506218   , 0.12610725   , 0.13421531   ,-0.07932826   ,
+  -0.03415896   , 0.14841901   , 0.03115418   ,-0.03508768   ,
+   0.15678287   , 0.092080206  , 0.3631713    ,-0.18557747   ],
+ [ 0.17020884   , 0.00059586583,-0.19336678   , 0.16886993   ,
+   0.0051189796 , 0.11271074   , 0.17012477   , 0.1880422    ,
+   0.00094748987,-0.05403972   ,-0.096818976  , 0.15789264   ,
+   0.020672545  ,-0.011793235  , 0.07559957   , 0.2282492    ,
+  -0.25993878   , 0.07577393   , 0.18065555   ,-0.13057086   ,
+  -0.008606901  , 0.17221718   ,-0.16397494   , 0.090200216  ,
+   0.094782524  , 0.10831354   ,-0.15877782   ,-0.11682761   ,
+  -0.12589957   ,-0.11032567   , 0.2514772    ,-0.121541865  ,
+  -0.054988526  ,-0.13515246   ,-0.15696439   ,-0.10457065   ,
+  -0.31417865   ,-0.14871615   , 0.21272379   ,-0.108200945  ],
+ [-0.33747962   , 0.2663906    , 0.123845674  , 0.13825211   ,
+  -0.022452675  , 0.07353663   ,-0.18799435   , 0.1137479    ,
+   0.075147726  , 0.114884324  ,-0.06847361   , 0.08855389   ,
+   0.080065034  ,-0.14216734   , 0.15601018   , 0.15421884   ,
+   0.10235433   ,-0.040384043  ,-0.027479703  ,-0.050372686  ,
+  -0.1745645    , 0.0056889183 ,-0.010952491  ,-0.106840275  ,
+  -0.16424936   , 0.11693056   ,-0.018299937  ,-0.032624163  ,
+   0.04213294   , 0.16615076   , 0.19680288   ,-0.18909359   ,
+   0.036904354  ,-0.15751146   ,-0.0068198335 , 0.18216823   ,
+  -0.18252371   , 0.12232421   ,-0.011322539  , 0.09581013   ],
+ [-0.1273852    , 0.076688     , 0.16578862   , 0.07168799   ,
+   0.047599804  , 0.03928271   ,-0.01726259   , 0.1802322    ,
+   0.22489144   , 0.17903335   , 0.04860318   ,-0.14075291   ,
+  -0.118533865  , 0.16746455   ,-0.10471523   ,-0.18550941   ,
+   0.06772763   , 0.103718154  , 0.11613704   ,-0.12255698   ,
+   0.07551731   ,-0.17339465   , 0.072086796  , 0.19375847   ,
+  -0.19519599   ,-0.07216368   , 0.03659578   , 0.17156966   ,
+  -0.05563894   ,-0.14997679   , 0.060583547  , 0.10082308   ,
+  -0.17222546   , 0.0648539    , 0.056129426  ,-0.057923436  ,
+  -0.10887732   , 0.08923673   , 0.10639022   , 0.16611807   ],
+ [ 0.032666944  ,-0.018229365  ,-0.14976303   , 0.022301868  ,
+  -0.15801921   ,-0.03930736   , 0.021464547  , 0.1787062    ,
+   0.11973917   , 0.10555342   ,-0.11885067   , 0.044053722  ,
+   0.032905996  ,-0.04484202   , 0.10929033   , 0.20277788   ,
+   0.11058491   , 0.1456265    ,-0.11444397   , 0.0003554274 ,
+  -0.049089517  , 0.048788015  ,-0.12715282   ,-0.22049212   ,
+  -0.053454056  ,-0.06932479   , 0.16615233   ,-0.13089593   ,
+  -0.20648591   ,-0.0577396    , 0.05216139   ,-0.11818624   ,
+   0.16610698   ,-0.10605201   , 0.11226255   ,-0.06448886   ,
+  -0.108304136  ,-0.08936918   ,-0.02805943   ,-0.17893521   ],
+ [ 0.03528857   , 1.1132827    ,-0.13285865   ,-0.12258005   ,
+   0.051295683  , 0.14535168   , 0.07621472   , 0.18596013   ,
+  -0.17061757   ,-0.016304517  , 0.05141739   ,-0.086620755  ,
+   0.016453534  ,-0.042974506  , 0.12622903   , 0.1685384    ,
+  -0.04598375   ,-0.18187957   ,-0.060220122  , 0.108547874  ,
+   0.027224453  ,-0.088862374  ,-0.10239337   , 0.087306954  ,
+  -0.015595121  ,-0.040221464  ,-0.12766655   , 0.1438841    ,
+  -0.09356237   ,-0.07132962   ,-0.28055862   ,-0.07324172   ,
+  -0.065161124  , 0.11921882   , 0.10117649   ,-0.032318365  ,
+  -0.11304592   , 0.080013044  ,-0.11162929   ,-0.14458054   ],
+ [-0.0030307712 , 0.022545459  ,-0.19265012   , 0.14415199   ,
+  -0.18754633   ,-0.029447185  ,-0.16603942   , 0.1742426    ,
+   0.1022024    , 0.09696538   ,-0.13513936   , 0.0022217948 ,
+  -0.17575471   , 0.11410378   ,-0.09874897   , 0.043915775  ,
+  -0.16690558   , 0.09792081   ,-0.015540947  ,-0.095734425  ,
+   0.037385512  ,-0.15837839   , 0.10341012   ,-0.18126917   ,
+   0.14024779   , 0.17245142   ,-0.095632814  , 0.031358737  ,
+  -0.8136732    , 0.12477959   , 0.21777478   , 0.027524285  ,
+  -0.028327     , 0.07466511   , 0.16370751   ,-0.011269646  ,
+  -0.069862895  , 0.05743733   , 0.19537291   , 0.05945422   ],
+ [ 0.034027763  , 0.18479678   , 2.0324934    ,-0.17541014   ,
+   0.026472678  , 0.040149655  , 0.112866126  , 0.006387641  ,
+  -0.02341895   , 0.13012111   ,-0.014781654  ,-0.06811231   ,
+   0.038004965  ,-0.17704909   ,-0.048557296  ,-0.08157137   ,
+  -0.43660977   ,-0.005902411  ,-0.11729457   , 0.05558851   ,
+   0.114243634  ,-0.047227833  ,-0.20450686   , 0.075389944  ,
+  -0.094776675  , 0.092188776  ,-0.12561      ,-0.012851905  ,
+   0.17880706   ,-0.1556833    ,-0.086489506  ,-0.045565944  ,
+  -0.06434436   , 0.037247207  ,-0.09064163   ,-0.0047377585 ,
+  -0.24226798   ,-0.11588995   , 0.17403336   , 0.024471376  ],
+ [ 0.17677327   , 0.37169755   , 0.1607603    , 0.027668362  ,
+  -0.104275905  ,-0.04828826   , 0.06284806   , 0.25476733   ,
+  -0.019651506  ,-0.13522995   , 0.03251242   , 0.2699315    ,
+  -0.0038995047 ,-0.21506368   ,-0.23563378   ,-0.009438805  ,
+   0.048857864  , 0.19621868   , 0.19957839   ,-0.095617026  ,
+  -0.02573507   ,-0.11897339   , 0.11547658   , 0.14443891   ,
+  -0.072104946  , 0.015534895  ,-0.12132739   ,-0.051884614  ,
+   0.0006059464 ,-0.10185295   ,-0.55015206   , 0.022214927  ,
+   0.0712749    ,-0.28048056   ,-0.44280735   , 0.14266682   ,
+   0.003763041  ,-0.11343845   , 0.20971867   , 0.045321763  ],
+ [ 0.2320342    , 0.065456     ,-0.015595465  ,-0.033533286  ,
+  -0.15451454   ,-0.1571851    , 0.013729419  ,-0.17047285   ,
+  -0.20628048   ,-0.17823856   ,-0.061653458  ,-0.017283157  ,
+   0.05816814   ,-0.06911919   ,-0.11746594   , 0.14569965   ,
+   0.44820908   , 0.08966732   ,-0.11156694   , 0.2016075    ,
+  -0.010543603  ,-0.12828651   , 0.08583678   , 0.14558409   ,
+   0.08088331   , 0.13803591   ,-0.16575658   , 0.18077779   ,
+   0.09516995   ,-0.12557416   ,-0.010801047  ,-0.075481825  ,
+   0.041122604  , 0.0101805795 , 0.07743298   ,-0.13808247   ,
+  -0.14033595   ,-0.124803394  , 0.095285796  , 0.09610254   ],
+ [ 0.058656648  ,-0.173524     , 0.07693427   , 0.0841119    ,
+  -0.15992731   , 0.11423488   ,-0.062417433  ,-0.08343706   ,
+  -0.18268289   , 0.06328853   ,-0.031446535  , 0.17022426   ,
+  -0.34365255   , 0.037808757  , 0.13262522   , 0.08060694   ,
+  -0.066210166  , 0.05723792   ,-0.12669836   ,-0.12516068   ,
+  -0.06533174   ,-0.065199174  ,-0.14363623   , 0.103203736  ,
+   0.08689409   , 0.19278121   ,-0.043206263  , 0.07734741   ,
+  -0.16524951   , 0.10040229   ,-0.054802246  ,-0.10018174   ,
+   0.13255073   ,-0.56500435   ,-0.087847285  , 0.035265673  ,
+  -0.07667184   , 0.14687206   , 0.10186496   , 0.8663983    ],
+ [ 0.07594585   , 0.054796815  ,-0.15515484   ,-0.19122206   ,
+   0.17230359   , 0.15640709   , 0.088232726  ,-0.010922194  ,
+  -0.065519124  , 0.13724184   , 0.30850533   , 0.12321467   ,
+  -0.13472827   , 0.003618872  , 0.14490853   , 0.17708197   ,
+   0.089861535  , 0.1583855    ,-0.014964943  ,-0.008126364  ,
+  -0.23632267   ,-0.037383158  , 0.17642935   , 0.14145824   ,
+   0.36485997   ,-0.1300532    ,-0.007680681  , 0.06415195   ,
+   0.051859412  ,-0.06345538   , 0.19371438   ,-0.5735414    ,
+   0.14772588   , 0.04833289   , 0.17991705   , 0.16049056   ,
+   0.0922111    ,-0.0070680757 ,-0.16698135   ,-0.014794846  ],
+ [ 0.07714142   ,-0.27833974   ,-0.16373469   , 0.06645473   ,
+  -0.052441895  ,-0.041811742  ,-0.11022693   ,-0.15682027   ,
+   0.059950374  ,-0.18349786   ,-0.10553146   ,-0.16313836   ,
+   0.11508906   ,-0.18390535   , 0.086466685  ,-0.038797017  ,
+  -0.18346517   ,-0.013881019  , 0.1457801    ,-0.14133368   ,
+   0.07432311   ,-0.050974995  , 0.015142754  , 0.14480424   ,
+   0.12544653   ,-0.09423942   , 0.05903183   ,-0.1413198    ,
+   0.3544089    ,-0.07378042   , 0.009520401  ,-0.043134157  ,
+  -0.093539044  , 0.06721321   ,-0.06898901   ,-0.19968098   ,
+   0.18184276   ,-0.19356564   ,-0.06467251   , 0.056111638  ],
+ [ 0.48351726   , 0.15852052   ,-0.15999877   ,-0.19241703   ,
+  -0.01136019   , 0.2092522    ,-0.04882918   ,-0.10184305   ,
+  -0.07941996   , 0.13847838   , 0.14213291   ,-0.15085343   ,
+   0.19862223   ,-0.28171602   , 0.027692538  , 0.09538702   ,
+   0.05141622   , 0.008144374  , 0.1826589    , 0.0816916    ,
+   0.23232059   , 0.023586268  ,-0.03471948   , 0.1732889    ,
+  -0.13237683   , 0.07532327   ,-0.363056     , 0.043157216  ,
+  -0.124891326  , 0.040060382  ,-0.15007946   ,-0.05542267   ,
+   0.08607108   , 0.049953572  ,-0.09928397   , 0.17249073   ,
+  -0.14612114   ,-0.13042557   , 0.08517195   , 0.13537695   ],
+ [ 0.11740793   ,-0.01792746   ,-0.1705812    , 0.03192513   ,
+  -0.10639544   ,-0.027131347  ,-0.108390085  , 0.18124571   ,
+  -0.10473306   , 0.1294312    , 0.07153492   , 0.12797566   ,
+   0.06403838   , 0.029418128  ,-0.18361136   ,-0.10406945   ,
+  -0.19623117   , 0.122842275  ,-0.110404626  , 0.14036235   ,
+  -0.39896858   ,-0.08405068   ,-0.029651083  , 0.1525045    ,
+  -0.10656285   ,-0.16804023   , 0.11360384   , 0.112683624  ,
+  -0.15371338   ,-0.20238416   , 0.13605133   ,-0.15444987   ,
+   0.040620282  , 0.00008812704,-0.0995329    , 0.06485774   ,
+  -0.08435204   , 0.15833911   , 0.15715624   , 0.10819506   ],
+ [ 0.07645465   , 0.19940795   , 0.0055451025 ,-0.021046301  ,
+  -0.01248017   ,-0.0034939998 , 0.08020736   ,-0.011017193  ,
+  -0.030132487  , 0.016307108  , 0.070177466  , 0.027440863  ,
+   0.09232113   , 0.042190414  , 0.19486667   , 0.07367685   ,
+  -0.06104781   ,-0.21729724   , 0.17427395   ,-0.10827207   ,
+  -0.076983966  , 0.0130959945 , 0.18094765   ,-0.09915493   ,
+  -0.11187868   ,-0.3245561    ,-0.09953795   , 0.16245902   ,
+   0.023949355  , 0.041815158  ,-0.12731689   , 0.08310369   ,
+   0.11337155   , 0.13353054   ,-0.15127976   ,-0.16367924   ,
+   0.16240656   , 0.050518285  ,-0.15156472   , 0.16100147   ],
+ [ 0.06219768   , 0.09860249   , 0.039405804  , 0.07923414   ,
+  -0.11584213   ,-0.117333435  , 0.08026089   , 0.15032661   ,
+  -0.1458663    ,-0.003284187  , 0.071770065  ,-0.0061223167 ,
+  -0.18688644   , 0.15958394   ,-0.06721335   ,-0.16251485   ,
+  -0.025515597  , 0.1486302    , 0.112918384  , 0.16629812   ,
+   0.1364479    ,-0.14581262   ,-0.051029004  , 0.004801288  ,
+   0.0061098146 , 0.13398094   ,-0.16062449   , 0.01766556   ,
+  -0.09947894   ,-0.20435995   , 0.12863034   , 0.37795472   ,
+  -0.038347986  ,-0.12645257   , 0.08037601   ,-0.21977663   ,
+   0.068327986  ,-0.06858366   , 0.11007866   , 0.092515096  ],
+ [ 0.016813958  ,-0.13311654   ,-0.29355925   , 0.025403513  ,
+  -0.1419873    ,-0.07965827   ,-0.09917936   ,-0.0469557    ,
+   0.08592898   , 0.12011246   , 0.18754336   ,-0.053844344  ,
+  -0.15695974   , 0.035373375  , 0.13795869   , 0.14661114   ,
+  -0.016788417  , 0.15862405   , 0.13239168   ,-0.040223274  ,
+  -0.13260521   ,-0.04921217   ,-0.072006494  , 0.025290256  ,
+  -0.40052524   , 0.17188911   ,-0.037399024  , 0.29678687   ,
+   0.10707824   ,-0.1653126    , 0.1297702    , 0.14275323   ,
+  -0.18245259   ,-0.18264922   ,-0.067454286  ,-0.17491925   ,
+   0.16393077   , 0.07701907   , 0.13767467   ,-0.11100765   ],
+ [-0.056078408  ,-0.080351815  , 0.1754133    , 0.17093799   ,
+  -0.17800486   ,-0.111495554  , 0.02338749   ,-0.040400073  ,
+   0.14103274   ,-0.173494     ,-0.10314853   , 0.21132548   ,
+   0.14733016   ,-0.00914948   , 0.15716906   ,-0.115474164  ,
+   0.21246879   , 0.19922908   ,-0.00901867   , 0.12659967   ,
+  -0.19423541   , 0.12287013   , 0.13606372   , 0.11230545   ,
+  -0.07641767   , 0.47511786   , 0.065267034  , 0.16946846   ,
+   0.045800667  , 0.040067267  ,-0.060872372  , 0.16475146   ,
+  -0.0041617686 , 0.10313636   , 0.05659007   ,-0.08551767   ,
+   0.09899757   ,-0.1689205    ,-0.057035245  , 0.12816256   ],
+ [-0.09604663   ,-0.18752073   ,-0.013593322  ,-0.070611306  ,
+  -0.20173776   , 0.12566237   , 0.10918319   ,-0.04404448   ,
+   0.12931708   , 0.075651     ,-0.03936619   , 0.07536632   ,
+  -0.089594856  ,-0.059994493  ,-0.17765862   , 0.16423354   ,
+  -0.063456796  , 0.2016392    , 0.1458254    , 0.15440437   ,
+   0.046095595  , 0.025752103  ,-0.20398682   ,-0.28371805   ,
+   0.11533157   ,-0.14243151   , 0.12110801   , 0.11093322   ,
+   0.07503872   , 0.16752557   ,-0.008208037  ,-0.10818143   ,
+  -0.061395615  , 0.06691923   , 0.06736909   , 0.20354316   ,
+  -0.06250542   , 0.15493117   , 0.05455276   ,-0.12022636   ],
+ [-0.06570838   , 0.05971326   ,-0.008987926  ,-0.08535449   ,
+   0.11690817   , 0.06680165   , 0.17828174   , 0.16859491   ,
+  -0.0096328715 ,-0.18200213   ,-0.17908305   , 0.18748085   ,
+   0.07778887   ,-0.1780721    ,-0.43168437   ,-0.08094836   ,
+   0.18661976   , 0.05241319   , 0.17977446   ,-0.19311462   ,
+   0.15365097   ,-0.121853605  ,-0.17115526   ,-0.08788697   ,
+  -0.0014783654 ,-0.059290655  ,-0.15420945   ,-0.08186995   ,
+   0.034273624  ,-0.02638107   , 0.14742497   , 0.5334436    ,
+  -0.02028728   , 0.048658565  ,-0.1615289    , 0.09400962   ,
+  -0.33837315   ,-0.16901217   , 0.065174766  , 0.101136476  ],
+ [-0.118122876  ,-0.10938486   , 0.018659724  ,-0.06764919   ,
+   0.005456838  , 0.15091798   ,-0.04721557   ,-0.049001817  ,
+   0.23510638   , 0.18454716   , 0.15235578   ,-0.24995801   ,
+   0.11198181   ,-0.09728428   , 0.07933632   , 0.09621938   ,
+   0.20632632   ,-0.02378511   , 0.048638143  , 0.11018115   ,
+   0.08399489   , 0.0024432524 ,-0.15258281   , 0.08976777   ,
+  -0.19227539   , 0.21183303   ,-0.16999966   , 0.09655936   ,
+   0.14193377   , 0.20027354   ,-0.00898603   , 0.1288889    ,
+   0.09642149   , 0.19244185   ,-0.12360052   ,-0.0464133    ,
+   0.053855326  , 0.11156837   ,-0.1465125    , 0.006655255  ],
+ [ 0.037966844  ,-0.111203514  ,-0.15214281   , 0.06964454   ,
+  -0.10859332   ,-0.09975841   , 0.21509148   ,-0.09316536   ,
+   0.18211718   , 0.064340495  , 0.1273202    ,-0.07203468   ,
+  -0.09497186   ,-0.05096655   , 0.1167525    , 0.085483834  ,
+   0.01864613   , 0.0074841394 ,-0.052315243  ,-0.12712733   ,
+  -0.18936525   , 0.054828927  , 0.0131718805 , 0.018358868  ,
+  -0.10848243   , 0.21349321   , 0.1620631    , 0.019219752  ,
+   0.14693159   ,-0.013134889  , 0.066988006  , 0.06652612   ,
+   0.01624353   ,-0.1486697    , 0.118522994  ,-0.1293649    ,
+   0.16031988   , 0.14197275   , 0.04387561   ,-0.18560281   ]])
+pesoCamada0 = np.array ([ 0.0013018582 , 0.0030652252 , 0.0077647166 ,-0.004095256  ,
+ -0.0036367043 ,-0.00016623184, 0.011378176  , 0.041621     ,
+ -0.01094946   , 0.0013541336 ,-0.010182198  ,-0.0038946494 ,
+ -0.027161393  , 0.012976314  ,-0.058850966  ,-0.14802277   ,
+  0.006337163  ,-0.0037631094 ,-0.02527057   , 0.0050302027 ,
+ -0.0018557298 ,-0.010831836  , 0.18785124   , 0.004456544  ,
+ -0.009707445  , 0.0033430983 ,-0.0061397115 ,-0.0022394897 ,
+ -0.012954494  ,-0.0042061727 , 0.004041888  ,-0.026343457  ,
+  0.009936007  ,-0.005846928  , 0.022846581  ,-0.005539617  ,
+ -0.00015559529, 0.019641679  , 0.03915771   ,-1.1229147    ])
+camada1 = np.array ([[ 0.0465094   , 0.12045441  , 0.14188792  , 0.12610619  ,-0.070576526 ,
+   0.10242311  ,-0.18032734  , 0.10313921  ,-0.21359278  , 0.08997178  ],
+ [ 0.1234125   , 0.10904473  ,-0.32449746  , 0.08419736  , 0.08932776  ,
+  -0.15404427  ,-0.07641615  , 0.08807899  , 0.08004012  , 0.122938655 ],
+ [ 0.22879894  ,-0.052426517 , 0.08036115  , 0.024566976 , 0.13750155  ,
+   0.13594198  ,-0.13147557  ,-0.14890835  ,-0.07543303  , 0.03398309  ],
+ [-0.14207394  , 0.08649103  ,-0.15482377  ,-0.07645385  ,-0.078821026 ,
+  -0.058201496 , 0.20565239  ,-0.050464872 , 0.17385721  , 0.25024807  ],
+ [ 0.13498764  ,-0.28417656  , 0.0059663057, 0.022911929 , 0.12378043  ,
+  -0.068724744 , 0.12379819  ,-0.008927909 , 0.17463231  ,-0.648536    ],
+ [ 0.11637619  ,-0.029794743 , 0.024913445 , 0.086072944 , 0.1991692   ,
+   0.12688847  , 0.054153193 , 0.46978596  , 0.021543898 , 0.19576891  ],
+ [ 0.0452972   ,-0.21220048  ,-0.18002526  ,-0.033132516 ,-0.06034628  ,
+  -0.12843925  , 0.088588625 , 0.09081664  ,-0.025729135 , 0.07607311  ],
+ [-0.048715748 ,-0.017682053 , 0.035814602 ,-0.040673412 ,-0.11161581  ,
+   0.0943855   , 0.17215586  ,-0.14659148  ,-0.05030634  , 0.14338474  ],
+ [-0.14035375  ,-0.34491175  ,-0.122594215 ,-0.1127811   , 0.24209514  ,
+  -0.09916073  , 0.117606744 , 0.4179058   , 0.1670369   ,-0.44371894  ],
+ [-0.06102354  ,-0.16084814  , 0.10714491  , 0.14331673  , 0.23657627  ,
+   0.0004048571, 0.3414174   , 0.029911961 , 0.11655135  ,-0.067778334 ],
+ [-0.29355195  , 0.010117203 ,-0.08499326  , 0.122569636 , 0.17581145  ,
+  -0.09806339  , 0.0071327626,-0.23527028  , 0.22069274  ,-0.037325155 ],
+ [ 0.056929965 ,-0.07676135  ,-0.18797787  ,-0.07685198  , 0.14360687  ,
+   0.008536557 , 0.14235458  , 0.115980685 , 0.08571919  , 0.072321296 ],
+ [-0.1489368   , 0.03804232  , 0.11102729  ,-0.048768148 ,-0.020382235 ,
+  -0.13355435  ,-0.05879458  ,-0.009678499 , 0.1641102   , 0.18607     ],
+ [ 0.010270112 ,-0.01916259  , 0.13189156  ,-0.07284122  ,-0.037339665 ,
+   0.02020261  ,-0.19597116  ,-0.05908881  ,-0.17098214  , 0.14624055  ],
+ [-0.15378828  , 0.026244894 ,-0.1262797   , 0.13694257  , 0.11100885  ,
+  -0.12399163  ,-0.008840651 , 0.006017591 , 0.063197605 ,-0.23334466  ],
+ [ 0.1761393   ,-0.10544655  , 0.09296183  , 0.11924037  ,-0.027824083 ,
+  -0.1636475   , 0.0745583   , 0.047527168 , 0.024410173 ,-0.05212903  ],
+ [ 0.026746992 , 0.23497052  , 0.043068606 , 0.19367638  ,-0.09615244  ,
+  -0.056659896 , 0.1464778   , 0.14413667  , 0.043941934 ,-0.009603076 ],
+ [ 0.24176623  , 0.06222999  , 0.16622412  ,-0.015541477 , 0.031459294 ,
+   0.037225857 ,-0.13957034  ,-0.007736527 , 0.07218581  , 0.011602201 ],
+ [-0.16211295  , 0.03462969  ,-0.083344355 , 0.015994797 ,-0.15705073  ,
+  -0.04487049  , 0.11214711  ,-0.19234481  , 0.12486297  , 0.18786335  ],
+ [ 0.21754268  ,-0.11204453  , 0.051063083 ,-0.028519798 , 0.014005014 ,
+   0.02144925  ,-0.10498798  , 0.1681682   , 0.12566422  , 0.12460543  ],
+ [ 0.09893037  , 0.22237845  ,-0.13400723  ,-0.17226847  , 0.2418911   ,
+   0.17650732  , 0.21183003  , 0.097385004 ,-0.0073435865,-0.034296606 ],
+ [ 0.07698937  , 0.14168884  ,-0.1693163   , 0.10298272  , 0.14950617  ,
+   0.08634923  ,-0.16197035  , 0.10599758  , 0.04774731  , 0.004715263 ],
+ [-1.0909119   ,-0.057965077 , 0.16929369  ,-0.15544167  , 0.11470953  ,
+  -0.18731533  ,-0.1291681   , 0.08191032  ,-0.038864344 ,-0.081298344 ],
+ [-0.1355767   , 0.058589444 ,-0.110939726 ,-0.22570376  ,-0.12113143  ,
+   0.074606955 , 0.13010263  , 0.13699149  , 0.1893683   ,-0.17045066  ],
+ [ 0.032061968 , 0.03721562  , 0.19969119  , 0.0211332   ,-0.16621962  ,
+  -0.0058999406,-0.07746449  ,-0.0107988585,-0.034514993 ,-0.007930436 ],
+ [ 0.06722108  , 0.19357222  , 0.21061409  , 0.059368953 ,-0.1691756   ,
+   0.1611341   , 0.008216307 ,-0.084623165 , 0.15534528  ,-0.113482326 ],
+ [ 0.0057678814, 0.006761298 , 0.14750308  , 0.12776954  ,-0.10246399  ,
+   0.0041394513,-0.14802673  , 0.0708509   ,-0.08386821  , 0.039702035 ],
+ [ 0.09846361  , 0.20503692  ,-0.028036049 ,-0.108142965 ,-0.034465883 ,
+  -0.13264734  ,-0.040557697 , 0.1241798   , 0.10967009  ,-0.04846858  ],
+ [ 0.007758905 , 0.06110494  , 0.18449435  , 0.17557926  , 0.115300745 ,
+  -0.14077207  ,-0.13722427  ,-0.19800118  , 0.3077437   ,-0.11198644  ],
+ [ 0.026365692 , 0.050361287 ,-0.1667439   , 0.08933665  ,-0.0875043   ,
+   0.033823684 , 0.13344587  ,-0.06061529  , 0.025592862 ,-0.16899498  ],
+ [-0.11936859  ,-0.17373829  ,-0.16127044  ,-0.09710467  , 0.106645435 ,
+  -0.14055103  , 0.18607253  , 0.18027072  , 0.08993598  , 0.002921007 ],
+ [ 0.058474112 ,-0.0091699315,-0.081766926 ,-0.14567222  , 0.10969625  ,
+  -0.032571644 , 0.13443692  , 0.16705239  ,-0.17779364  , 0.11530684  ],
+ [-0.14578705  , 0.07528613  , 0.03612915  ,-0.18984804  ,-0.057743296 ,
+  -0.063257724 , 0.19187768  , 0.038571004 , 0.14940591  , 0.28139207  ],
+ [ 0.11829698  ,-0.14874585  ,-0.020885373 , 0.06794728  ,-0.15858395  ,
+  -0.14613779  , 0.08202582  , 0.037656445 , 0.060194287 , 0.0072433706],
+ [-0.1324652   ,-0.061619833 , 0.07136122  , 0.11286667  ,-0.21654263  ,
+   0.14497888  , 0.066637546 ,-0.082866654 ,-0.051796988 ,-0.0682276   ],
+ [-0.09953244  , 0.14278083  ,-0.8281217   ,-0.13611814  ,-0.052648045 ,
+  -0.04153591  , 0.08264936  ,-0.02696999  ,-0.0209862   , 0.13971344  ],
+ [-1.6587913   , 0.18732576  , 0.007948664 ,-0.1304299   ,-0.5711931   ,
+   0.11660153  , 0.12936565  , 0.18391728  ,-0.047583614 ,-0.016504852 ],
+ [-0.17262265  , 0.0214063   ,-0.057325386 , 0.054992624 , 0.17264704  ,
+  -0.0943145   , 0.07191058  ,-0.048727896 , 0.1662664   ,-0.035808604 ],
+ [ 0.081347495 ,-0.3852422   ,-0.19600007  , 0.16068399  ,-0.14224893  ,
+  -0.13198414  , 0.062351093 , 0.15298685  , 0.052379124 ,-0.10283978  ],
+ [-0.40132242  , 0.08465543  , 0.16602986  , 0.109819844 ,-0.009067651 ,
+  -0.12022129  ,-0.2268181   , 0.090554215 , 0.021353325 ,-0.1423585   ]])
+pesoCamada1 = np.array ([-0.004801611 ,-0.59544     ,-0.053435598 , 0.013308793 ,-0.007298912 ,
+ -0.0029357756, 0.0313612   , 0.014150826 ,-0.003859973 , 0.015414857 ])
+camada2 = np.array ([[ 0.07485676 ],
+ [ 0.05979189 ],
+ [ 0.19479892 ],
+ [ 0.17634752 ],
+ [ 0.020772135],
+ [-0.1608015  ],
+ [ 0.17394015 ],
+ [ 0.17279512 ],
+ [ 0.15856265 ],
+ [ 0.1670837  ]])
+pesoCamada2 = np.array ([-0.028219849])
+pesoDama = 1.661217667413865
+
+my_color = input()  # r or b
+print (my_color, file=sys.stderr)
+
+# game loop
+while True:
+    listaLinhas = []
+    for i in range(8):
+        input_line = input()  # board line
+        listaLinhas.append (input_line)
+        
+    tabuleiro = converteInputParaTabuleiro (listaLinhas, copy.deepcopy(my_color), 9)
+    
+    melhorMovimento = -10
+    jogadaSelecionada = ""
+    primeiroMovimento = True
+    
+    timeStart = time.time()
+    legal_moves = int(input())  # number of legal moves
+    for i in range(legal_moves):
+        move_string = input()  # move
+        print (move_string,  file=sys.stderr)
+        jogadas = converteJogadaParaInputDoTabuleiro (move_string)
+        tabuleiroNovo = fazJogada (tabuleiro, jogadas, copy.deepcopy(my_color))
+        if (primeiroMovimento):
+            jogadaSelecionada = move_string
+            primeiroMovimento = False
+        
+        if (tabuleiroNovo == None):
+            print("Erro no movimento!!", file=sys.stderr)
+            tabuleiro.printaTabuleiro ()
+            print(move_string, file=sys.stderr)
+            continue
+        
+        alpha = -9999999999
+        beta =  9999999999
+        
+        scoreTabuleiro = calculaScoreTabuleiroMedia (copy.deepcopy(tabuleiroNovo), 1, False)
+            
+        print(str(scoreTabuleiro), file=sys.stderr)
+        
+        if (scoreTabuleiro > melhorMovimento):
+            melhorMovimento = scoreTabuleiro
+            jogadaSelecionada = move_string
+            
+    print (jogadaSelecionada)
