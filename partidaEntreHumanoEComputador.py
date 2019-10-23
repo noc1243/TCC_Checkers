@@ -17,7 +17,7 @@ from keras.layers import Dense
 from keras import initializers
 from keras.models import load_model
 
-nomeJogador = "Jogador_e39e79fd-b1f0-4f7d-88ca-6d4c28239974.h5"
+nomeJogador = "Jogador_3b9c6929-d796-451e-b6d0-ea30b9b129c1.h5"
 
 K.clear_session ()
 

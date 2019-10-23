@@ -2852,3 +2852,795 @@ Selecionando os melhores Jogadores!
 Jogadores Selecionados!
 Fim da Geracao!
 
+Rodando Geracao: 130
+Criando filhos de uma geracao!
+Filho criado: Jogador_a09a6aa1-6534-40b7-98e2-1ab8a844402e.h5
+Filho criado: Jogador_21b2007c-f8b7-4f56-b03d-8181b2de4f42.h5
+Filho criado: Jogador_bdbd6a69-7694-4ee0-a852-181352a1c76a.h5
+Filho criado: Jogador_e9333e5b-3f4b-4c51-8c92-973a93373cda.h5
+Filho criado: Jogador_b7902273-95f5-4184-9325-64cb39e882d1.h5
+Filho criado: Jogador_f3604220-e83a-41af-9b16-30334ef12c96.h5
+Filho criado: Jogador_dc8a390c-e75e-4367-9c88-c5a14666b779.h5
+Filho criado: Jogador_ba6c18b2-9bba-45d9-a8a8-ed222bff0b78.h5
+Filho criado: Jogador_5db2710e-9c89-412f-be23-351cc3faa079.h5
+Filho criado: Jogador_20b2da09-e571-4e48-9efc-7d8d9c1bcb0a.h5
+Filho criado: Jogador_1177241c-dac5-4782-9106-7905ba848651.h5
+Filho criado: Jogador_eeeeab9f-2792-4755-ae70-2f10d05a126a.h5
+Filho criado: Jogador_6945ab3f-74a2-4997-a0be-45e85b55acdf.h5
+Filho criado: Jogador_ff871ef4-09ed-47b8-80ec-d9c76557bdbf.h5
+Filho criado: Jogador_b93231f0-0e61-4122-904f-317440f61569.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 131
+Criando filhos de uma geracao!
+Filho criado: Jogador_f1bd238d-d885-48df-83a9-4f91295e760b.h5
+Filho criado: Jogador_5dce508f-09e9-4eb5-a4bf-7850bd2ba737.h5
+Filho criado: Jogador_8e3e3225-0c99-4df8-8a4b-882695647d4e.h5
+Filho criado: Jogador_4258776e-50bc-4f8a-bebb-0333996595bd.h5
+Filho criado: Jogador_0c4d5201-e8ba-47f7-a2be-54b2211ff70a.h5
+Filho criado: Jogador_35bb0cd2-36d6-4d9e-aa44-5221c6821685.h5
+Filho criado: Jogador_10690955-39a4-491b-a900-44339b6b0f65.h5
+Filho criado: Jogador_93955991-2f07-4302-8012-b8c0eede08da.h5
+Filho criado: Jogador_6388b0b3-3bde-4a25-a31c-65a1a148f009.h5
+Filho criado: Jogador_23aa6bc3-e2f6-44a1-8c9b-0d80009b3905.h5
+Filho criado: Jogador_3943c1a2-6929-4eed-a975-d61606b26d08.h5
+Filho criado: Jogador_2a8e7e0f-99d9-472d-b7ea-65a1a5a3cd1a.h5
+Filho criado: Jogador_46f535b5-bdfb-4fc4-9014-91ce903b4e08.h5
+Filho criado: Jogador_aae0e32c-cf96-479d-bf31-24c030c28a79.h5
+Filho criado: Jogador_1d5f269d-c65e-4374-b8e0-8745f67fc9ed.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 132
+Criando filhos de uma geracao!
+Filho criado: Jogador_c8f6edbd-0475-4435-a8d0-272d38b8d26a.h5
+Filho criado: Jogador_27133b2f-92a5-4d3c-9e8c-32eaec918f1f.h5
+Filho criado: Jogador_c42e8185-be02-4123-ac9e-77e3980f61d0.h5
+Filho criado: Jogador_e507cc53-42aa-424d-8403-ef96e36df1ab.h5
+Filho criado: Jogador_01718b8e-9701-44bd-aaf7-6048fe700978.h5
+Filho criado: Jogador_ddd8035a-cefc-4652-bbff-98aaf01dd5a6.h5
+Filho criado: Jogador_de28a26e-549c-4928-a98f-708c711a2b2f.h5
+Filho criado: Jogador_282094b8-0c1f-474e-81c5-09dbde35b7ba.h5
+Filho criado: Jogador_8a34fa97-4786-4294-9134-ac65bee2b513.h5
+Filho criado: Jogador_a3d00eef-5001-4d95-b3f4-ecff9b593846.h5
+Filho criado: Jogador_85af8310-6c41-40f1-9f54-e87f2cc61873.h5
+Filho criado: Jogador_b588de2b-0577-4418-83de-a5649973a996.h5
+Filho criado: Jogador_7e794a38-647d-4305-b68e-73991f2c4961.h5
+Filho criado: Jogador_65fc770e-46df-4688-af85-967e14c7b45a.h5
+Filho criado: Jogador_b7a36731-1902-435d-92df-1352769f9a70.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 133
+Criando filhos de uma geracao!
+Filho criado: Jogador_58d9f67b-22f1-4e73-b619-db486eb2ec2c.h5
+Filho criado: Jogador_af990ef4-48fa-41dc-b6b2-348667f1c409.h5
+Filho criado: Jogador_e30ec92c-fa32-41a1-9fa2-345537e77738.h5
+Filho criado: Jogador_615dd8e9-65c0-4f2d-894d-3bf5c239d154.h5
+Filho criado: Jogador_dfeb1b1a-ec37-4692-bf2a-435cc9e0507e.h5
+Filho criado: Jogador_1edc3011-631d-4118-95b7-d6320914ccbc.h5
+Filho criado: Jogador_567f6d1f-188e-4cba-bc14-0f7b970ad5c1.h5
+Filho criado: Jogador_e637b551-4081-449f-99a3-d2e1a78c39d1.h5
+Filho criado: Jogador_7a1294ee-294e-427a-ac4b-f26f4a339f79.h5
+Filho criado: Jogador_1e5aac1b-12ce-46b3-bd8a-3c2f0ede3da2.h5
+Filho criado: Jogador_99337772-a019-4f89-b036-8230ff6b0f97.h5
+Filho criado: Jogador_92be73e6-22dd-407f-8d78-b5a741179c1b.h5
+Filho criado: Jogador_1eb0c039-c3f5-484c-84a0-60477ef9691f.h5
+Filho criado: Jogador_7f2577ba-be2d-4c05-ba9a-66b5892e0fa5.h5
+Filho criado: Jogador_d64941bb-7707-41bc-88e8-23e0f5a2c836.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 134
+Criando filhos de uma geracao!
+Filho criado: Jogador_03fa038e-55b2-48bf-9b47-bcbf79485675.h5
+Filho criado: Jogador_3e8ecde4-f6a7-4a99-be42-752312aa6cd2.h5
+Filho criado: Jogador_bc159d11-0d45-4204-8d40-35d9e5a14edd.h5
+Filho criado: Jogador_2ee093a0-6d72-48ca-8bc7-9ffd42257a69.h5
+Filho criado: Jogador_3d82d689-a5be-4bc5-9169-1d12a96fe1d5.h5
+Filho criado: Jogador_a5168fc0-f134-42e6-b315-c69e6364f5a0.h5
+Filho criado: Jogador_9aad191b-337d-430c-84d4-8112f10d3466.h5
+Filho criado: Jogador_29ec6c28-1262-4022-9d70-a1098a9b1cc4.h5
+Filho criado: Jogador_4d9f027c-8495-4c6f-8a3c-263020b68e10.h5
+Filho criado: Jogador_1603088e-ee87-400a-883e-3095fd2896bf.h5
+Filho criado: Jogador_81c62b11-3bbc-45cd-903b-7ffa61f54af2.h5
+Filho criado: Jogador_b2bc0ac8-9eee-4077-899e-b46132ee147c.h5
+Filho criado: Jogador_d2d6a646-ca76-45ef-b4e7-413c4803cb22.h5
+Filho criado: Jogador_57e5579d-6f3b-40a3-8d5e-29e301b220fd.h5
+Filho criado: Jogador_17e250ef-8bbc-4b89-86d9-38d378efaa8c.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 135
+Criando filhos de uma geracao!
+Filho criado: Jogador_0a559193-be9c-437b-a83b-52f28736f805.h5
+Filho criado: Jogador_5a6e7aea-ba94-422a-9d0a-2efe5a0664d4.h5
+Filho criado: Jogador_de6ed312-e563-425a-a747-782c8311470f.h5
+Filho criado: Jogador_03321e6f-9042-4e5e-9a73-af40477a7794.h5
+Filho criado: Jogador_13f230c9-e0a0-4f4d-887e-ca899abe5f48.h5
+Filho criado: Jogador_91e449be-90c8-4464-95d9-f86e589b4ccf.h5
+Filho criado: Jogador_47e973d5-b66d-4173-8802-9d28862dd528.h5
+Filho criado: Jogador_8572794a-e794-4dc2-b705-926f02313ec1.h5
+Filho criado: Jogador_e43cba62-3495-4ff6-9dd3-5dd979ee9ecd.h5
+Filho criado: Jogador_34402e78-5acf-4952-a017-43cd155bc2bf.h5
+Filho criado: Jogador_cb3637cb-3bbc-491b-8ca1-d3a4bbd3dcbc.h5
+Filho criado: Jogador_6365af70-9f07-4b03-8723-f160bc362651.h5
+Filho criado: Jogador_bf91f300-f51d-4f78-9e71-9405a82ba938.h5
+Filho criado: Jogador_04168f9b-bdd6-407c-b269-3bc374625581.h5
+Filho criado: Jogador_748fd0ba-2c97-4962-83b9-3c4be0d576bd.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 136
+Criando filhos de uma geracao!
+Filho criado: Jogador_1e6bc1a8-10f6-4587-898a-f400427812ae.h5
+Filho criado: Jogador_bd6063a6-3f37-4992-a7ac-6ef712526a1d.h5
+Filho criado: Jogador_cd361a42-2a0c-4c6e-883d-80469ca952fa.h5
+Filho criado: Jogador_8f8b7abc-e7dc-454b-aa9f-5d748d008072.h5
+Filho criado: Jogador_401f4e96-5d31-4dbc-916e-c738a0c351ce.h5
+Filho criado: Jogador_dd39be77-b370-4d8f-94ec-45f9e333fd1e.h5
+Filho criado: Jogador_b72609cf-9a28-4260-a2ac-de456421fd08.h5
+Filho criado: Jogador_339c6ec1-033c-4da7-9b08-86fbd7f5d37d.h5
+Filho criado: Jogador_915afb3e-f1c2-46be-bbcb-4d5cda4bf435.h5
+Filho criado: Jogador_a9f78d64-98bf-4745-9b08-9ac141d8580e.h5
+Filho criado: Jogador_a8a21c21-c453-448e-abe7-fd6425ed91ce.h5
+Filho criado: Jogador_e55eba15-0cc9-49ea-8253-f1a8ed1fb186.h5
+Filho criado: Jogador_1136ac9d-91d9-4835-83a2-6fb0be5d395e.h5
+Filho criado: Jogador_7c9d9f07-4d21-4b54-b6d6-25561e7bd1bf.h5
+Filho criado: Jogador_865e58f1-388a-414d-bf0c-2731095aa1c3.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 137
+Criando filhos de uma geracao!
+Filho criado: Jogador_75acba0e-e5ca-4d01-a38d-3b0398d2790b.h5
+Filho criado: Jogador_e11dd791-9db0-4ecc-9e9c-ccfdf7812123.h5
+Filho criado: Jogador_f2426286-5fd9-424e-9a10-c35cb9b0c94b.h5
+Filho criado: Jogador_058e5e74-93d0-4063-880a-3a3c1b03898e.h5
+Filho criado: Jogador_9247d5ab-8918-4ee3-bcb7-5c01dea84e1b.h5
+Filho criado: Jogador_96b75e0f-a988-4e40-9d60-d85adf8c7e4f.h5
+Filho criado: Jogador_76c34ab9-44f3-4120-a243-ff5bff1c8392.h5
+Filho criado: Jogador_1b27d9e7-8a0d-4242-82f8-80bb640bb055.h5
+Filho criado: Jogador_cf367d5b-f9f2-4fbf-bdf1-b644e7c25f17.h5
+Filho criado: Jogador_de633ff8-0f65-42d3-843a-f8065792884b.h5
+Filho criado: Jogador_6bcdcd52-215e-42db-9aca-96c85c4a847f.h5
+Filho criado: Jogador_f633d503-ca60-4cd1-a2b3-03df48ceb4e7.h5
+Filho criado: Jogador_e8817e6c-ce4a-4dfd-970a-04ced5c5144d.h5
+Filho criado: Jogador_9358667f-23eb-4970-86ac-5f028cbdcdda.h5
+Filho criado: Jogador_e38052da-a44b-485d-a8d6-2be8a4cd7687.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 138
+Criando filhos de uma geracao!
+Filho criado: Jogador_28478a14-57b9-4557-92d8-b4cf045a7e2d.h5
+Filho criado: Jogador_b6b29c19-b035-4c17-bd53-b29d50d942a6.h5
+Filho criado: Jogador_2b33f1c8-b5a2-4ed5-8c0e-a1276631e0a1.h5
+Filho criado: Jogador_d4b54087-755b-4e72-97d6-0fe74dcf3286.h5
+Filho criado: Jogador_df4c505a-e1f2-43ab-9d71-dd473e8a28f5.h5
+Filho criado: Jogador_f7639f46-e720-43a5-920e-345379c10878.h5
+Filho criado: Jogador_87a5913e-d80e-4adb-8eb7-b74856c929ee.h5
+Filho criado: Jogador_a0254aa2-9e60-4bd9-8c73-f1915784c743.h5
+Filho criado: Jogador_b08e0e7b-1398-4b10-a298-e7b2285280f9.h5
+Filho criado: Jogador_ea596f58-21a5-4439-96b7-1238b698de8b.h5
+Filho criado: Jogador_2996215b-cb9f-4f8d-a4c6-6306913826a7.h5
+Filho criado: Jogador_d4806fde-8e37-4b97-a5ac-777d803ca1c6.h5
+Filho criado: Jogador_d1209ede-6a04-4ce0-aa01-719d51cdc701.h5
+Filho criado: Jogador_159b432e-2024-4d7c-a98c-96a640374191.h5
+Filho criado: Jogador_30b01cea-595a-484d-9f51-e83fc840f5b6.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 139
+Criando filhos de uma geracao!
+Filho criado: Jogador_b555c769-f898-460b-a2cc-84a2ddd6b614.h5
+Filho criado: Jogador_110d49e8-4c16-4cd7-923b-534bd59fb214.h5
+Filho criado: Jogador_6d6ae2c1-5ce0-4f09-8e38-9eb6b183247d.h5
+Filho criado: Jogador_5dc6382a-4d64-4df1-92bb-d2d394427647.h5
+Filho criado: Jogador_0f515da4-9d16-42c9-8033-1245ae8d399e.h5
+Filho criado: Jogador_b7cb9366-aedb-4171-8ca0-7e2a0df80fc5.h5
+Filho criado: Jogador_2d2f730e-e125-462d-bb1f-baf36b7cb0e5.h5
+Filho criado: Jogador_ca872aaa-dab0-49d7-b70d-831810328592.h5
+Filho criado: Jogador_65623e52-e20a-4dee-b347-1c2bbf806792.h5
+Filho criado: Jogador_81700309-ea66-4f13-9338-78e988f8f405.h5
+Filho criado: Jogador_66d20bdc-eb3d-46d4-b3f7-13d3787025d6.h5
+Filho criado: Jogador_2a0d472b-82d7-4027-b593-d571bd213f8b.h5
+Filho criado: Jogador_c854de87-1ca6-40eb-bd91-ca414f1042df.h5
+Filho criado: Jogador_724e45eb-349b-4d9a-8caf-939363a620f9.h5
+Filho criado: Jogador_ce291951-9b8d-4eb7-921e-321548e0fc19.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 140
+Criando filhos de uma geracao!
+Filho criado: Jogador_3ea18fe6-1c98-4cb6-8bcb-62668980055c.h5
+Filho criado: Jogador_31af4334-9fba-4246-9b18-721581c61c66.h5
+Filho criado: Jogador_ae9f4eca-b28d-4f48-aea6-6452721515ff.h5
+Filho criado: Jogador_5cd242a4-3ad5-4c4e-8d77-c6fbb9f2e291.h5
+Filho criado: Jogador_a0bc9f6a-6ef4-4772-9b18-b50e8c995828.h5
+Filho criado: Jogador_a0de4176-6d39-4556-b471-7e5820fc4e87.h5
+Filho criado: Jogador_43973197-35a8-4112-9b87-6c7d3ba9c84e.h5
+Filho criado: Jogador_3450dd18-1063-4b3a-bd76-a11a1087ef3b.h5
+Filho criado: Jogador_d475adde-e222-40ca-8a87-128c17c29ca2.h5
+Filho criado: Jogador_50274bf1-4741-4710-bfcf-abeb0d54e30b.h5
+Filho criado: Jogador_c8ae6a3e-20db-41a8-af3f-b4408d2b9d7e.h5
+Filho criado: Jogador_2b46378c-00f0-4dab-9739-d524968c2caf.h5
+Filho criado: Jogador_c9a95a6c-9a5e-4637-92b3-7f294a623638.h5
+Filho criado: Jogador_f2be9f6b-6177-4be4-89d4-d23c2c0da194.h5
+Filho criado: Jogador_f6e235a4-7650-4fa7-92db-395a8bf0080a.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 141
+Criando filhos de uma geracao!
+Filho criado: Jogador_253472da-feb8-4e31-a49e-a6a9e023096a.h5
+Filho criado: Jogador_fece32bc-4e9c-4fdc-bb44-d27abc02f9d9.h5
+Filho criado: Jogador_a43cc883-7d6b-4332-9c70-7387547d12d0.h5
+Filho criado: Jogador_7c4c74d3-40cb-468f-930b-33fe7b97f96e.h5
+Filho criado: Jogador_f02325a1-2d87-4f57-b024-10979da2856e.h5
+Filho criado: Jogador_7fab90e2-ca5c-43fc-91c9-dce0287881d0.h5
+Filho criado: Jogador_428b8e10-3cb7-40cc-98b8-8ee3cafc27ad.h5
+Filho criado: Jogador_08c8aa0a-5ee9-4fc8-b7c5-78e294b1e00e.h5
+Filho criado: Jogador_a7c46b97-1222-4a57-849d-97e328dda98a.h5
+Filho criado: Jogador_e2192f1c-aa02-4aa8-9a42-7fb39ae5121b.h5
+Filho criado: Jogador_0f26dba8-3613-4185-a0e9-f59edc61eaae.h5
+Filho criado: Jogador_3f21755f-e046-492d-b49f-fb2e5a433eb1.h5
+Filho criado: Jogador_54726a70-04b4-473f-b0d0-af289717e6d4.h5
+Filho criado: Jogador_a5702e4d-ba32-403b-b68d-819924c2c99b.h5
+Filho criado: Jogador_affd313f-0bc4-4d59-ac5a-65061b3e234e.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 142
+Criando filhos de uma geracao!
+Filho criado: Jogador_6aa519a8-44c8-46bd-bec6-83bc6393af58.h5
+Filho criado: Jogador_bd520256-2d83-4270-9038-02ff4821f480.h5
+Filho criado: Jogador_2a796598-c62d-4fac-8016-78a33d1ab162.h5
+Filho criado: Jogador_587d7c2b-1990-47a5-8559-59b2bcc1d37a.h5
+Filho criado: Jogador_536bb7c1-c10d-4030-8fd4-8d5c1cf98ace.h5
+Filho criado: Jogador_b522cc2b-57d4-4205-8c82-749ccb0744f6.h5
+Filho criado: Jogador_f88867f3-04b2-433d-ac75-decfb39abed2.h5
+Filho criado: Jogador_63d2e413-4269-4ffc-b803-5a4b0490e13c.h5
+Filho criado: Jogador_9dacee09-8229-4a17-a01e-36850c33de2a.h5
+Filho criado: Jogador_b6406349-d8f4-43db-b67f-00c578b95071.h5
+Filho criado: Jogador_22671bd0-b404-49e3-85c0-118e2fe26386.h5
+Filho criado: Jogador_0fd6b7bb-9703-4b25-b07a-b837fc20c82d.h5
+Filho criado: Jogador_cc06faf2-8258-42bb-9371-6496ae6e57ab.h5
+Filho criado: Jogador_633a922c-f31a-4af6-ab3a-6c75e5949de3.h5
+Filho criado: Jogador_5ea187e8-ab01-4f2a-b2d3-151193fea78b.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 143
+Criando filhos de uma geracao!
+Filho criado: Jogador_3b4c62f3-3fd1-4829-96bb-8c4aea42f9fc.h5
+Filho criado: Jogador_88bffc3a-a9bd-4b3d-a90c-c6e0edace711.h5
+Filho criado: Jogador_9ae89fd9-ef63-4062-868b-00526a8b4066.h5
+Filho criado: Jogador_f1b562bf-ec66-40f1-99b1-87166834468e.h5
+Filho criado: Jogador_d2290216-a647-4799-9344-b9c7c2cd6b81.h5
+Filho criado: Jogador_6b18b091-04f2-45d7-81d2-d6fb8f5fa0ce.h5
+Filho criado: Jogador_9a31ac2e-758f-4f1c-bab5-38f78e190153.h5
+Filho criado: Jogador_a8d98680-f011-4d20-b4ef-2b76bfaa4733.h5
+Filho criado: Jogador_4ed7c798-fde7-4f5e-8dd3-0a08761c6432.h5
+Filho criado: Jogador_1ff8a5fd-c7d4-403b-bbe6-a72ba8dfe450.h5
+Filho criado: Jogador_badb2581-d36a-4cc1-a244-beddca846e44.h5
+Filho criado: Jogador_4e89194b-e4ab-42ec-91f8-31bb70a9c8ab.h5
+Filho criado: Jogador_9f6213fc-a4ba-480d-a0d7-cd373bd8864f.h5
+Filho criado: Jogador_875ec7ee-c9e9-4de6-a3cf-2d418b2b56e7.h5
+Filho criado: Jogador_2861507a-ea48-4154-a907-95d93c697b43.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 144
+Criando filhos de uma geracao!
+Filho criado: Jogador_7fe539ac-4890-4d69-a370-9e53b7886bb4.h5
+Filho criado: Jogador_bb41d2af-086f-4e18-9427-9152b85e54ff.h5
+Filho criado: Jogador_9f7426ec-86c6-4a50-9b14-95ab56e878ff.h5
+Filho criado: Jogador_18a4c042-6123-42ce-80df-b0475d8c68ab.h5
+Filho criado: Jogador_f1b1e102-91a4-42c7-a89d-21b7064bf7fe.h5
+Filho criado: Jogador_1897df5d-3203-4400-98fa-446a81919e41.h5
+Filho criado: Jogador_4249a3de-7288-4e55-b0ff-ed9ed94bc01e.h5
+Filho criado: Jogador_672e292b-e5a7-4535-90c1-abb885787894.h5
+Filho criado: Jogador_405a62ae-3575-4acf-a90b-12ab0b82f85a.h5
+Filho criado: Jogador_38db4cee-42a9-4137-8695-555b3349d85b.h5
+Filho criado: Jogador_591893c8-1ae5-41e4-9d50-af0df10b889f.h5
+Filho criado: Jogador_3366375e-45f0-4c3d-80b9-3f6c2d2bda2f.h5
+Filho criado: Jogador_8af60c16-0b45-4845-a2b0-fa292dedc733.h5
+Filho criado: Jogador_5c8b6a42-4017-4ef0-b6cc-ba68a53c9377.h5
+Filho criado: Jogador_2ebe160e-0943-4c14-8c69-bd45757c07d5.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 145
+Criando filhos de uma geracao!
+Filho criado: Jogador_8c3150b0-6ef8-44ab-8ab3-ddd8b0b2f967.h5
+Filho criado: Jogador_6a36c99c-4976-4805-8f2c-2fe5c611f573.h5
+Filho criado: Jogador_10f3fa2a-79a2-49ef-b555-a040e8539287.h5
+Filho criado: Jogador_4b7574d6-6d99-4224-ac4a-5838c44c3a8f.h5
+Filho criado: Jogador_365963f2-3265-44f6-a264-4f0b19ec033d.h5
+Filho criado: Jogador_ba0fdef4-d27b-43d4-8aac-942e9c1bb55a.h5
+Filho criado: Jogador_e63a2407-df07-464e-b075-4628e28d8ac1.h5
+Filho criado: Jogador_9ee3d722-7ebf-4917-a2e9-3320ebb644ff.h5
+Filho criado: Jogador_97284aff-e43b-4282-87e6-5d302e4997d8.h5
+Filho criado: Jogador_5951017e-5b38-48b0-ade3-7a1216c67ce1.h5
+Filho criado: Jogador_5e37ac0b-7d16-42d2-acfe-94ff82620167.h5
+Filho criado: Jogador_a8b7b43f-3e69-4666-a8d0-bace1b42476c.h5
+Filho criado: Jogador_47bf40b0-c5f3-4be3-8ffe-4603925b3daf.h5
+Filho criado: Jogador_3545c0b2-68c5-4255-b683-3db46e33b00c.h5
+Filho criado: Jogador_c323237b-316b-44a6-95e2-522a5f6c17fb.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 146
+Criando filhos de uma geracao!
+Filho criado: Jogador_97a94b74-d865-452e-aada-f9f7c4d7178d.h5
+Filho criado: Jogador_308f8b38-cfc7-4430-bbaf-29d0bf62813a.h5
+Filho criado: Jogador_7a95d3ff-fb07-4fb6-860d-dca3c8daa80c.h5
+Filho criado: Jogador_ecb4667f-0302-4ab8-80b0-30a7b713366f.h5
+Filho criado: Jogador_b74014b4-8054-46d2-8dfe-e66c6dbdf87b.h5
+Filho criado: Jogador_3f222dcc-e872-4a31-b6ac-fbd3d0e8b4a4.h5
+Filho criado: Jogador_53be7131-82d6-42d8-97db-9a57e6ac6d24.h5
+Filho criado: Jogador_b3e66e13-1753-437b-8dc9-5f1ce31f4699.h5
+Filho criado: Jogador_66d38512-b26c-4a95-baea-bf0197a948e9.h5
+Filho criado: Jogador_879359c8-923a-41e4-b63d-89b11965cb9f.h5
+Filho criado: Jogador_13fe3712-e0c4-4986-a0a9-0f3295a97667.h5
+Filho criado: Jogador_4037148b-cd50-45f5-8220-b60cfb544ea6.h5
+Filho criado: Jogador_7efe4f4e-79e0-42e8-b790-97c6d3075af3.h5
+Filho criado: Jogador_13d58592-d412-41b7-97c1-d75899054ec4.h5
+Filho criado: Jogador_81e44076-f30b-4abf-b794-2c31dbef7e71.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 147
+Criando filhos de uma geracao!
+Filho criado: Jogador_1dfe39af-2090-42e9-ab3b-5ca87e8da01a.h5
+Filho criado: Jogador_533b9984-bdca-4760-bc9f-ab9390829201.h5
+Filho criado: Jogador_a9209318-026f-4eab-8c14-42ef57800f2e.h5
+Filho criado: Jogador_86788578-79d8-47d7-9b9f-cbf1f17a9981.h5
+Filho criado: Jogador_05d08e8b-9326-4545-9c67-a969d46f0a8d.h5
+Filho criado: Jogador_b0a90b34-3b55-4af2-b23b-9063e439b605.h5
+Filho criado: Jogador_203724b2-ad8e-4f6e-9759-e986129aac8a.h5
+Filho criado: Jogador_c80ae9e4-23ca-4cea-b72f-59292059da65.h5
+Filho criado: Jogador_8d4b4bcc-eb43-4f0e-a6fa-a81427cde6cb.h5
+Filho criado: Jogador_5fa9123f-a858-41e6-a1e1-f3010610a893.h5
+Filho criado: Jogador_cf5ef43f-6dc7-4f31-9553-396cd81a84bb.h5
+Filho criado: Jogador_0cf5467f-ced6-4a1e-8c85-206973f1a47f.h5
+Filho criado: Jogador_81aeefa1-1c7b-4b0f-a4cd-9f6507da0af5.h5
+Filho criado: Jogador_69c04ec6-bc79-4e52-8d26-e7a92a60c2d2.h5
+Filho criado: Jogador_14d07c78-da9a-43b1-8f85-368682f5f6f7.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 148
+Criando filhos de uma geracao!
+Filho criado: Jogador_19cec724-fb30-4d17-b711-2208f140c05c.h5
+Filho criado: Jogador_cef76fdd-1e79-48d9-b24c-4f093309b55c.h5
+Filho criado: Jogador_5d48fa01-fa20-4c8b-b6db-c6382723d3f7.h5
+Filho criado: Jogador_e79c1585-d4d3-442e-96c9-c27be5ff0cb1.h5
+Filho criado: Jogador_67ae6d17-de8e-4f72-aa3c-a57a217d31ca.h5
+Filho criado: Jogador_6c90760d-bb3e-4a82-9b33-a6b2cc3f9943.h5
+Filho criado: Jogador_d9f63099-11a9-4a51-a075-77241cf91b90.h5
+Filho criado: Jogador_7140020a-f490-4ea5-ad1f-9a022e0e6ccb.h5
+Filho criado: Jogador_83fb98be-d0bd-41bd-88fa-bff1782430dc.h5
+Filho criado: Jogador_614ed81b-195b-49ca-8dac-f500e545e6c4.h5
+Filho criado: Jogador_90659c7b-b93b-4851-b20d-c1a7e7ad6be0.h5
+Filho criado: Jogador_bbc0e978-1eec-4751-b6c4-ee0c6a336fa7.h5
+Filho criado: Jogador_7ea681a4-9df2-40b7-9f06-0b71f688b892.h5
+Filho criado: Jogador_70f7f89c-9f50-4c5f-959a-c96c389fd6b3.h5
+Filho criado: Jogador_108e8b31-94e5-4c6f-b493-0def0c20f451.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 149
+Criando filhos de uma geracao!
+Filho criado: Jogador_d9d70694-8cf9-4e3e-a8a8-4c9dbee0e7b4.h5
+Filho criado: Jogador_4b064a29-26f8-4ad3-87f4-ff2a33e5abc1.h5
+Filho criado: Jogador_8b5e43f2-0fe3-40b0-911c-9debe4b6840c.h5
+Filho criado: Jogador_c8a9188c-d3ac-4a95-a45f-a4f9e286084c.h5
+Filho criado: Jogador_c67285f1-2851-4588-a097-9223914ac65e.h5
+Filho criado: Jogador_c2ffe0ce-ecbb-4320-a58b-16683ac992f6.h5
+Filho criado: Jogador_c7f2bb5e-907b-48aa-bbc9-0cdc4d6ccec4.h5
+Filho criado: Jogador_606cc6e5-e961-488f-98a2-983d0018faa1.h5
+Filho criado: Jogador_db158427-b2a6-4ab5-aa19-a513a27d96f8.h5
+Filho criado: Jogador_5875ad42-d185-4d05-a813-9cbe3fbcaf0f.h5
+Filho criado: Jogador_1ce43dff-8fc7-4e20-a9de-65b5b9a01886.h5
+Filho criado: Jogador_c4f28bab-4be4-4f2a-a889-8b8194c78c3a.h5
+Filho criado: Jogador_50a0054d-e3d3-4b4a-a8e4-bfbb2ff2ef06.h5
+Filho criado: Jogador_00fe0417-62f9-4740-b9a2-b7c55c79ba79.h5
+Filho criado: Jogador_9acfb12e-ba79-441f-8007-4166da9c4c86.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 150
+Criando filhos de uma geracao!
+Filho criado: Jogador_8da9bed8-e3eb-4ce2-85a8-2dfac3e4bf18.h5
+Filho criado: Jogador_837f49a8-c790-45ed-956b-a4d4e25c0789.h5
+Filho criado: Jogador_ba75f769-170d-4f2f-bfee-3f4f0a94f5f7.h5
+Filho criado: Jogador_9e8193ad-8985-4514-9899-9329c84137e4.h5
+Filho criado: Jogador_72dfa988-316c-4c02-9c7b-111ed1a800ae.h5
+Filho criado: Jogador_61bcb175-f58c-4bfb-9944-dbf4e4ab9038.h5
+Filho criado: Jogador_ab88c999-a1b9-4672-a941-23f381b4048f.h5
+Filho criado: Jogador_fde2c099-baf3-498f-8fbb-27ff8110cb3f.h5
+Filho criado: Jogador_9bf2b2dd-7b34-404c-80aa-a32e46389dd8.h5
+Filho criado: Jogador_a5536f5c-3647-47a5-99bd-8344c3fb4968.h5
+Filho criado: Jogador_b89582ec-a3c9-4b6e-8f59-caa17190c8c1.h5
+Filho criado: Jogador_3b9c6929-d796-451e-b6d0-ea30b9b129c1.h5
+Filho criado: Jogador_2fbb1084-3005-4464-b0c3-b2955f486a1a.h5
+Filho criado: Jogador_c9b60a1a-9cfc-4218-b164-cc5d6b7856ff.h5
+Filho criado: Jogador_b7351772-febe-4e8e-bcda-1abcd787db88.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 151
+Criando filhos de uma geracao!
+Filho criado: Jogador_795ff494-02b8-40ad-a60d-b9a1d49fbbfc.h5
+Filho criado: Jogador_19500032-940b-425a-9fa8-e8ee1845006b.h5
+Filho criado: Jogador_269b6fa9-195e-43f1-96c9-695290bdca6e.h5
+Filho criado: Jogador_3dc94253-e922-40cc-a542-f7ab76e0dfb2.h5
+Filho criado: Jogador_38045482-cd8f-49ca-84de-eb7e313fb722.h5
+Filho criado: Jogador_f9ce1130-bb09-460c-84c7-4083c9c9ecec.h5
+Filho criado: Jogador_281d45e1-afe2-44d9-b399-78a5ed9261ba.h5
+Filho criado: Jogador_a5ba57dc-5b53-4a04-8df7-5423139685e7.h5
+Filho criado: Jogador_e80addaf-54a5-42da-a5df-e6c3235565da.h5
+Filho criado: Jogador_deeae01f-ef9b-4da6-941d-2fdb6928f648.h5
+Filho criado: Jogador_59a703a8-be8c-4851-83a6-8cd52a541520.h5
+Filho criado: Jogador_7b4f8e93-da76-440f-b05b-b638d3567f0f.h5
+Filho criado: Jogador_0be352e3-9b09-437a-ba9d-61cb8b6f0c46.h5
+Filho criado: Jogador_80e40165-1dfc-4c38-b65a-73a9edec9a71.h5
+Filho criado: Jogador_e2397379-b4f8-41f3-85a7-303755709aac.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 152
+Criando filhos de uma geracao!
+Filho criado: Jogador_507d5bc5-8e21-4d6b-9604-c0c7491a207e.h5
+Filho criado: Jogador_fed37964-f8ad-47b1-bf4c-b6a9825d8f01.h5
+Filho criado: Jogador_695bf676-1bf6-4754-b394-6c2d4b0e7a5e.h5
+Filho criado: Jogador_7be22443-0016-4d46-a4e8-272d53b48d23.h5
+Filho criado: Jogador_ff2e1eae-7321-41ef-818f-5b533d476230.h5
+Filho criado: Jogador_2989c46c-5bab-472a-9ac4-15c8647a9720.h5
+Filho criado: Jogador_a1539d18-d0ed-4699-99f8-f08841d6c93c.h5
+Filho criado: Jogador_2c74a3d4-6b15-4538-af48-654b70f89484.h5
+Filho criado: Jogador_58fcd40b-6e3e-437b-8d58-5bb8a0fa8bad.h5
+Filho criado: Jogador_6a54ad3a-02a9-4e86-a4d4-8091b1506ccb.h5
+Filho criado: Jogador_72d30082-5a9a-4e99-a227-138cce535eef.h5
+Filho criado: Jogador_68c7bda0-b463-4293-99b5-b10cfcf71529.h5
+Filho criado: Jogador_f31c820e-21e4-422e-a2cb-2b1ae84c9cf9.h5
+Filho criado: Jogador_0e420374-388e-4514-8e32-f69e64df0330.h5
+Filho criado: Jogador_16552dc5-76c6-4f96-a081-fc0d7c0bb7d2.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 153
+Criando filhos de uma geracao!
+Filho criado: Jogador_63cef76b-e7cd-4fe4-8f2d-31342c62cc69.h5
+Filho criado: Jogador_fc668b8f-bc0d-4b5c-9113-f99a0ed4858f.h5
+Filho criado: Jogador_8e38bebd-d6c5-440c-b751-a09202efaa23.h5
+Filho criado: Jogador_0176f48e-1f92-4fe9-8d3e-a6d7d7d2f0ce.h5
+Filho criado: Jogador_9d4fc3f1-7486-4604-8945-386caa1c0314.h5
+Filho criado: Jogador_ea0a1b0a-3db4-4335-9c8c-839fed01f9b9.h5
+Filho criado: Jogador_68b62690-b6bf-4858-84d7-ba9e919cfa72.h5
+Filho criado: Jogador_22646b0e-20c2-4409-8a56-8b6ea6a75edd.h5
+Filho criado: Jogador_3044cd2a-0199-4c13-829e-ff618729892a.h5
+Filho criado: Jogador_83fe51d0-ce1c-4adc-a0cf-9681524138e4.h5
+Filho criado: Jogador_0cab86b6-414c-4892-a052-453b34f6a318.h5
+Filho criado: Jogador_f7503161-d543-41d3-afeb-264856c2b3c2.h5
+Filho criado: Jogador_ac4b7b2d-f1d5-4120-a91b-2e7d4d0cac55.h5
+Filho criado: Jogador_3ccfa471-223d-4ef0-89b6-6981e391fdc5.h5
+Filho criado: Jogador_aaa2f959-e497-401f-b9b6-529b5f58ac98.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 154
+Criando filhos de uma geracao!
+Filho criado: Jogador_7fb4e184-716c-41cb-9886-c2e3b5e107f6.h5
+Filho criado: Jogador_edb74407-52f9-40f6-9531-85591f84250e.h5
+Filho criado: Jogador_9bcdfc80-3720-484e-bcf7-d76d96abd4d2.h5
+Filho criado: Jogador_360e1cf5-5629-44ef-bb78-f68179e851b5.h5
+Filho criado: Jogador_d579a8f2-c3b8-40b7-8a43-fa7beb5bfd05.h5
+Filho criado: Jogador_c69ab90a-cadc-4a48-ae05-c731f6e7ee23.h5
+Filho criado: Jogador_5220147c-be79-4047-926c-3c6350139058.h5
+Filho criado: Jogador_79461f24-d657-4747-8594-293bf08b8216.h5
+Filho criado: Jogador_9027bf20-4bce-4fbe-ad66-c8bb9cb5de0f.h5
+Filho criado: Jogador_02e4c512-8e47-414c-bba5-e43bc9206ce3.h5
+Filho criado: Jogador_79808c29-3206-459f-8231-c6c54f835134.h5
+Filho criado: Jogador_7b290c4b-40c1-4911-9ccf-e31bd4c7f7ea.h5
+Filho criado: Jogador_77c5cdcb-65e1-4a61-9eeb-5e04577c27a4.h5
+Filho criado: Jogador_a8227483-9d82-4ebc-a7da-a3fb2525b558.h5
+Filho criado: Jogador_94ac352b-ef57-40d1-b5e2-a37dfb128cd9.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 155
+Criando filhos de uma geracao!
+Filho criado: Jogador_ce7b95f2-3a76-4c26-82e9-659af38c36c7.h5
+Filho criado: Jogador_7781c3b2-23d0-4805-97f7-1a7eec5c6933.h5
+Filho criado: Jogador_5ff870f9-cb50-421e-9b6f-1d66374e8060.h5
+Filho criado: Jogador_dd5bd104-5005-4953-a0fa-8b6d00ec8499.h5
+Filho criado: Jogador_7d4eb157-07af-4580-9dce-b5d347572262.h5
+Filho criado: Jogador_5011a34f-4bb2-4e09-98d7-e2399a57e881.h5
+Filho criado: Jogador_fbb2cf41-1643-45b5-a6ac-d1063712955c.h5
+Filho criado: Jogador_15646e5f-f1c3-4ae5-b11e-7f6599beff02.h5
+Filho criado: Jogador_e028dbf9-1b65-4619-8d09-f46b6de9d15d.h5
+Filho criado: Jogador_264349c2-1880-422a-8c6d-a6bd39c0ee38.h5
+Filho criado: Jogador_e3a25608-5a92-407b-9d8d-0e9ba686d578.h5
+Filho criado: Jogador_6dd22691-f2e2-40a8-87bf-da91cceba072.h5
+Filho criado: Jogador_13d61a64-ec8f-4ddd-a99e-1612511c1f52.h5
+Filho criado: Jogador_1b01c475-9dbf-4c79-8eb0-ba6274801473.h5
+Filho criado: Jogador_0246a492-c84d-47f2-8bc3-fca978d1bde8.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 156
+Criando filhos de uma geracao!
+Filho criado: Jogador_3a843934-4982-4df8-aaff-fe525584ce2e.h5
+Filho criado: Jogador_0ce005e0-6e9d-41c8-9e4a-59b43d918843.h5
+Filho criado: Jogador_b94949d7-5d75-4c7a-92ad-848c5bf77e1d.h5
+Filho criado: Jogador_f158a895-6ec5-444c-9c39-e1f0e6ef2106.h5
+Filho criado: Jogador_5693724c-941f-4f72-9bee-81a9bac2ac95.h5
+Filho criado: Jogador_2ccab1ff-8f04-4f4d-9984-bff3071397bc.h5
+Filho criado: Jogador_5d0a1d3e-9efb-4ed6-91b1-05b9bc8764e3.h5
+Filho criado: Jogador_d39b1c60-a456-4e79-b7de-153c31829913.h5
+Filho criado: Jogador_00929c0c-bb22-4ab0-8524-1c37226a57fd.h5
+Filho criado: Jogador_a12900cc-5cde-4ab5-ac1f-fc542b2f2d29.h5
+Filho criado: Jogador_2af9d490-daf2-4f7a-b92a-610cb82bc340.h5
+Filho criado: Jogador_45354353-c9b2-433e-849a-6583d132ed37.h5
+Filho criado: Jogador_0c11f9e3-812a-4735-a06d-d7cee04a2d87.h5
+Filho criado: Jogador_1e2cc7f8-ef4f-416a-bd45-01f26c1b8103.h5
+Filho criado: Jogador_628a43fe-edfd-448a-b66c-1f5bbfd8deaf.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 157
+Criando filhos de uma geracao!
+Filho criado: Jogador_da0ce293-3fc4-41a7-8282-f4dfcfc51532.h5
+Filho criado: Jogador_6cac4411-c377-4d7f-b092-222f74e8b1c0.h5
+Filho criado: Jogador_664ce2ec-5c1c-4e32-a204-d8a930ae3338.h5
+Filho criado: Jogador_2fc8b7e6-2866-4f65-b2b2-30c4d960d2e7.h5
+Filho criado: Jogador_cd502e2d-c4d0-4ab2-8c09-03a68d836413.h5
+Filho criado: Jogador_93575036-2772-4e87-98cc-9aef4eec7c06.h5
+Filho criado: Jogador_ce62f8e0-6238-47ec-87ee-8956aff377f7.h5
+Filho criado: Jogador_fcee6b06-6c04-4e54-84c4-1cf24b32c2c6.h5
+Filho criado: Jogador_8aa1704b-271d-4f5c-a4c4-b75da6183328.h5
+Filho criado: Jogador_b2933bcf-748e-4d19-bc15-185fbda14303.h5
+Filho criado: Jogador_247611f0-abd3-4e70-9b2c-0c8b8dc1c974.h5
+Filho criado: Jogador_0093d7e9-7393-4d80-b235-d4ea03f6cf77.h5
+Filho criado: Jogador_9138bdf9-e4f1-4f3e-aa0f-1882a015f140.h5
+Filho criado: Jogador_07c6824c-5641-494f-9fc6-d0a334289965.h5
+Filho criado: Jogador_90c120f2-e417-4c96-bb75-328e57388034.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 158
+Criando filhos de uma geracao!
+Filho criado: Jogador_ef824367-df52-472f-938a-79708164089e.h5
+Filho criado: Jogador_cab4d2dc-7ba5-46fc-a409-e4220083211c.h5
+Filho criado: Jogador_33a2d3ac-fbc1-449e-acec-4b07f2b6281d.h5
+Filho criado: Jogador_661c2a81-0c1a-4b58-97a0-707021983f4b.h5
+Filho criado: Jogador_aa52238d-c446-4811-b7f4-0baa654bf735.h5
+Filho criado: Jogador_e477d356-22d8-4335-8977-79ac1f4eeb86.h5
+Filho criado: Jogador_ddcc56d8-46e9-4cc5-bf45-267f27c7f1c5.h5
+Filho criado: Jogador_e3039ed9-69cb-492b-a08a-3c093ecff605.h5
+Filho criado: Jogador_3b39022f-bf96-4a50-b588-1271adbfee58.h5
+Filho criado: Jogador_792508d2-8fb3-4e9c-9a33-f244c0712d17.h5
+Filho criado: Jogador_00bdcc06-f29f-4c50-8036-d87a10a43811.h5
+Filho criado: Jogador_02661ce7-1232-46ec-a7c2-8fc7e2f1893e.h5
+Filho criado: Jogador_ed3964c1-96c4-4f40-af46-435fbcf95cfb.h5
+Filho criado: Jogador_a33c696f-ae1b-4ed3-9e38-6604e94b5b32.h5
+Filho criado: Jogador_2b870755-1834-4dc6-86c0-a37d106276c9.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 159
+Criando filhos de uma geracao!
+Filho criado: Jogador_173faa0d-0ce0-47aa-aea3-2f6383fbbeb4.h5
+Filho criado: Jogador_cb5ebb95-90ec-46c9-9781-131b09bc264f.h5
+Filho criado: Jogador_208d07f8-121c-4a95-a65b-548fb4cf5468.h5
+Filho criado: Jogador_b3120526-5a32-4e26-b36b-a6237daca4be.h5
+Filho criado: Jogador_817c20b3-b276-45c1-9584-ce7a13f00723.h5
+Filho criado: Jogador_9f0514ab-fd7c-42b1-9df2-bdea758e6399.h5
+Filho criado: Jogador_a07d215a-ec52-43c8-b0bc-8c7c912d7c9b.h5
+Filho criado: Jogador_f9bc4222-53db-4e15-b288-c21149a78b12.h5
+Filho criado: Jogador_8091365c-8145-4244-b456-fe81ead570c5.h5
+Filho criado: Jogador_c0569325-b199-4c51-ac2e-e731c6c0a8be.h5
+Filho criado: Jogador_8ea56e31-3227-4578-bac8-1d3cc3bc4304.h5
+Filho criado: Jogador_d8c5b65e-defb-4d02-866b-5ea98b6ee834.h5
+Filho criado: Jogador_0a90d397-2e9a-4d5f-9bc9-fc5cbbfd0e77.h5
+Filho criado: Jogador_bb7885cb-7a63-416b-8285-1a172465883a.h5
+Filho criado: Jogador_c6d8f3e1-939b-4807-b707-030423629810.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 160
+Criando filhos de uma geracao!
+Filho criado: Jogador_dfaea861-725d-4df9-a913-aca5ae35454b.h5
+Filho criado: Jogador_0b312325-38e8-4445-bcaf-8d0240396480.h5
+Filho criado: Jogador_1d4512f9-a100-4386-a721-c5b342f78423.h5
+Filho criado: Jogador_ba36e94f-b8bb-42c9-94f8-4c7a5bec7d5f.h5
+Filho criado: Jogador_1ac380dd-c216-4f3c-8278-bb6a46beb5aa.h5
+Filho criado: Jogador_02a8dc65-56f6-46bd-be76-a30f466adfed.h5
+Filho criado: Jogador_b4c64ac3-768a-4695-9b8b-7f39143b0d79.h5
+Filho criado: Jogador_25f1006e-3766-4a50-a54a-de2864ee1f19.h5
+Filho criado: Jogador_57dab383-e257-4a59-96da-10e2dbb7d21e.h5
+Filho criado: Jogador_1303d148-4176-449d-8cd8-3e6469f0c259.h5
+Filho criado: Jogador_3e576a1b-e2b9-4970-b78f-864bb97ab9f0.h5
+Filho criado: Jogador_40a58ef8-51fd-4a09-8ca3-ae6f3b77321d.h5
+Filho criado: Jogador_e7e5a2b9-c36a-4328-8f68-e084f2e26f59.h5
+Filho criado: Jogador_44b25b8d-6efd-40fc-8aad-945495af8482.h5
+Filho criado: Jogador_744aa77d-2f8c-4bd6-9c82-e1f52ca2d2c2.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 161
+Criando filhos de uma geracao!
+Filho criado: Jogador_b87bce1a-b9fe-4d18-92cb-62cbb6bfa950.h5
+Filho criado: Jogador_fb805eda-0817-4e36-b558-5376882d7c39.h5
+Filho criado: Jogador_d8ab1cd7-c283-446e-b716-35f564d410d7.h5
+Filho criado: Jogador_9a364dd3-8a57-4085-b585-d99df2daef50.h5
+Filho criado: Jogador_7ac97fcd-9250-4338-af06-efec77bb08e8.h5
+Filho criado: Jogador_5acec40f-6500-496f-a7cb-147909e762f8.h5
+Filho criado: Jogador_c0add47e-5e8d-4264-ac38-9e46642df032.h5
+Filho criado: Jogador_5c6aff61-9eb7-4102-819a-c4cfc7fb0fbb.h5
+Filho criado: Jogador_1c177a4d-0445-44fc-82e9-ee749a4639a9.h5
+Filho criado: Jogador_9ac3b228-af2a-4295-b447-623ccb22d125.h5
+Filho criado: Jogador_580f4d21-460e-4953-a0bf-adac10a55a98.h5
+Filho criado: Jogador_3c4dc224-ed3d-48fd-b7ec-21135af60420.h5
+Filho criado: Jogador_a6ffd4da-f95f-474c-a596-367d8d79b3f4.h5
+Filho criado: Jogador_9a348d80-fdbe-4fa4-bdcd-5e4c0bcad002.h5
+Filho criado: Jogador_5e1b44e8-0d09-4a71-98d9-517b117fc561.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 162
+Criando filhos de uma geracao!
+Filho criado: Jogador_dd2badf8-ad59-421e-8bea-8997a34175f3.h5
+Filho criado: Jogador_e7ccbf36-c827-484f-94f1-5d046ab7ff95.h5
+Filho criado: Jogador_555762d6-75f9-4f50-8335-bbdbc20ea968.h5
+Filho criado: Jogador_47337b02-1e84-4c2a-a658-904199040c93.h5
+Filho criado: Jogador_6ba60291-be3d-4f23-97de-588f48f6855c.h5
+Filho criado: Jogador_7a493765-b008-427a-b359-99748cec5973.h5
+Filho criado: Jogador_c93a506b-61ec-407c-b101-a94da35893e7.h5
+Filho criado: Jogador_684566f5-e00b-496f-9f8b-72668ff4e1a9.h5
+Filho criado: Jogador_8797a970-1c7f-4d4a-aa80-2e8cce7f5da7.h5
+Filho criado: Jogador_c096d3e6-9051-4a42-85c4-9fc910e7c83a.h5
+Filho criado: Jogador_bb6c67eb-cdd3-49fb-99d8-2458ee6c32e2.h5
+Filho criado: Jogador_f69f0af0-b188-43c4-bedc-742b1440e235.h5
+Filho criado: Jogador_0f4f5106-062e-4d56-840c-60ba931eaf51.h5
+Filho criado: Jogador_d11091d0-5b01-4226-9af3-9b449737f95c.h5
+Filho criado: Jogador_c1a06376-8ce1-4941-bd66-d0d8b5ba5780.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 163
+Criando filhos de uma geracao!
+Filho criado: Jogador_f6aba291-e6df-49dc-9bc2-4d2d115e1e0c.h5
+Filho criado: Jogador_d80bc83e-245d-4f7b-a2bf-be2f8073c944.h5
+Filho criado: Jogador_0549385e-ab83-4a86-bb53-dca3d0884e58.h5
+Filho criado: Jogador_4c8d788a-e9b0-4cf5-8d9a-e61aa29fb6c0.h5
+Filho criado: Jogador_b8b751ef-5d68-4327-8f36-a9f90acb2204.h5
+Filho criado: Jogador_ead4775e-4ef0-431a-b230-3caba8fa8c15.h5
+Filho criado: Jogador_fa531d2c-58fe-4238-af61-254e970f7a9f.h5
+Filho criado: Jogador_ff4b5dfd-c7b0-46ba-92be-b82c1db1790c.h5
+Filho criado: Jogador_873ba22a-5528-4c24-b913-b4f014e18c78.h5
+Filho criado: Jogador_01b39758-9cbe-47be-983c-61a752962f15.h5
+Filho criado: Jogador_8df48304-fc27-4f56-85b7-67146b2768df.h5
+Filho criado: Jogador_8578f06a-2d53-4114-96bc-4c3c8ce06928.h5
+Filho criado: Jogador_3e099c6f-040f-405d-9ed4-a0a1f0c35c91.h5
+Filho criado: Jogador_ff51f25c-b7c7-46a8-ae3f-57854b647bdb.h5
+Filho criado: Jogador_e5062a8a-bc87-4aad-a90f-5657b403c5b3.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 164
+Criando filhos de uma geracao!
+Filho criado: Jogador_5ec9a55b-52f9-4274-b25c-4fdcaa3f2f53.h5
+Filho criado: Jogador_a314e6d0-a6ea-4037-bda0-5ed7dfb950ab.h5
+Filho criado: Jogador_264931c5-f73f-44a2-bc27-2a6c3a75aa3b.h5
+Filho criado: Jogador_4da101d1-d82c-44d0-9c1f-7b2a3b274475.h5
+Filho criado: Jogador_c098ba90-58aa-47ce-8eb7-fecf129b4234.h5
+Filho criado: Jogador_2844aed3-095c-4ce5-bf64-33724e23448a.h5
+Filho criado: Jogador_0063acfd-ba3b-48b3-9a3f-15c7d8e803bd.h5
+Filho criado: Jogador_ca06f7f2-658a-4ee8-a8b8-5cba794bda3f.h5
+Filho criado: Jogador_e4612ea6-8c35-4e78-b576-552998a3ef89.h5
+Filho criado: Jogador_c68b0f3c-3684-4488-b809-374942960d27.h5
+Filho criado: Jogador_63489d6c-4ac1-4267-a0e4-f746ddaa1c77.h5
+Filho criado: Jogador_a275471a-d414-4c68-931a-f37299a6ffcb.h5
+Filho criado: Jogador_5e6c3b77-e61e-42d4-93e2-ccc0085b2509.h5
+Filho criado: Jogador_c73222f0-b0c2-492e-8c02-088580d213cc.h5
+Filho criado: Jogador_12ed7909-1b4f-4e1f-aba4-1fa013f72e09.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
+Rodando Geracao: 165
+Criando filhos de uma geracao!
+Filho criado: Jogador_c4d49ce9-0a16-4449-a64e-bdcc7a4f6117.h5
+Filho criado: Jogador_14929f91-5a45-46de-8d9a-e97544aef459.h5
+Filho criado: Jogador_6912c649-956e-4aa5-b51e-aa0fb25b54a4.h5
+Filho criado: Jogador_ccce990e-d9e7-4d40-b660-d816ac4e448d.h5
+Filho criado: Jogador_24ab2704-3a07-4215-8510-8c194dcf0a33.h5
+Filho criado: Jogador_fbc5ba52-d976-4799-a850-fe09669a084f.h5
+Filho criado: Jogador_f4ad488e-a187-40f4-9a66-9c71b831ac77.h5
+Filho criado: Jogador_1397456b-4982-4934-b19c-d1c3667211a7.h5
+Filho criado: Jogador_e6aff2cb-71fd-4bc6-b73d-2023ec432d69.h5
+Filho criado: Jogador_f1f89ac7-e700-440e-9d3e-1b59c825ff07.h5
+Filho criado: Jogador_817c57e5-30b6-4b96-b741-d7d0e6ecb749.h5
+Filho criado: Jogador_0750288c-ae77-466d-b15f-5409f4e85ee2.h5
+Filho criado: Jogador_d59e0915-4cbb-40f3-a3d3-c636696f9476.h5
+Filho criado: Jogador_5ec61e30-c703-4712-9e0c-23575d7cfc07.h5
+Filho criado: Jogador_5d85fb52-5d2c-4204-8950-08d219e8bbec.h5
+Iniciando campeonato!
+Selecionando os melhores Jogadores!
+Jogadores Selecionados!
+Fim da Geracao!
+
